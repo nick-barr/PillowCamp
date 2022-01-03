@@ -1,14 +1,16 @@
 import React from 'react';
 import {Route, Switch, Link} from 'react-router-dom';
 
-import LoginSignup from './userAuth/login_signup'
+import AuthBar from './userAuth/authbar'
+import loginContainer from './userAuth/login_container'
+import signupContainer from './userAuth/signup_container'
 
 const Home = () => {
     return(
         <div>
             <header>
                 <Link to='/'>PILLOWCAMP</Link>
-                <LoginSignup />    
+                <AuthBar />    
             </header>
 
             <div>

@@ -1,22 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class LoginSignup extends React.Component {
+class AuthBar extends React.Component {
   constructor(props) {
     super(props)
   }
 
   componentDidMount(){
-    debugger
   }
 
   render(){
-    debugger
     return(
       <div>
         <ul>
-          <li>test</li>
-          <li></li>
+        <Link to="/login">Login</Link>
+        <br />
+        <Link to="/signup">Sign up!</Link>
           <li></li>
         </ul>
       </div>
@@ -24,7 +23,7 @@ class LoginSignup extends React.Component {
   }
 } 
 
-// const LoginSignup = ({ currentUser, logout }) => {
+// const AuthBar = ({ currentUser, logout }) => {
 //   const sessionLinks = () => (
 //     <nav className="login-signup">
 //       <Link to="/login">Login</Link>
@@ -43,7 +42,7 @@ class LoginSignup extends React.Component {
 // };
 
 
-// const LoginSignup = ({ currentUser, logout }) => {
+// const AuthBar = ({ currentUser, logout }) => {
 //   const sessionLinks = () => {
 //     return(
 //     <nav className="login-signup">
@@ -65,4 +64,4 @@ class LoginSignup extends React.Component {
 // };
 
 
-export default LoginSignup;
+export default AuthBar;
