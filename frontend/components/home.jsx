@@ -1,9 +1,7 @@
 import React from 'react';
 import {Route, Switch, Link} from 'react-router-dom';
-import login_form_container from './userAuth/login_form_container';
 
 import LoginSignup from './userAuth/login_signup'
-import signup_form_container from './userAuth/signup_form_container';
 
 const Home = () => {
     return(
