@@ -1,13 +1,21 @@
-// import { connect } from 'react-redux';
-// import { signup } from '../../actions/session_actions';
-// import SignUp from './signup';
+import { connect } from 'react-redux';
+import { signup } from '../../actions/session_actions';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SessionForm from './session_form';
 
-// const mSTP = (state) => ({
-//     state
-// });
+const mapStateToProps = ({ errors }) => {
+  return {
+    errors: errors.session,
+    formType: 'signup',
+    navLink: <Link to="/login">log in instead</Link>,
+  };
+};
 
-// const mDTP = dispatch => ({
-//   signup: () => dispatch(signup())
-// });
+const mapDispatchToProps = dispatch => {
+  return {
+    processForm: (user) => dispatch(signup(user)),
+  };
+};
 
-// export default connect(mSTP, mDTP)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route, Switch, Link} from 'react-router-dom';
 
-import AuthBar from './userAuth/authbar'
+import AuthBarContainer from './userAuth/authbar_container'
 import loginContainer from './userAuth/login_container'
 import signupContainer from './userAuth/signup_container'
 
@@ -10,8 +10,14 @@ const Home = () => {
         <div>
             <header>
                 <Link to='/'>PILLOWCAMP</Link>
-                <AuthBar />    
+                <AuthBarContainer />    
             </header>
+
+                <Switch>
+                    <Route exact path="/login" component={loginContainer} />
+                    <Route exact path="/signup" component={signupContainer} />
+                </Switch>
+
 
             <div>
                 <p>Search component</p>    

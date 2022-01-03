@@ -10,16 +10,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const store = configureStore();
     const root = document.getElementById('root')
     
-    // window.store = store
-    // window.login = SessionAPI.login
-    // window.logout = SessionAPI.logout
-    // window.signup = SessionAPI.signup
-    // window.login = SessionActions.login
-    // window.logout = SessionActions.logout
-    // window.signupthunk = SessionActions.signup
-    // window.dispatch = store.dispatch
-    // window.getState = store.getState
-    // window.mSTP = mSTP
+    window.store = store
+    window.login = SessionAPI.login
+    window.logout = SessionAPI.logout
+    window.signup = SessionAPI.signup
+
+    window.login = SessionActions.login
+    window.logout = SessionActions.logout
+    window.signupthunk = SessionActions.signup
+    
+    window.dispatch = store.dispatch
+    window.getState = store.getState
+    window.mSTP = mSTP
 
     ReactDOM.render(<Root store={store} />, root)
 })
