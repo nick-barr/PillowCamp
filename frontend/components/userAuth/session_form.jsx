@@ -52,7 +52,7 @@ class SessionForm extends React.Component {
           Welcome to Pillowcamp!
           <br/>
           Please {this.props.formType} or {this.props.navLink}
-          {this.renderErrors()}
+          <div>{this.renderErrors()}</div>
           <div className="login-form">
             <br/>
             <label>Username:

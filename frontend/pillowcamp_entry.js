@@ -8,7 +8,18 @@ import mSTP from './components/userAuth/authbar_container'
 
 document.addEventListener("DOMContentLoaded", () => {
     
+    window.login = SessionAPI.login
+    window.logout = SessionAPI.logout
+    window.signup = SessionAPI.signup
+    
+    window.login = SessionActions.login
+    window.logout = SessionActions.logout
+    window.signupthunk = SessionActions.signup
+    
+    // window.mSTP = mSTP
+    
     const root = document.getElementById('root')
+    
     let store;
     
     if (window.currentUser) {
@@ -21,8 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
         store = configureStore(preloadedState);
         delete window.currentUser;
     } else {
-    store = configureStore();
+        store = configureStore();
     };
-
+    
+    window.dispatch = store.dispatch
+    window.getState = store.getState
+    
     ReactDOM.render(<Root store={store} />, root)
 });
