@@ -8,6 +8,16 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoAccount = this.handleDemoAccount.bind(this);
+  }
+
+  handleDemoAccount(e){
+    e.preventDefault();
+    const demo = {
+      username: "test_user1", 
+      password: "password1"
+    }
+    this.props.processFormDemo(demo);
   }
 
   update(field) {
@@ -20,6 +30,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+    // this.props.processForm(user).then(() => this.props.history.replace('/'));
   }
 
   renderErrors() {
@@ -61,8 +72,10 @@ class SessionForm extends React.Component {
             </label>
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
+            <input className="demo-session" type="submit" value={this.props.formType} />
           </div>
         </form>
+        <button className="demo-login" onClick={this.handleDemoAccount}>Demo User Login</button>
       </div>
     );
   }

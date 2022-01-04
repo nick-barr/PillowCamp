@@ -4,6 +4,7 @@ import {Route, Switch, Link} from 'react-router-dom';
 import AuthBarContainer from './userAuth/authbar_container'
 import loginContainer from './userAuth/login_container'
 import signupContainer from './userAuth/signup_container'
+import {AuthRoute, ProtectedRoute} from '../util/route_util'
 
 const Home = () => {
     return(
@@ -14,8 +15,8 @@ const Home = () => {
             </header>
 
                 <Switch>
-                    <Route exact path="/login" component={loginContainer} />
-                    <Route exact path="/signup" component={signupContainer} />
+                    <AuthRoute exact path="/login" component={loginContainer} />
+                    <AuthRoute exact path="/signup" component={signupContainer} />
                 </Switch>
 
 
