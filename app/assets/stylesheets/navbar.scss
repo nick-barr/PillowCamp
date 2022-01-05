@@ -1,0 +1,65 @@
+.nav-bar { 
+    display: flex;
+    flex-direction: row;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    padding-top: 20px;
+    height: 50px;
+    // border: 3px solid rgb(0, 0, 0);
+    align-items: center;    
+
+
+    .search-bar {
+
+        background: #947e1d;
+        border: 0.5px solid #E5ECD9;
+        box-sizing: border-box;
+        border-radius: 50px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+
+    .login-signup {
+        display: flex;
+        flex-direction: row;
+        float: right;
+        justify-content: flex-end;
+        // border: 2px solid black;
+        
+    }
+    .user-links {
+        display: flex;
+        // position: absolute;
+        flex-direction: row;
+        justify-content: center;
+        float: right;
+        // border: 2px solid black;
+
+    }
+
+    .auth-options {
+        display: flex;
+        flex-direction: row;
+        // border: 3px solid rgb(0, 0, 0);    
+        color: black;
+        text-decoration: none;
+        margin: 10px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 900;
+        font-size: 17px;
+        height: 20px;
+        padding-bottom: 2px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0);
+
+    }
+    .auth-options:hover {
+        
+        padding-bottom: 2px;
+        border-bottom: 2px solid rgba(0, 179, 60, 0.911);
+        // line-height: 23px;
+    }
+
+
+}

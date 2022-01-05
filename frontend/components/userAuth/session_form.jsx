@@ -26,6 +26,11 @@ class SessionForm extends React.Component {
     });
   }
 
+
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
@@ -74,7 +79,7 @@ class SessionForm extends React.Component {
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
-        <button className="demo-login" onClick={this.handleDemoAccount}>Demo User Login</button>
+        <button className="demo-submit" onClick={this.handleDemoAccount}>Demo User Login</button>
       </div>
     );
   }

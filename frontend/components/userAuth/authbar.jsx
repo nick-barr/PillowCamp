@@ -4,21 +4,20 @@ import { Link } from 'react-router-dom';
 const AuthBar = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
-      <Link to="/login">Login</Link>
+      <Link to="/login" className="auth-options">Login</Link>
       <br />
-      <Link to="/signup">Sign up!</Link>
+      <Link to="/signup" className="auth-options">Sign up!</Link>
     </nav>
   );
   const personalGreeting = () => (
-    // <div>
-    <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.username}!</h2>
-      <Link to="/reservations">Trips</Link>
-      <Link to="/favorites">Favorites</Link>
-      <Link to="/messages">Inbox</Link>
+    <nav className="user-links">
+      {/* <h2 className="user-greet">Hi, {currentUser.username}!</h2> */}
+      <h2 className="user-greet"></h2>
+        <Link to="/reservations" className="auth-options">Trips</Link>
+        <Link to="/favorites" className="auth-options">Favorites</Link>
+        <Link to="/messages" className="auth-options">Inbox</Link>
       <button className="header-button" onClick={logout}>Log Out</button>
-    </hgroup>
-    // </div>
+    </nav>
   );
 
   return currentUser ? personalGreeting() : sessionLinks();
