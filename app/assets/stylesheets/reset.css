@@ -43,4 +43,8 @@ table {
 	border-spacing: 0;
 }
 
+a {
+	text-decoration: none;
+}
+
 /* courtest of https://meyerweb.com/eric/tools/css/reset/ with minor adjustments */

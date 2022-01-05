@@ -11,19 +11,22 @@ class NavBar extends React.Component{
     render(){
         if (this.props.location.pathname === '/') {
             return(
-                <div className="nav-bar">
-                    <div className='logo'>
-                        <NavLink to='/'><img src={window.logo} className="logo" /></NavLink>
-                    </div>
-                    
-                    <div className='auth-bar'>
-                        <AuthBarContainer />
+                <div className='super-nav'>
+                    <div className="nav-bar">
+                        <div className='logo'>
+                            <NavLink to='/'><img src={window.logo} className="logo" /></NavLink>
+                        </div>
+                        
+                        <div className='auth-bar'>
+                            <AuthBarContainer />
+                        </div>
                     </div>
                 </div>
                 )
 
         } else {
             return(
+            // <div class='super-nav'>
             <div className="nav-bar">
                 <div className='logo'>  
                     <NavLink to='/'><img src={window.logo} className="logo" /></NavLink>
@@ -38,6 +41,7 @@ class NavBar extends React.Component{
                     <AuthBarContainer />
                 </div>
             </div>
+            // </div>
             )
         }
     }

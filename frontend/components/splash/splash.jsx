@@ -41,8 +41,41 @@ class Splash extends React.Component {
                 <div className="splash-spot-list">
                     <SpotListContainer />
                 </div>
+
+                <div className='splash-footer'>
+                    <ul>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                    </ul>
+
+                    <ul>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                    </ul>
+
+                    <ul>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                    </ul>
+
+                    <ul>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                        <li>Friendly Reminder... <br/>Please go outside once in a while!</li>
+                    </ul>
+                </div>
                 
+                <div className='splash-last-foot'></div>
             </div>
+
+
         )
     }
 };

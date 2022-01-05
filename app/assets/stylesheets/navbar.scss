@@ -1,14 +1,41 @@
+.super-nav {
+    // display: flex;
+    // justify-content: center;
+    background-color: rgb(243, 242, 239);
+    // border: 3px solid rgb(207, 0, 0);
+    // z-index: 101;
+    height: 85px;
+    // position:relative;
+    // top:0;
+    // z-index: 100;
+    width: 100%;
+}
+
 .nav-bar { 
     display: flex;
     flex-direction: row;
-    max-width: 1100px;
+    width: 80%;
+    // max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between;
     padding-top: 20px;
+    padding-bottom: 15px;
+    // padding-left: 150px;
+    // padding-right: 150px;
+    padding-left: 10%;
+    padding-right: 10%;
     height: 50px;
+    align-items: center;   
+	background-color: rgb(243, 242, 239);
+    box-sizing: content-box;
+    // left: 50%;
+    // right: 50%;
+    
     // border: 3px solid rgb(0, 0, 0);
-    align-items: center;    
+    position: fixed;
+    top: 0px;
+    z-index: 100;
 
 
     .search-bar {
