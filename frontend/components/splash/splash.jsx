@@ -72,7 +72,16 @@ class Splash extends React.Component {
                     </ul>
                 </div>
                 
-                <div className='splash-last-foot'></div>
+                <div className='splash-last-foot'>
+                    <a href="https://www.linkedin.com/in/nicholas-barrameda/">
+                        <img alt="MyLinkedIn" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                        width="50" height="50" />
+                    </a>
+                    <a href="https://github.com/nick-barr/">
+                        <img alt="MyGitHub" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                        width="50" height="50" />
+                    </a>
+                </div>
             </div>
 
 
