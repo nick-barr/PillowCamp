@@ -5,7 +5,7 @@
     justify-content:space-between;
 }
 
-.splash-content{ margin-top:89px;}
+// .splash-content{ margin-top:89px;}
 
 .splash-container{ 
     width: 100%;
@@ -151,7 +151,7 @@
     }
     ul .spot-list-card:hover {
         margin-top: -20px;
-        // box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.274);
+        box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.274);
     }
 
     li:nth-child(2) {

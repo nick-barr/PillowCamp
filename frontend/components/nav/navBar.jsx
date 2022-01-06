@@ -34,7 +34,7 @@ class NavBar extends React.Component{
                 
                 <div className='search-bar'>
                     {/* <SearchBarContainer /> */}
-                    Add a new search bar
+                    {/* Add a new search bar */}
                 </div>
                 
                 <div className='auth-bar'>

@@ -26,10 +26,6 @@ const Home = () => {
                     <Route exact path="/" component={splashContainer} />
                 </Switch>
 
-
-            <div>
-                <p>Recommended searches</p>    
-            </div>
         </div>
     )
 }

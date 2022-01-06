@@ -1,0 +1,107 @@
+.login-background {
+    // position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+
+    .login-form-container{
+        // border: 2px solid black;
+        left:50%;
+        right:50%;
+        margin-top: 150px;
+        margin-bottom: 110px;
+        height:500px;
+        width: 400px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        text-align: center;
+    }
+}
+
+.login-form-box > * {
+       padding-top: 5px;
+    padding-bottom: 5px;
+}
+.login-input {
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    height:53px;
+    width:360px;
+}
+
+.login-input[type="text"] {padding-left: 10px; margin-top: 15px;}
+.login-input[type="password"] {padding-left: 10px; margin-bottom: 30px;}
+
+.login-form-box {
+font-family: 'Nunito', sans-serif;
+margin: 5px;
+
+    .login-head {
+        font-weight: 900;
+        font-size: 35px;
+        color: rgb(53, 53, 53);
+    }
+    .login-sub-head {
+        font-weight: 400;
+        font-size: 19px;
+        color: rgb(102, 102, 102);
+        margin-bottom: 20px;
+    }
+
+    hr {border-top: 1px solid grey; margin-bottom: 25px; padding: 0px;}
+}
+
+// .demo-submit <#sess-button{    background-color: rgb(32, 32, 32);
+// }
+
+#sess-button {
+    background-color: rgb(86, 211, 144);
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 2px 2px;
+    height:53px;
+    width:380px;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+#sess-button:hover {
+    box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.274);
+}
+
+
+.form-footer {
+    margin-top: 150px;
+    background-color:rgb(121, 121, 121);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 200px;
+
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color:rgb(40,64,12);
+
+    li {
+        margin: 10px;
+    }
+}
+
+.form-last-foot {
+    background-color:rgb(0, 0, 0);
+    height: 60px;
+}
