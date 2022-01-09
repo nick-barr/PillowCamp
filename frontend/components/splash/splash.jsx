@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import SpotListContainer from '../spotLists/spotList_container';
+import SplashListContainer from './splashList_container';
 import SearchBarContainer from '../searchBar/searchBar_container';
 
 class Splash extends React.Component {
@@ -39,7 +39,7 @@ class Splash extends React.Component {
                 </div>
 
                 <div className="splash-spot-list">
-                    <SpotListContainer />
+                    <SplashListContainer />
                 </div>
 
                 <div className='splash-footer'>

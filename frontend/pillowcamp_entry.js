@@ -4,7 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import * as SessionAPI from './util/session_util'
 import * as SessionActions from './actions/session_actions'
-import mSTP from './components/userAuth/authbar_container'
+import * as SpotActions from './actions/spot_actions'
 
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.login = SessionActions.login
     window.logout = SessionActions.logout
     window.signupthunk = SessionActions.signup
+    
+    window.spots = SpotActions.fetchSpots
+    window.spot = SpotActions.fetchSpot
+    
     
     // window.mSTP = mSTP
     
