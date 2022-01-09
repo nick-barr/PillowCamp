@@ -1,18 +1,46 @@
+.spot-index-container{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(15, 199, 255);
+    width: 90%;
+    
+    ul {
+        width: 30%;
+    }
+    
+    .map-container {
+        // max-width: 500px;
+        width: 60%;
+        border: 1px solid rgb(255, 0, 242);
+    }
+}    
+    
 .spot-index-box {
-    border: 1px solid black;
-    max-height: 700px;
+    border: 1px solid rgb(0, 155, 83);
+    min-height: 500px;
     max-width: 700px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1;
 
     li {
+        display: flex;
+        flex-direction: row;
         border: 1px solid red;
     }
 }
 
 .spot-index-image {
-    border: 1px solid black;
-    max-height: 400px;
-    max-width: 400px;
+    // border: 1px solid black;
+    // max-height: 200px;
+    // max-width: 400px;
+    // overflow: hidden;
+
+
+    width: 400px; /* width of container */
+    height: 250px; /* height of container */
+    object-fit: cover;
+    object-position: 20% 50%; /* try 20px 10px */ 
 }

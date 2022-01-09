@@ -25,6 +25,7 @@ const Home = () => {
                     <Route path="/lists/cozycottages" component={SpotDetail} />
                     <Route path="/lists/bywater" component={spotIndex_container} />
                     <Route path="/search" component={spotIndex_container} />
+                    <Route path="/spot/$`spotId" component={spotIndex_container} />
                     <Route exact path="/" component={splashContainer} />
                 </Switch>
 

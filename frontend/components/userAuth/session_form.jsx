@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../footer/footer'
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -62,8 +63,7 @@ class SessionForm extends React.Component {
             <button className="session-submit" id="sess-button" onClick={this.handleDemoAccount}>Demo Account</button>
 
             <div>{this.renderErrors()}</div>
-            {/* <div className="login-form"> */}
-              {/* <br/> */}
+
                 <input type="text"
                   value={this.state.username}
                   onChange={this.update('username')}
@@ -78,10 +78,12 @@ class SessionForm extends React.Component {
                   placeholder='Enter password'
                 />
               <br/>
+
               <input className="session-submit" id="sess-button" type="submit" value={this.props.formType} />
+              
               <br /><br />
               <hr />
-            {/* </div> */}
+              
           </form>
         </div>
       </div>
