@@ -32,7 +32,7 @@ class NavBar extends React.Component{
                     <NavLink to='/'><img src={window.logo} className="logo" /></NavLink>
                 </div>
                 
-                <div className='search-bar'>
+                <div className='search-bar-2'>
                     {/* <SearchBarContainer /> */}
                     {/* Add a new search bar */}
                 </div>

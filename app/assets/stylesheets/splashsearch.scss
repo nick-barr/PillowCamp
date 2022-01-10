@@ -1,0 +1,91 @@
+.search-bar {
+    // position:absolute;
+    left: 0; 
+    right: 0; 
+    margin-top: 47px;
+    margin-left: auto; 
+    margin-right: auto; 
+    // width: 1px; /* Need a specific value to work */
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1040px;
+    width: 1040px;
+    height: 107px;
+    left: 270px;
+    top: 395px;
+    z-index: 30;
+    background: #F3F2EE;
+    border: 0.5px solid #E5ECD9;
+    box-sizing: border-box;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+
+    // border: 2.5px solid black;
+
+}
+
+.search-form{
+    display: flex;
+    align-items: center;
+    // justify-content: space-around;
+    margin-top: 15px;
+    max-width: 1000px;
+    
+    input {
+        height:42px;
+        border-radius: 30px;
+        border-style: none;
+        font-size: 15px;
+
+    }
+    select {
+        height:42px;
+        width:50px;
+        border-radius: 30px;
+        border-style: none;
+        text-align-last:center;
+
+    }
+    
+    input[type="date"] {
+        text-align-last:center;
+        width:160px;
+    }
+
+    input[type="text"] {
+        width:300px;
+        padding-left: 15px;
+    }
+
+
+    label {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 900;
+        font-size: 13px;
+        position: relative;
+        top: -38px;
+        left: 60px;
+        width: 100px;
+    }
+
+    
+    input .search-button {
+        /* position: absolute; */
+        position: relative;
+        width: 36px;
+        height: 36px;
+        top: 10px;
+        left: 60px;
+        /* left: 1171px;
+        top: 440px; */
+    
+        border: 2.5px solid red;
+
+    }
+}

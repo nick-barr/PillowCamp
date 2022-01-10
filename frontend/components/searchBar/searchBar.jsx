@@ -1,5 +1,5 @@
 import React from 'react';
-// import SearchButton from '../../../app/assets/images/searchbutton'
+import { FaFonticons } from 'react-icons/fa';
 
 class SearchBar extends React.Component{
     constructor(props){
@@ -17,13 +17,13 @@ class SearchBar extends React.Component{
             <div className='search-bar'>
                 <form className ='search-form' onSubmit={this.handleSubmit}>
                     <label className='search-dest'>WHERE TO?</label>
-                    <input type="text" value=''/>
+                    <input type="text" value='' placeholder='Enter a destination' />
                     <label className='search-date-s'>START DATE</label>
                     <input type="date" value=''/>
-                    <label className='search-dest-e'>END DATE</label>
+                    <label className='search-date-e'>END DATE</label>
                     <input type="date" value=''/>
                     <label className='search-guests'>GUESTS</label>
-                    <select name="guests" id="guests">
+                    <select name="guests" id="guests" placeholder='Add Guests'>
                         <option value="1">   1   </option>
                         <option value="2">   2   </option>
                         <option value="3">   3   </option>

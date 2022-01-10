@@ -1,12 +1,17 @@
 header {
+    height: 85px;
+    z-index: 1000;
+    width: 100%;
+}
+.super-nav {
     // display: flex;
     // justify-content: center;
     background-color: rgb(243, 242, 239);
     z-index: 101;
     height: 85px;
     position:fixed;
+    z-index: 100;
     // top:0;
-    z-index: 1000;
     width: 100%;
     // border: 3px solid rgb(207, 0, 0);
 }

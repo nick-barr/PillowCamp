@@ -1,6 +1,9 @@
 import React from 'react';
 import {Redirect, useHistory} from 'react-router-dom'
 import Maps from '../maps/maps'
+import { FaThumbsUp } from 'react-icons/fa'
+// import { FaArrowAltCircleRight } from 'react-icons/fa'
+// import { FaSwimmer } from 'react-icons/fa'
 
 class SpotIndex extends React.Component{
     constructor(props){
@@ -11,6 +14,7 @@ class SpotIndex extends React.Component{
     }
 
     componentDidMount(){   
+        window.scrollTo(0, 0);
         this.props.fetchSpots()
     }
 
@@ -31,22 +35,34 @@ class SpotIndex extends React.Component{
         }
 // debugger
         return(
+            <div className='spot-index-grand-container'>
             <div className='spot-index-container'>
                 <br />
                 <ul className='spot-index-box'>
                     {this.props.spots.map(spot=>(
-                        <li onClick={() => this.setState({redirect: '/login'})}>
+                        <div>
+                        
+                        <li onClick={() => this.setState({redirect: `/spots/${spot.id}`})}>
                             {/* <img className='spot-index-image' src={spot.photoUrl}/> */}
                             <img src={window.defaultspot} className='spot-index-image'/>
                             <div className='spot-index-stuff'>
-                                <p>{spot.id}</p>
-                                <p>{spot.title}</p>
-                                <p><b>$ {spot.price}</b> / night</p>
+                                <div className='main-info'>
+                                    <p className='rating'><FaThumbsUp /> 100% recommended</p>
+                                    <p className='title'>{spot.title}</p>
+                                </div>
+                                <div className='cost'>
+                                    <p className='price'>$ {spot.price}</p>
+                                    <p className='night'>/ night</p>
+                                </div>
                             </div>
                         </li>
+                        
+                        <hr className='spotIndex-hr' />
+                        </div>
                     ))}
                 </ul>
                 <Maps />
+            </div>
             </div>
         )
     }

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import SplashListContainer from './splashList_container';
 import SearchBarContainer from '../searchBar/searchBar_container';
-import Footer from '../footer/footer'
 
 class Splash extends React.Component {
     constructor(props) {
@@ -38,7 +37,6 @@ class Splash extends React.Component {
                     <SplashListContainer />
                 </div>
 
-                <Footer />
             </div>
 
 
