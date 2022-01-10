@@ -3,7 +3,13 @@ import { logout } from '../../actions/session_actions';
 import SearchBar from './searchBar';
 
 const mSTP = ({ session, entities: { users } }) => ({
-  currentUser: users[session.id]
+  currentUser: users[session.id],
+  search: {
+    destination: '',
+    dateS: '',
+    dateE: '',
+    guests: ''
+  }
 });
 
 const mDTP = dispatch => ({

@@ -3,7 +3,7 @@ import {Redirect, useHistory} from 'react-router-dom'
 import Maps from '../maps/maps'
 import { FaThumbsUp } from 'react-icons/fa'
 // import { FaArrowAltCircleRight } from 'react-icons/fa'
-// import { FaSwimmer } from 'react-icons/fa'
+import { FaSwimmer } from 'react-icons/fa'
 
 class SpotIndex extends React.Component{
     constructor(props){
@@ -42,7 +42,7 @@ class SpotIndex extends React.Component{
                     {this.props.spots.map(spot=>(
                         <div>
                         
-                        <li onClick={() => this.setState({redirect: `/spots/${spot.id}`})}>
+                        <li onClick={() => this.setState({redirect: `/spot/${spot.id}`})}>
                             {/* <img className='spot-index-image' src={spot.photoUrl}/> */}
                             <img src={window.defaultspot} className='spot-index-image'/>
                             <div className='spot-index-stuff'>
@@ -52,7 +52,7 @@ class SpotIndex extends React.Component{
                                 </div>
                                 <div className='cost'>
                                     <p className='price'>$ {spot.price}</p>
-                                    <p className='night'>/ night</p>
+                                    <p className='night'> / night</p>
                                 </div>
                             </div>
                         </li>

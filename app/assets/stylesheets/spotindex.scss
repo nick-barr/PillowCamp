@@ -8,23 +8,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border: 1px solid rgb(15, 199, 255);
     width: 100%;
-    // width: 1000px;
     background-color: rgb(253, 253, 253);
     height: auto;
-
     justify-content: center;
+    
+    // border: 1px solid rgb(15, 199, 255);
     
     ul {
         width: 100%;
     }
     
     .map-container {
+        width: 70%;
         // max-width: 500px;
         // width: 60%;
         // border: 1px solid rgb(255, 0, 242);
-        width: 70%;
     }
     
     .google-map {
@@ -36,33 +35,33 @@
         // height: 100%;
         height: 100vh;
         width: 100%;
-        // border: 1px solid rgb(255, 0, 242);
         border-radius: 0px;
-
+        // border: 1px solid rgb(255, 0, 242);
+        
     }
 }    
     
 .spot-index-box {
-    border: 1px solid rgb(0, 155, 83);
     min-height: 500px;
     max-width: 700px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    z-index: 1;
+    // z-index: 1;
+    // border: 1px solid rgb(0, 155, 83);
 
     li {
         display: flex;
         flex-direction: row;
-        border: 1px solid red;
         width: 670px;
         margin: 10px;
+        // border: 1px solid red;
     }
 
     .spotIndex-hr {
         margin-top: 15px;
-        border: 1px solid lightgray;
+        // border: 1px solid lightgray;
     } 
 }
 
@@ -76,11 +75,11 @@
 .spot-index-stuff{
     display: flex;
     padding: 15px;
-    border: 1px solid blue;
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
-
+    // border: 1px solid blue;
+    
     .main-info {
         .rating {
             font-size: 12px;
@@ -92,7 +91,7 @@
         .title {
             font-size: 20px;
             font-weight: 800;
-            border: 1px solid blue;
+            // border: 1px solid blue;
         }
     }
 
@@ -102,17 +101,18 @@
         flex-direction: row;
         .price {
             position: relative;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 700;
             right: -1px;
-            border: 1px solid blue;
+            // border: 1px solid blue;
         }
         .night {
             position: relative;
             font-size: 16px;
             font-weight: 500;
             right: -1px;
-            border: 1px solid blue;
+            margin-left: 5px;
+            // border: 1px solid blue;
         }
     }
 }
