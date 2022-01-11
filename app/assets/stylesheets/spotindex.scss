@@ -4,31 +4,34 @@
     background-color: rgb(253, 253, 253);
 }
 
-    .spot-index-container{
+.spot-index-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     background-color: rgb(253, 253, 253);
     height: auto;
     justify-content: center;
-    
-    // border: 1px solid rgb(15, 199, 255);
-    
+    margin-left: 20px;
+    // max-width: 1800px;
+
+    // border: 10px solid rgb(15, 199, 255);
+
     ul {
-        width: 100%;
+        // border: 1px solid rgb(35, 255, 15);
+        width: 720px;
+
     }
-    
+
     .map-container {
         width: 70%;
         // max-width: 500px;
-        // width: 60%;
         // border: 1px solid rgb(255, 0, 242);
     }
-    
+
     .google-map {
         // max-width: 500px;
-        position: sticky;
+        // position: absolute;
         top: 0;
         object-fit: cover;
         overflow: hidden;
@@ -43,7 +46,7 @@
     
 .spot-index-box {
     min-height: 500px;
-    max-width: 700px;
+    max-width: 650px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -54,14 +57,15 @@
     li {
         display: flex;
         flex-direction: row;
-        width: 670px;
+        width: 630px;
         margin: 10px;
         // border: 1px solid red;
     }
 
     .spotIndex-hr {
         margin-top: 15px;
-        // border: 1px solid lightgray;
+        margin-right: 25px;
+        border: 1px solid lightgray;
     } 
 }
 
@@ -70,11 +74,13 @@
     height: 200px;
     object-fit: cover;
     object-position: 20% 50%; 
+    border-radius: 15px;
 }
 
 .spot-index-stuff{
     display: flex;
-    padding: 15px;
+    padding: 11px;
+    padding-bottom: 3px;
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
@@ -92,6 +98,17 @@
             font-size: 20px;
             font-weight: 800;
             // border: 1px solid blue;
+            margin-top: 7px;
+        }
+
+        .index-lodging {
+            display: flex;
+            margin-right: 20px;
+            color:rgb(146, 146, 146);
+            font-size: 14px;
+            flex-wrap: wrap;
+            margin-top: 7px;
+
         }
     }
 

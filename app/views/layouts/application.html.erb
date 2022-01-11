@@ -22,7 +22,7 @@
       window.mist = "<%= image_url('mist.jpg') %>";
       window.tent = "<%= image_url('tent.jpg') %>";
       
-      window.defaultspot = "<%= image_url('spots/defaultspotphoto.jpg') %>";
+      window.defaultspot = "<%= image_url('spots/farmtable.jpg') %>";
       window.defaultmap = "<%= image_url('defaultMap.jpg') %>";
       
       window.cottage = "<%= image_url('cottage.jpg') %>";
@@ -33,10 +33,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Nunito:wght@300;400;600;700&family=Roboto&display=swap" rel="stylesheet">
 
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google_maps_api_key}" %>
+    <%= stylesheet_link_tag 'application', media: 'all' %> <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+
     <%= yield %>
   </body>
 </html>

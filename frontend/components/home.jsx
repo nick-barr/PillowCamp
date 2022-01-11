@@ -10,6 +10,7 @@ import SpotDetail from './spotLists/spotDetail';
 import spotIndex_container from './spotLists/spotIndex_container';
 import spotShow_container from './spotLists/spotShow_container'
 import splashContainer from './splash/splash_container'
+import testmap from './maps/testmap';
 
 import Footer from './footer/footer'
 
@@ -26,9 +27,10 @@ const Home = () => {
                     <AuthRoute exact path="/signup" component={signupContainer} />
                     <Route path="/lists/widespaces" component={SpotDetail} />
                     <Route path="/lists/cozycottages" component={SpotDetail} />
-                    <Route path="/lists/bywater" component={spotIndex_container} />
+                    <Route path="/lists/bywater" component={SpotDetail} />
                     <Route path="/search" component={spotIndex_container} />
                     <Route path="/spot/:spotId" component={spotShow_container} />
+                    <Route path="/tm" component={testmap} />
                     <Route exact path="/" component={splashContainer} />
                 </Switch>
 

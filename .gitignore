@@ -34,3 +34,5 @@ bundle.js*
 .DS_Store
 npm-debug.log
 /possible_garbage
+# Ignore application configuration
+/config/application.yml

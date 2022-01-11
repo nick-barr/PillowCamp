@@ -1,9 +1,12 @@
 import React from 'react';
+import ReservationForm from '../reservation/reservation_container'
+import Reviews from '../reviews/reviews'
+import Map from '../maps/maps'
+
 
 class SpotShow extends React.Component{
     constructor(props){
         super(props)
-        this.propsShower = this.propsShower.bind(this);
         this.state = {
             loading: true
         }
@@ -12,43 +15,47 @@ class SpotShow extends React.Component{
     componentDidMount(){
         this.props.fetchSpot(this.props.match.params.spotId)
             .then(() => {this.setState({ loading: false})})
-        debugger
+        // debugger
     }
     
-    propsShower(){
-        console.log(this.props.spot.title)
-    }
-
     render() {
-        debugger
+        // debugger
         if (this.state.loading) return (<h1> Loading </h1>);
 
         return(
             <div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />  
-                <br />
-                <br />
-                <br />
-                <h1>{this.props.spot.title}</h1>
-                <br />
-                <br />
-                <br />
-                <br />
-                Hey.
-                Hey.
-                Hey.
-                Hey.
-                Hey.
-                <button onClick={this.propsShower}></button>
-                Hey.
-                Hey.
-                Hey.
-                Hey.
+                <div className='show-page'>
+                    
+                    {/* <img src={window.defaultspot} className='spot-index-image'/> */}
+                    <img src={this.props.spot.photoUrl} className='spot-index-image'/>
+                
+                    <div className='show-container'>
+                        
+                        <div className='show-details'>
+                            <p>{this.props.spot.details}</p>
+                            <p className='title'>{this.props.spot.title}</p>
+                            <p className='description'>{this.props.spot.description}</p>
+                            <div className='show-offers'>
+                                <p>{this.props.spot.lodging}</p>
+                                <p>{this.props.spot.essentials}</p>
+                                <p>{this.props.spot.amenities}</p>
+                            </div>
+                        </div>
+
+                        <Reviews />
+                
+                    </div>
+
+                    <div className='res-form-container'>
+                        <ReservationForm />
+                    </div>
+                
+                </div>
+                
+                <div className='show-map-container'>
+                    <Map className='show-map'/>
+                </div>
+                
             </div>
         )
     }
