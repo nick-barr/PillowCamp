@@ -1,13 +1,27 @@
 import React from 'react';
 
-const Reviews = () => {
-    return(
-        <div>
-            <h1>Reviews</h1>
-            <h2>Best place I've ever stayed in my life</h2>
-            <p>Felt recharged after. Firewood was readily avaialble. Birds would bring me towels and bears would help me scrub my back. Basically Snow White level adventure.</p>
-        </div>
-    )
+class Reviews extends React.Component{
+    constructor(props){
+        super(props)
+    }
+
+    render(){
+        // debugger
+        return(
+            <div className='user-review-container'>
+                <h1>Reviews</h1>
+                {this.props.reviews.map(review =>
+                <div className='user-review'>
+                    <img src="https://sharespost-sharex-production.s3.us-west-2.amazonaws.com/uploads/issuer/100001872/logo/hipcamp-logo.png" alt="" />
+                        <div className='review-content'>
+                            <h2>{review.user}</h2>
+                            <h3>{review.body}</h3>
+                        </div>
+                </div>
+                )}
+            </div>
+        )
+    }
 }
 
 export default Reviews;

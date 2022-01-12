@@ -14,7 +14,7 @@ class SpotShow extends React.Component{
 
     componentDidMount(){
         this.props.fetchSpot(this.props.match.params.spotId)
-            .then(() => {this.setState({ loading: false})})
+        .then(() => {this.setState({ loading: false})})
         // debugger
     }
     
@@ -26,8 +26,8 @@ class SpotShow extends React.Component{
             <div>
                 <div className='show-page'>
                     
-                    {/* <img src={window.defaultspot} className='spot-index-image'/> */}
-                    <img src={this.props.spot.photoUrl} className='spot-index-image'/>
+                    <img src={window.defaultspot} className='spot-index-image'/>
+                    {/* <img src={this.props.spot.photoUrl} className='spot-index-image'/> */}
                 
                     <div className='show-container'>
                         
@@ -42,7 +42,7 @@ class SpotShow extends React.Component{
                             </div>
                         </div>
 
-                        <Reviews />
+                        <Reviews reviews={this.props.spot.reviews}/>
                 
                     </div>
 
@@ -53,7 +53,8 @@ class SpotShow extends React.Component{
                 </div>
                 
                 <div className='show-map-container'>
-                    <Map className='show-map'/>
+                    {/* <Map className='show-map' spot={this.props.spot}/> */}
+                    <Map className='show-map' spots={[this.props.spot]}/>
                 </div>
                 
             </div>

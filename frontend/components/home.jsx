@@ -20,7 +20,8 @@ const Home = () => {
     return(
         <div>   
             <header>
-                <Route path="/" component={NavBar} />
+                {/* <Route path="/" component={NavBar} /> */}
+                <NavBar />
             </header>
                 <Switch>
                     <AuthRoute exact path="/login" component={loginContainer} />
