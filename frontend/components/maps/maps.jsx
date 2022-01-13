@@ -1,9 +1,10 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 const icon = {
     url: "https://cdn-icons-png.flaticon.com/512/3313/3313260.png",
     scaledSize: new google.maps.Size(70,70)
-    
+
 };
 
 let mark
@@ -73,4 +74,4 @@ class Maps extends React.Component{
     }
 }
 
-export default Maps;
+export default withRouter(Maps);

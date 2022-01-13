@@ -17,7 +17,7 @@ User.create!(username: 'Animal Lover', password: 'password1')
 User.create!(username: 'Bird Watcher', password: 'password1') 
 User.create!(username: 'test_user1', password: 'password1') 
 
-
+# north
 Spot.create!(
     title: 'Modern Geo-Dome', 
     description: 'Come escape to one of our Wildernest Geo-Domes. The Wildernest is high above a beautiful ravine. Nestled in native blueberry bushes and surrounded by pine trees, this Geo-Dome has views down the Palmaghatt Ravine to the Palmaghatt Kill Stream from its wide windows and beautiful deck.', 
@@ -27,7 +27,9 @@ Spot.create!(
     price: 120,
     lodging: ['Canvas tent', 'Up to 2 guests per site', 'Short walk'],
     essentials: ['Campfires allowed', 'Toilet available', 'Pets allowed'], 
-    amenities: ['Potable water available', 'Kitchen available', 'Showers available']
+    amenities: ['Potable water available', 'Kitchen available', 'Showers available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'northeast'
 )
 Spot.create!(
     title: 'Franconia Forest', 
@@ -38,7 +40,9 @@ Spot.create!(
     price: 80, 
     lodging: ['Campground', 'Up to 6 guests per site', 'Parking at listing'], 
     essentials: ['Campfires allowed', 'Pets allowed', 'Toilet available'], 
-    amenities: ['Bins available', 'Picnic table available', 'Potable water available']
+    amenities: ['Bins available', 'Picnic table available', 'Potable water available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'northeast'
 )
 Spot.create!(
     title: 'Cozy Farm Yurt', 
@@ -49,7 +53,9 @@ Spot.create!(
     price: 185, 
     lodging: ['Canvas tent', 'Up to 2 guests per site', 'Short walk'], 
     essentials: ['Campfires allowed', 'Pets allowed', 'Toilet available'], 
-    amenities: ['Potable water available', 'Toilet available', 'Wifi available']
+    amenities: ['Potable water available', 'Toilet available', 'Wifi available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'northeast'
 )
 Spot.create!(
     title: 'Breathtaking Sunset View Hilltop', 
@@ -60,7 +66,9 @@ Spot.create!(
     price: 115,
     lodging: ['Campground', 'Up to 6 guests per site', 'Parking at listing'], 
     essentials: ['Campfires allowed', 'Pets allowed', 'Toilet available'], 
-    amenities: ['Picnic table available', 'Bins available', 'Showers available']
+    amenities: ['Picnic table available', 'Bins available', 'Showers available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'northeast'
 )
 Spot.create!(
     title: 'Tiny Mountain Glamphouse', 
@@ -71,7 +79,143 @@ Spot.create!(
     price: 85, 
     lodging: ['Cabin', 'Up to 9 guests per site', 'Park at listing'], 
     essentials: ['Campfires allowed', 'Toilet available', 'Pets allowed'], 
-    amenities: ['Potable water available', 'Wifi available', 'Showers available']
+    amenities: ['Potable water available', 'Wifi available', 'Showers available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'northeast'
+)
+
+# west
+Spot.create!(
+    title: 'Modern Geo-Dome', 
+    description: 'Come escape to one of our Wildernest Geo-Domes. The Wildernest is high above a beautiful ravine. Nestled in native blueberry bushes and surrounded by pine trees, this Geo-Dome has views down the Palmaghatt Ravine to the Palmaghatt Kill Stream from its wide windows and beautiful deck.', 
+    details: 'United States > New York',
+    latitude: 47.065899741406064, 
+    longitude: -122.85218082743062,
+    price: 120,
+    lodging: ['Canvas tent', 'Up to 2 guests per site', 'Short walk'],
+    essentials: ['Campfires allowed', 'Toilet available', 'Pets allowed'], 
+    amenities: ['Potable water available', 'Kitchen available', 'Showers available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'west'
+)
+Spot.create!(
+    title: 'Franconia Forest', 
+    description: 'Our site is just up the road from some of the most famous hikes, overlooks, swimming holes, formations, and ski resorts in the western White Mountains and has among the most scenic drives in America.',
+    details: 'United States > New York', 
+    latitude: 45.53926974110929, 
+    longitude: -123.16158001054815,
+    price: 80, 
+    lodging: ['Campground', 'Up to 6 guests per site', 'Parking at listing'], 
+    essentials: ['Campfires allowed', 'Pets allowed', 'Toilet available'], 
+    amenities: ['Bins available', 'Picnic table available', 'Potable water available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'west'
+)
+Spot.create!(
+    title: 'Cozy Farm Yurt', 
+    description: 'The Outlier Inn is a bucolic 12-acre farm in New York state’s southern Catskill mountains, 90 miles from NYC. The Inn offers a peaceful and inspiring respite from life in the Big City. We have sheep, goats, alpacas, and chickens which are accessible to guests!',
+    details: 'United States > New York', 
+    latitude: 41.40390911127015, 
+    longitude: -111.82430994345582,
+    price: 185, 
+    lodging: ['Canvas tent', 'Up to 2 guests per site', 'Short walk'], 
+    essentials: ['Campfires allowed', 'Pets allowed', 'Toilet available'], 
+    amenities: ['Potable water available', 'Toilet available', 'Wifi available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'west'
+)
+Spot.create!(
+    title: 'Breathtaking Sunset View Hilltop', 
+    description: 'Breathtaking getaway on a Small beautiful eco friendly family farm. Beautiful views of horses and wild life. Camp located on a huge green grass field. Central located in the Hudson valley. Minutes from biking and hikingt rails located along the Hudson River.',
+    details: 'United States > New York', 
+    latitude: 44.47682738408476, 
+    longitude: -111.2718114021745, 
+    price: 115,
+    lodging: ['Campground', 'Up to 6 guests per site', 'Parking at listing'], 
+    essentials: ['Campfires allowed', 'Pets allowed', 'Toilet available'], 
+    amenities: ['Picnic table available', 'Bins available', 'Showers available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'west'
+)
+Spot.create!(
+    title: 'Tiny Mountain Glamphouse', 
+    description: 'A unique cozy loft nested cozily in the woods next to a creek. This spot is equipped with a nice stone fire ring to really enjoy the outdoors. Also nearby are  logging roads that allow you to hike the Ripshin Mountains.',
+    details: 'United States > New York', 
+    latitude: 47.87259663668736, 
+    longitude: -115.1172012494924,
+    price: 85, 
+    lodging: ['Cabin', 'Up to 9 guests per site', 'Park at listing'], 
+    essentials: ['Campfires allowed', 'Toilet available', 'Pets allowed'], 
+    amenities: ['Potable water available', 'Wifi available', 'Showers available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'west'
+)
+
+#south
+Spot.create!(
+    title: 'Modern Geo-Dome', 
+    description: 'Come escape to one of our Wildernest Geo-Domes. The Wildernest is high above a beautiful ravine. Nestled in native blueberry bushes and surrounded by pine trees, this Geo-Dome has views down the Palmaghatt Ravine to the Palmaghatt Kill Stream from its wide windows and beautiful deck.', 
+    details: 'United States > New York',
+    latitude: 33.29150768911002, 
+    longitude: -97.88058362863072,
+    price: 120,
+    lodging: ['Canvas tent', 'Up to 2 guests per site', 'Short walk'],
+    essentials: ['Campfires allowed', 'Toilet available', 'Pets allowed'], 
+    amenities: ['Potable water available', 'Kitchen available', 'Showers available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'south'
+)
+Spot.create!(
+    title: 'Franconia Forest', 
+    description: 'Our site is just up the road from some of the most famous hikes, overlooks, swimming holes, formations, and ski resorts in the southern White Mountains and has among the most scenic drives in America.',
+    details: 'United States > New York', 
+    latitude: 29.828731080021097, 
+    longitude: -95.70529084670167,
+    price: 80, 
+    lodging: ['Campground', 'Up to 6 guests per site', 'Parking at listing'], 
+    essentials: ['Campfires allowed', 'Pets allowed', 'Toilet available'], 
+    amenities: ['Bins available', 'Picnic table available', 'Potable water available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'south'
+)
+Spot.create!(
+    title: 'Cozy Farm Yurt', 
+    description: 'The Outlier Inn is a bucolic 12-acre farm in New York state’s southern Catskill mountains, 90 miles from NYC. The Inn offers a peaceful and inspiring respite from life in the Big City. We have sheep, goats, alpacas, and chickens which are accessible to guests!',
+    details: 'United States > New York', 
+    latitude: 33.280006872346874,
+    longitude: -94.49850696254029,
+    price: 185, 
+    lodging: ['Canvas tent', 'Up to 2 guests per site', 'Short walk'], 
+    essentials: ['Campfires allowed', 'Pets allowed', 'Toilet available'], 
+    amenities: ['Potable water available', 'Toilet available', 'Wifi available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'south'
+)
+Spot.create!(
+    title: 'Breathtaking Sunset View Hilltop', 
+    description: 'Breathtaking getaway on a Small beautiful eco friendly family farm. Beautiful views of horses and wild life. Camp located on a huge green grass field. Central located in the Hudson valley. Minutes from biking and hikingt rails located along the Hudson River.',
+    details: 'United States > New York', 
+    latitude: 34.91844076628341, 
+    longitude: -85.73774342658601, 
+    price: 115,
+    lodging: ['Campground', 'Up to 6 guests per site', 'Parking at listing'], 
+    essentials: ['Campfires allowed', 'Pets allowed', 'Toilet available'], 
+    amenities: ['Picnic table available', 'Bins available', 'Showers available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'south'
+)
+Spot.create!(
+    title: 'Tiny Mountain Glamphouse', 
+    description: 'A unique cozy loft nested cozily in the woods next to a creek. This spot is equipped with a nice stone fire ring to really enjoy the outdoors. Also nearby are  logging roads that allow you to hike the Ripshin Mountains.',
+    details: 'United States > New York', 
+    latitude: 35.80336489086327, 
+    longitude: -83.96644151681453,
+    price: 85, 
+    lodging: ['Cabin', 'Up to 9 guests per site', 'Park at listing'], 
+    essentials: ['Campfires allowed', 'Toilet available', 'Pets allowed'], 
+    amenities: ['Potable water available', 'Wifi available', 'Showers available'],
+    sitetype: 'campsite openfield luxury',
+    region: 'south'
 )
 
 spot1 = Spot.find(1)
