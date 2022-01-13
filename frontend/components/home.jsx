@@ -6,7 +6,6 @@ import NavBar from './nav/navBar_container'
 
 import loginContainer from './userAuth/login_container'
 import signupContainer from './userAuth/signup_container'
-import SpotDetail from './spotLists/spotDetail';
 import spotIndex_container from './spotLists/spotIndex_container';
 import spotShow_container from './spotLists/spotShow_container'
 import splashContainer from './splash/splash_container'
@@ -25,10 +24,17 @@ const Home = () => {
                 <Switch>
                     <AuthRoute exact path="/login" component={loginContainer} />
                     <AuthRoute exact path="/signup" component={signupContainer} />
-                    <Route path="/lists/widespaces" component={SpotDetail} />
-                    <Route path="/lists/cozycottages" component={SpotDetail} />
-                    <Route path="/lists/bywater" component={SpotDetail} />
+                    
+                    <Route path="/filter/:filter" component={spotIndex_container} />
+                    <Route path="/south" component={spotIndex_container} />
+                    <Route path="/northeast" component={spotIndex_container} />
+                    <Route path="/west" component={spotIndex_container} />
+                    <Route path="/b" component={spotIndex_container} />
+                    <Route path="/luxury" component={spotIndex_container} />
+                    <Route path="/openfield" component={spotIndex_container} />
+                    
                     <Route path="/search" component={spotIndex_container} />
+                    
                     <Route path="/spot/:spotId" component={spotShow_container} />
                     <Route exact path="/" component={splashContainer} />
                 </Switch>

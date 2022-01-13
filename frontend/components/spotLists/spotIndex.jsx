@@ -3,14 +3,15 @@ import {Redirect, useHistory, Link} from 'react-router-dom'
 import Map from '../maps/maps'
 import { FaThumbsUp } from 'react-icons/fa'
 
+
+
 class SpotIndex extends React.Component{
     constructor(props){
         super(props)
         this.state = { redirect: null };
         // this.state = { redirect: null, loading: true };
-
     }
-
+    
     componentDidMount(){   
         window.scrollTo(0, 0);
         this.props.fetchSpots()
@@ -18,18 +19,23 @@ class SpotIndex extends React.Component{
     }
 
     render(){
-        // debugger
         // if (this.state.redirect) {
         //     return <Redirect to={this.state.redirect} />
         // }
-// debugger
+        let filteredSpots = []
+        if (this.props.spots.length !== 0) {
+            
+            debugger
+            filteredSpots = this.props.spots.filter(spot => 
+                spot.region === this.props.match.params.filter ||
+                spot.sitetype === this.props.match.params.filter)} 
         return(
             // <Maps className='map-test2' />
             <div className='spot-index-grand-container'>
             <div className='spot-index-container'>
                 <br />
                 <ul className='spot-index-box'>
-                    {this.props.spots.map((spot, i)=>(
+                    {filteredSpots.map((spot)=>(
                     <div className='left-set'>    
                         <Link to={`/spot/${spot.id}`}>
                         <li>
@@ -39,6 +45,7 @@ class SpotIndex extends React.Component{
                                 <div className='main-info'>
                                     <p className='rating'><FaThumbsUp /> 100% recommended</p>
                                     <p className='title'>{spot.title}</p>
+                                    <p className='index-lodging'>{spot.details}</p>
                                     <div className='index-lodging'>{spot.lodging.map(item => (
                                         <p>{item} ·&nbsp;</p>
                                     ))}</div>
@@ -54,7 +61,7 @@ class SpotIndex extends React.Component{
                     </div>
                     ))}
                 </ul>
-                <Map spots={this.props.spots}/>
+                <Map spots={filteredSpots}/>
             </div>
             </div>
         )

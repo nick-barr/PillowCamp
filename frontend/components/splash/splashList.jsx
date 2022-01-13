@@ -15,11 +15,11 @@ class SplashList extends React.Component{
     render(){
         return(
             <div className='spot-list-carousel'>
-                <h5>Discover hidden gems</h5>
+                <h5>Discover hidden gems by region</h5>
                 <ul>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'lists/south-region'}>
+                        <NavLink to={'filter/south'}>
                        
                             <p id='sun'>South</p>
                             <img src={window.rvcamper} className="photo-list"/>
@@ -28,7 +28,7 @@ class SplashList extends React.Component{
                     </li>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'lists/northeast-region'}>
+                        <NavLink to={'filter/northeast'}>
                             <p id='cozy'>Northeast</p>
                             <img src={window.treehousefancy} className="photo-list"/>
                         </NavLink>
@@ -36,7 +36,7 @@ class SplashList extends React.Component{
                     </li>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'lists/west-region'}>
+                        <NavLink to={'filter/west'}>
                             <p id='water'>West</p>
                             <img src={window.lake} className="photo-list"/>
                         </NavLink>
@@ -44,11 +44,11 @@ class SplashList extends React.Component{
                     </li>   
                 </ul>
 
-                <h5>Find your next getaway</h5>
+                <h5>Find experiences right for you</h5>
                 <ul>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'/search'}>
+                        <NavLink to={'filter/campsite'}>
                         {/* <NavLink to={'search/weekend'}> */}
                        
                             <p id='tweek'>Campgrounds</p>
@@ -58,7 +58,7 @@ class SplashList extends React.Component{
                     </li>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'/search'}>
+                        <NavLink to={'filter/luxury'}>
                         {/* <NavLink to={'search/nextweek'}> */}
                             <p id='nweek'>Wilderness</p>
                             <img src={window.mist} className="photo-list"/>
@@ -67,7 +67,7 @@ class SplashList extends React.Component{
                     </li>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'/search'}>
+                        <NavLink to={'filter/openfield'}>
                         {/* <NavLink to={'search/nextmonth'}> */}
                             <p id='tmonth'>Fancy</p>
                             <img src={window.tent} className="photo-list"/>
