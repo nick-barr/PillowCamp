@@ -1,0 +1,68 @@
+import React from 'react';
+import ReservationForm from '../reservation/reservation_container'
+import Reviews from '../reviews/reviews'
+import Map from '../maps/maps'
+
+
+class SpotShow extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            loading: true
+        }
+    }
+
+    componentDidMount(){
+        this.props.fetchSpot(this.props.match.params.spotId)
+        .then(() => {this.setState({ loading: false})})
+        // debugger
+    }
+    
+    render() {
+        // debugger
+        if (this.state.loading) return (<h1> Loading </h1>);
+
+        return(
+            <div>
+                    
+                <div className='show-page'>
+                    <div className='show-photos'>
+                        <img src={window.defaultspot} className='spot-show-image'/>
+                        <img src={window.defaultspot} className='spot-show-image'/>
+                        <img src={window.defaultspot} className='spot-show-image'/>
+                        {/* <img src={this.props.spot.photoUrl} className='spot-index-image'/> */}
+                    </div>
+
+                    <div className='show-box'>
+                        <div className='show-container'>
+                            <div className='show-details'>
+                                <p>{this.props.spot.details}</p>
+                                <p className='title'>{this.props.spot.title}</p>
+                                <p className='description'>{this.props.spot.description}</p>
+                                <div className='show-offers'>
+                                    <p>{this.props.spot.lodging}</p>
+                                    <p>{this.props.spot.essentials}</p>
+                                    <p>{this.props.spot.amenities}</p>
+                                </div>
+                            </div>
+                            <Reviews reviews={this.props.spot.reviews}/>
+                        </div>
+                        <div className='res-form-container'>
+                            <ReservationForm />
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                <div className='show-map-container'>
+                    {/* <Map className='show-map' spot={this.props.spot}/> */}
+                    <Map className='show-map' spots={[this.props.spot]}/>
+                </div>
+                
+            </div>
+        )
+    }
+}
+
+export default SpotShow;

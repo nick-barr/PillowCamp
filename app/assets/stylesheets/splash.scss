@@ -12,34 +12,6 @@
     height: 700px;
     display: flex;
     justify-content: center;
-    .search-bar {
-        // position:absolute;
-        left: 0; 
-        right: 0; 
-        margin-top: 47px;
-        margin-left: auto; 
-        margin-right: auto; 
-        // width: 1px; /* Need a specific value to work */
-        top: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 1040px;
-        height: 107px;
-        left: 270px;
-        top: 395px;
-        z-index: 30;
-        background: #F3F2EE;
-        border: 0.5px solid #E5ECD9;
-        // border: 2.5px solid red;
-        box-sizing: border-box;
-        border-radius: 50px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        max-width: 1040px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 70%;
-    }
 
     .splash-hero {
         position: absolute;
@@ -52,37 +24,12 @@
         height: 500px;
         object-fit: cover;
         object-position: 20% 10%;
-        z-index: 1;
-        
-    
-        // splash-spot-list
-    
+        z-index: 1;    
     }
 }
 
-.search-form > input {
-    font-family: 'Nunito', sans-serif;    font-size:small;
-}
-.search-form > label {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 900;
-    font-size: 13px;
-    position: relative;
-    top: -23px;
-    left: -30px;
-}
-
-.search-button {
-    /* position: absolute; */
-    width: 36px;
-    height: 36px;
-    /* left: 1171px;
-    top: 440px; */
-
-    background: #74C58A;
-}
-
 .spot-list-carousel {
+    margin-bottom: 150px;
 
     h5 {
         display: flex;
@@ -102,6 +49,7 @@
         // flex-direction: row;
         justify-content:space-between;
         max-width: 1100px;
+        min-width: 805px;
         margin-left: auto;
         margin-right: auto;
         width: 80%;
@@ -203,6 +151,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    // padding-top : 100px;
+
 
     .splash-title h1{
         font-family: 'Nunito', sans-serif;
@@ -228,26 +178,3 @@
     }
 }
 
-.splash-footer {
-    margin-top: 150px;
-    background-color:rgb(121, 121, 121);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 200px;
-
-    font-family: 'Nunito', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    color:rgb(40,64,12);
-
-    li {
-        margin: 10px;
-    }
-}
-
-.splash-last-foot {
-    background-color:rgb(0, 0, 0);
-    height: 60px;
-}

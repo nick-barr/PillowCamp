@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, NavLink} from 'react-router-dom'
 
-class SpotList extends React.Component{
+class SplashList extends React.Component{
     constructor(props){
         super(props);
         // this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,58 +15,61 @@ class SpotList extends React.Component{
     render(){
         return(
             <div className='spot-list-carousel'>
-                <h5>Discover hidden gems</h5>
+                <h5>Discover hidden gems by region</h5>
                 <ul>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'lists/widespaces'}>
+                        <NavLink to={'filter/south'}>
                        
-                            <p id='sun'>Sceneic Sunsets</p>
+                            <p id='sun'>South</p>
                             <img src={window.rvcamper} className="photo-list"/>
                         </NavLink>
                         </div>
                     </li>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'lists/cozycottages'}>
-                            <p id='cozy'>Cozy Cottages</p>
+                        <NavLink to={'filter/northeast'}>
+                            <p id='cozy'>Northeast</p>
                             <img src={window.treehousefancy} className="photo-list"/>
                         </NavLink>
                         </div>
                     </li>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'lists/bywater'}>
-                            <p id='water'>Serenity by Water</p>
+                        <NavLink to={'filter/west'}>
+                            <p id='water'>West</p>
                             <img src={window.lake} className="photo-list"/>
                         </NavLink>
                         </div>
                     </li>   
                 </ul>
 
-                <h5>Find your next getaway</h5>
+                <h5>Find experiences right for you</h5>
                 <ul>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'serach/weekend'}>
+                        <NavLink to={'filter/campsite'}>
+                        {/* <NavLink to={'search/weekend'}> */}
                        
-                            <p id='tweek'>Weekend Getaway</p>
+                            <p id='tweek'>Campgrounds</p>
                             <img src={window.dog} className="photo-list"/>
                         </NavLink>
                         </div>
                     </li>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'serach/nextweek'}>
-                            <p id='nweek'>Next Weekend</p>
+                        <NavLink to={'filter/openfield'}>
+                        {/* <NavLink to={'search/nextweek'}> */}
+                            <p id='nweek'>Wilderness</p>
                             <img src={window.mist} className="photo-list"/>
                         </NavLink>
                         </div>
                     </li>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'serach/nextmonth'}>
-                            <p id='tmonth'>This Season</p>
+                        <NavLink to={'filter/luxury'}>
+                        {/* <NavLink to={'search/nextmonth'}> */}
+                            <p id='tmonth'>Fancy</p>
                             <img src={window.tent} className="photo-list"/>
                         </NavLink>
                         </div>
@@ -77,4 +80,4 @@ class SpotList extends React.Component{
     }
 }
 
-export default SpotList;
+export default SplashList;

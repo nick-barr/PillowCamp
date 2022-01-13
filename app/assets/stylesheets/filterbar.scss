@@ -1,0 +1,49 @@
+.filter-bar-container{
+    position: sticky;
+    width:100%;
+    top: 85px;
+    height: 55px;
+    background-color: white;
+    z-index: 50;
+
+    ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+        li {
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 15px;
+            display: flex;
+
+            p {
+                // border: 3px solid rgb(0, 0, 0);    
+                color: black;
+                text-decoration: none;
+                margin: 10px;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 900;
+                font-size: 17px;
+                height: 20px;
+                padding-bottom: 2px;
+                border-bottom: 2px solid rgba(255, 255, 255, 0);
+        
+            }
+            
+            p:hover {
+                
+                padding-bottom: 2px;
+                border-bottom: 2px solid rgba(0, 179, 60, 0.911);
+                // line-height: 23px;
+            }
+            p:focus {    
+                padding-bottom: 2px;
+                border-bottom: 2px solid rgba(0, 179, 60, 0.911);
+                // line-height: 23px;
+            }
+
+        }
+    }
+}

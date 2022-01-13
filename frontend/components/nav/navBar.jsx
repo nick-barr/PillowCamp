@@ -1,7 +1,7 @@
 import React from 'react';
+import {withRouter, NavLink} from 'react-router-dom';
 import SearchBarContainer from '../searchBar/searchBar_container';
 import AuthBarContainer from '../userAuth/authbar_container';
-import {NavLink} from 'react-router-dom';
 
 class NavBar extends React.Component{
     constructor(props){
@@ -32,7 +32,7 @@ class NavBar extends React.Component{
                     <NavLink to='/'><img src={window.logo} className="logo" /></NavLink>
                 </div>
                 
-                <div className='search-bar'>
+                <div className='search-bar-2'>
                     {/* <SearchBarContainer /> */}
                     {/* Add a new search bar */}
                 </div>
@@ -47,4 +47,4 @@ class NavBar extends React.Component{
     }
 }
 
-export default NavBar;
+export default withRouter(NavBar);

@@ -1,0 +1,112 @@
+.search-bar {
+    // position:absolute;left: 0; 
+    right: 0; 
+    margin-top: 47px;
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1040px;
+    width: 1040px;
+    height: 107px;
+    left: 270px;
+    top: 395px;
+    z-index: 30;
+    background: #F3F2EE;
+    border: 0.5px solid #E5ECD9;
+    box-sizing: border-box;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 1040px;
+    width: 70%;
+
+    // border: 2.5px solid black;
+    
+}
+
+.search-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    // margin-top: 23px;
+    width: 100%;
+    max-width: 1100px;
+    // border: 2.5px solid rgb(177, 38, 38);
+    
+    .labels {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-bottom: 5px;
+        // border: 2.5px solid black;
+
+        .search-dest {
+            position: relative;
+            right: 110px;
+        }
+    }
+    
+    .inputs {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        justify-content: space-between;
+        // border: 2.5px solid rgb(34, 0, 224);
+    }
+    
+    
+    input {
+        height:42px;
+        border-radius: 30px;
+        border-style: none;
+        font-size: 15px;
+
+    }
+    select {
+        height:42px;
+        width:80px;
+        border-radius: 30px;
+        border-style: none;
+        text-align-last:center;
+
+    }
+    
+    input[type="date"] {
+        text-align-last:center;
+        width:180px;
+        padding-right: 10px;
+        color: gray;
+    }
+    
+    input[type="text"] {
+        width:300px;
+        padding-left: 15px;
+        padding-left: 15px;
+        color: lightgray;
+    }
+
+
+    label {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 900;
+        font-size: 13px;
+        // position: relative;
+        // top: -38px;
+        // left: 60px;
+        // width: 120px;
+    }
+
+    
+    .search-button {
+        // position: absolute;
+        position: relative;
+        width: 46px;
+        height: 46px;
+        top: 0px;
+        left: 10px;
+
+    }
+}

@@ -9,27 +9,37 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <script type="text/javascript">
-      window.tentf = "<%= image_url('tentviewfamily.jpg') %>"
-      window.cottage = "<%= image_url('cottage.jpg') %>";
       window.logo = "<%= image_url('Pillowcamp_logo.jpg') %>";
-      window.skies = "<%= image_url('starryskies.jpg') %>";
-      window.lake = "<%= image_url('lake.jpg') %>";
+      window.searchbutton = "<%= image_url('searchbutton.jpg') %>";
+      
+      window.tentf = "<%= image_url('tentviewfamily.jpg') %>"
+      
       window.rvcamper = "<%= image_url('rvcamper.jpg') %>";
       window.treehousefancy = "<%= image_url('treehousefancy.jpg') %>";
-      window.winter = "<%= image_url('winterhike.jpg') %>";
-      window.searchbutton = "<%= image_url('searchbutton.jpg') %>";
+      window.lake = "<%= image_url('lake.jpg') %>";
+      
       window.dog = "<%= image_url('dog.jpg') %>";
       window.mist = "<%= image_url('mist.jpg') %>";
       window.tent = "<%= image_url('tent.jpg') %>";
+      
+      window.defaultspot = "<%= image_url('starryskies.jpg') %>";
+      window.defaultmap = "<%= image_url('defaultMap.jpg') %>";
+      
+      window.cottage = "<%= image_url('cottage.jpg') %>";
+      window.skies = "<%= image_url('starryskies.jpg') %>";
+      window.winter = "<%= image_url('winterhike.jpg') %>";
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Nunito:wght@300;400;600;700&family=Roboto&display=swap" rel="stylesheet">
 
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google_maps_api_key}" %>
+    <%= stylesheet_link_tag 'application', media: 'all' %> <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+
     <%= yield %>
   </body>
 </html>

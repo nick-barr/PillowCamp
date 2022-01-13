@@ -1,0 +1,32 @@
+.splash-footer {
+    // margin-top: 50px;
+    background-color:rgb(199, 199, 199);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 200px;
+
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color:rgb(40,64,12);
+    
+
+    li {
+        margin: 10px;
+    }
+}
+
+.splash-last-foot {
+    background-color:rgb(161, 161, 161);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

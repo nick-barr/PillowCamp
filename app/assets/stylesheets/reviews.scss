@@ -1,0 +1,36 @@
+.user-review-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: top 20px, bottom 20px;
+
+    h1 {
+        font-weight: 900;
+        font-size: 25px;
+    }
+
+    .user-review {
+        display: flex;
+        flex-direction: row;
+        img {
+            border-radius: 50px;
+            height: 50px;
+            width: 50px;
+        }
+
+        .review-content {
+            display: flex;
+            flex-direction: column;
+        }
+        h2 {
+            font-weight: 800;
+            font-size: 20px;
+        }
+        h3 {
+            font-weight: 500;
+            font-size: 14px;
+
+        }
+
+    }
+}

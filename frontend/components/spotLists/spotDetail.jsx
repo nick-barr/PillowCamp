@@ -7,6 +7,7 @@ class SpotDetail extends React.Component{
 
 
     render(){
+        debugger
         return(
             <div className='spot-list'>
                 <ul>

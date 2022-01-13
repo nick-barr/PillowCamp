@@ -1,0 +1,1 @@
+json.extract! spot, :id, :title, :description, :details, :latitude, :longitude, :price, :lodging, :essentials, :amenities, :sitetype, :region
