@@ -1,14 +1,16 @@
 .reservation-container {
-    // border: 2px solid black;
+    border: 2px solid black;
     height: 400px;
     width: 300px;
-    position: absolute;
+    position: sticky;
     top: 0;
-    right: 12%;
-    top: 45%;
     z-index: 100;
     background-color: white;
-    box-shadow: 2px 3px 5px 2px grey;}
+    box-shadow: 2px 3px 5px 2px grey;
+    // position: relative;
+    top: 100px;
+}
+    
 
 .reservation-form {
     display: flex;

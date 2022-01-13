@@ -2,19 +2,22 @@ header {
     height: 85px;
     z-index: 1000;
     width: 100%;
-}
-.super-nav {
-    // display: flex;
-    // justify-content: center;
+    position: sticky;
+    top: 0px;
     background-color: rgb(243, 242, 239);
-    z-index: 101;
-    height: 85px;
-    position:fixed;
-    z-index: 100;
-    // top:0;
-    width: 100%;
-    // border: 3px solid rgb(207, 0, 0);
 }
+// .super-nav {
+//     // display: flex;
+//     // justify-content: center;
+//     background-color: rgb(243, 242, 239);
+//     z-index: 101;
+//     height: 85px;
+//     position:fixed;
+//     z-index: 100;
+//     // top:0;
+//     width: 100%;
+//     // border: 3px solid rgb(207, 0, 0);
+// }
 
 .nav-bar { 
     display: flex;
@@ -32,7 +35,7 @@ header {
     padding-right: 10%;
     height: 50px;
     align-items: center;   
-	background-color: rgb(243, 242, 239);
+	// background-color: rgb(243, 242, 239);
     box-sizing: content-box;
     // left: 50%;
     // right: 50%;

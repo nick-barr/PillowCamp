@@ -22,7 +22,7 @@ class SpotIndex extends React.Component{
         // if (this.state.redirect) {
         //     return <Redirect to={this.state.redirect} />
         // }
-debugger
+// debugger
         return(
             // <Maps className='map-test2' />
             <div className='spot-index-grand-container'>

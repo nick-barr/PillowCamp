@@ -8,7 +8,7 @@
 
 User.destroy_all
 Spot.destroy_all
-# Review.destroy_all
+Review.destroy_all
 
 User.create!(username: 'Happy Camper', password: 'password1') 
 User.create!(username: 'Outdoor Explorer', password: 'password1') 

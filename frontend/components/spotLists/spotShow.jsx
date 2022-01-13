@@ -24,33 +24,36 @@ class SpotShow extends React.Component{
 
         return(
             <div>
-                <div className='show-page'>
                     
-                    <img src={window.defaultspot} className='spot-index-image'/>
-                    {/* <img src={this.props.spot.photoUrl} className='spot-index-image'/> */}
-                
-                    <div className='show-container'>
-                        
-                        <div className='show-details'>
-                            <p>{this.props.spot.details}</p>
-                            <p className='title'>{this.props.spot.title}</p>
-                            <p className='description'>{this.props.spot.description}</p>
-                            <div className='show-offers'>
-                                <p>{this.props.spot.lodging}</p>
-                                <p>{this.props.spot.essentials}</p>
-                                <p>{this.props.spot.amenities}</p>
+                <div className='show-page'>
+                    <div className='show-photos'>
+                        <img src={window.defaultspot} className='spot-show-image'/>
+                        <img src={window.defaultspot} className='spot-show-image'/>
+                        <img src={window.defaultspot} className='spot-show-image'/>
+                        {/* <img src={this.props.spot.photoUrl} className='spot-index-image'/> */}
+                    </div>
+
+                    <div className='show-box'>
+                        <div className='show-container'>
+                            <div className='show-details'>
+                                <p>{this.props.spot.details}</p>
+                                <p className='title'>{this.props.spot.title}</p>
+                                <p className='description'>{this.props.spot.description}</p>
+                                <div className='show-offers'>
+                                    <p>{this.props.spot.lodging}</p>
+                                    <p>{this.props.spot.essentials}</p>
+                                    <p>{this.props.spot.amenities}</p>
+                                </div>
                             </div>
+                            <Reviews reviews={this.props.spot.reviews}/>
                         </div>
-
-                        <Reviews reviews={this.props.spot.reviews}/>
-                
+                        <div className='res-form-container'>
+                            <ReservationForm />
+                        </div>
                     </div>
-
-                    <div className='res-form-container'>
-                        <ReservationForm />
-                    </div>
-                
                 </div>
+
+
                 
                 <div className='show-map-container'>
                     {/* <Map className='show-map' spot={this.props.spot}/> */}
