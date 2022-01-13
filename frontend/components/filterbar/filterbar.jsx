@@ -11,40 +11,39 @@ class FilterBar extends React.Component{
         // debugger
         // e.preventDefault();
         this.props.history.push(url);
-        console.log("test");
     }
 
     render(){
     
         return(
             <div className='filter-bar-container'>
-                <ul >
+                <ul className='filter-bar-options'>
                     <li onClick={() => this.changeURL('/filter/all')}>
-                        <p id='sun'>All</p>
+                        <p>All</p>
                     </li>
 
                     <li onClick={() => this.changeURL('/filter/south')}>
-                        <p id='sun'>South</p>
+                        <p>South</p>
                     </li>
 
                     <li onClick={() => this.changeURL('/filter/northeast')}>
-                        <p id='cozy'>Northeast</p>
+                        <p>Northeast</p>
                     </li>
     
                     <li onClick={() => this.changeURL('/filter/west')}>
-                        <p id='water'>West</p>
+                        <p>West</p>
                     </li>   
 
                     <li onClick={() => this.changeURL('/filter/campsite')}>
-                        <p id='tweek'>Campgrounds</p>
+                        <p>Campgrounds</p>
                     </li>
 
                     <li onClick={() => this.changeURL('/filter/openfield')}>
-                        <p id='nweek'>Wilderness</p>
+                        <p>Wilderness</p>
                     </li>
 
                     <li onClick={() => this.changeURL('/filter/luxury')}>
-                        <p id='tmonth'>Fancy</p>
+                        <p>Fancy</p>
                     </li>
 
                 </ul>

@@ -17,7 +17,7 @@ class Maps extends React.Component{
     componentDidMount() {
         // debugger
 
-        debugger
+        // debugger
         let center
         if (this.props.spots.length === 1) {
             center = {lat: this.props.spots[0].latitude, lng: this.props.spots[0].longitude,}
@@ -41,7 +41,7 @@ class Maps extends React.Component{
         let mark
 
         if (this.props.spots.length !== 0) {
-            debugger
+            // debugger
             this.props.spots.forEach(spot => {
                     options = { position: new google.maps.LatLng(spot.latitude, spot.longitude),
                                 icon: icon },
@@ -57,7 +57,7 @@ class Maps extends React.Component{
         let options = {position: {lat: 42.06, lng: -73.76242}, icon: icon}
 
         if (this.props.spots.length !== 0) {
-            debugger
+            // debugger
             this.props.spots.forEach(spot => {
                 options = { position: new google.maps.LatLng(spot.latitude, spot.longitude),
                             icon: icon },

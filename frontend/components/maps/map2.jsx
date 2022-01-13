@@ -115,7 +115,7 @@ class Map2 extends React.Component{
     }
     
     render(){
-        debugger
+        // debugger
 
         let options = {position: {lat: 42.06, lng: -73.76242}, icon: icon}
 
