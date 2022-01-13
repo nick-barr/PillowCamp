@@ -26,12 +26,12 @@ const Home = () => {
                     <AuthRoute exact path="/signup" component={signupContainer} />
                     
                     <Route path="/filter/:filter" component={spotIndex_container} />
-                    <Route path="/south" component={spotIndex_container} />
+                    {/* <Route path="/south" component={spotIndex_container} />
                     <Route path="/northeast" component={spotIndex_container} />
                     <Route path="/west" component={spotIndex_container} />
-                    <Route path="/b" component={spotIndex_container} />
+                    <Route path="/campsite" component={spotIndex_container} />
                     <Route path="/luxury" component={spotIndex_container} />
-                    <Route path="/openfield" component={spotIndex_container} />
+                    <Route path="/openfield" component={spotIndex_container} /> */}
                     
                     <Route path="/search" component={spotIndex_container} />
                     

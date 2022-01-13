@@ -1,7 +1,9 @@
 import React from 'react';
 import {Redirect, useHistory, Link} from 'react-router-dom'
 import Map from '../maps/maps'
+import Map2 from '../maps/map2'
 import { FaThumbsUp } from 'react-icons/fa'
+import Filterbar from '../filterbar/filterbar';
 
 
 
@@ -9,9 +11,14 @@ class SpotIndex extends React.Component{
     constructor(props){
         super(props)
         this.state = { redirect: null };
-        // this.state = { redirect: null, loading: true };
+        this.state = { redirect: null, loading: true };
     }
     
+
+    componentDidUpdate(){
+        this.setState = {loading: false}
+    }
+
     componentDidMount(){   
         window.scrollTo(0, 0);
         this.props.fetchSpots()
@@ -23,15 +30,21 @@ class SpotIndex extends React.Component{
         //     return <Redirect to={this.state.redirect} />
         // }
         let filteredSpots = []
-        if (this.props.spots.length !== 0) {
-            
-            debugger
+        let options = this.props.match.params.filter
+        if (options === 'all') {
+            filteredSpots = this.props.spots
+        } else if (this.props.spots.length !== 0) {        
             filteredSpots = this.props.spots.filter(spot => 
-                spot.region === this.props.match.params.filter ||
-                spot.sitetype === this.props.match.params.filter)} 
+                spot.region === options ||
+                spot.sitetype === options)
+        }
+
+        options = this.props.match.params.filter
+            
         return(
             // <Maps className='map-test2' />
             <div className='spot-index-grand-container'>
+                <Filterbar />
             <div className='spot-index-container'>
                 <br />
                 <ul className='spot-index-box'>
@@ -61,7 +74,8 @@ class SpotIndex extends React.Component{
                     </div>
                     ))}
                 </ul>
-                <Map spots={filteredSpots}/>
+                {/* <Map spots={filteredSpots} options={options}/> */}
+                <Map2 spots={filteredSpots} options={options}/>
             </div>
             </div>
         )
