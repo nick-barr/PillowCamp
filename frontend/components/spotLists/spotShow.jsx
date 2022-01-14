@@ -24,7 +24,7 @@ class SpotShow extends React.Component{
     render() {
         // debugger
         if (this.state.loading) return (<h1> Loading </h1>);
-herok
+
         return(
             <div>
                     
