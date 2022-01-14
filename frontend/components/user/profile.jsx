@@ -27,6 +27,7 @@ class Profile extends React.Component {
     // }
 
     render() {
+        debugger
         return (
           <div className="profile-background">
             <div className="profile-form-container">

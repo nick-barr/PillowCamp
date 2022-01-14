@@ -52,8 +52,8 @@ class SpotIndex extends React.Component{
                     <div className='left-set'>    
                         <Link to={`/spot/${spot.id}`}>
                         <li>
-                            {/* <img className='spot-index-image' src={spot.photoUrl}/> */}
-                            <img src={window.defaultspot} className='spot-index-image'/>
+                            <img className='spot-index-image' src={spot.photoUrl}/>
+                            {/* <img src={window.defaultspot} className='spot-index-image'/> */}
                             <div className='spot-index-stuff'>
                                 <div className='main-info'>
                                     <p className='rating'><FaThumbsUp /> 100% recommended</p>

@@ -1,5 +1,7 @@
 class BookingsTable2 < ActiveRecord::Migration[6.1]
   def change
+    
+    drop_table :bookings
 
     create_table :bookings do |t|
       t.integer :spot_id, null: false

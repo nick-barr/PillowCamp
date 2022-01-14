@@ -24,17 +24,17 @@ class SpotShow extends React.Component{
     render() {
         // debugger
         if (this.state.loading) return (<h1> Loading </h1>);
-
+herok
         return(
             <div>
                     
                 <div className='show-page'>
                     <div className='show-photos'>
-                        <img src={window.defaultspot} className='spot-show-image'/>
                         {/* <img src={window.defaultspot} className='spot-show-image'/>
+                        <img src={window.defaultspot} className='spot-show-image'/>
                         <img src={window.defaultspot} className='spot-show-image'/> */}
 
-                        {/* <img src={this.props.spot.photoUrl} className='spot-index-image'/> */}
+                        <img src={this.props.spot.photoUrl} className='spot-show-image'/>
                     </div>
 
                     <div className='show-box'>
