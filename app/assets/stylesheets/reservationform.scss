@@ -24,6 +24,18 @@
     text-align: center;
     padding: 15px;
 
+    .res-price{
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 15px;
+        align-items: baseline;
+
+        h1 {
+            font-size: 26px;
+            font-weight: 900;
+        }
+    }
+
     label {
         font-size: 18px;
         font-weight: 600;

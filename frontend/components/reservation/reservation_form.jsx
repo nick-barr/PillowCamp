@@ -15,7 +15,10 @@ class ReservationForm extends React.Component{
         return(
             <div className='reservation-container'>
                 <form className='reservation-form' onSubmit={this.handleSubmit}>
-                    <h1>{this.props.price}</h1>
+                    <div className='res-price'>
+                        <h1>${this.props.price}</h1>
+                        <p>&nbsp;/ per night</p>
+                    </div>
                     <label >Check in</label>
                     <input type="date" />
                     <label >Check out</label>

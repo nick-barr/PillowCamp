@@ -5,7 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'date'
 
+Booking.destroy_all
 Review.destroy_all
 Spot.destroy_all
 User.destroy_all
@@ -15,7 +17,6 @@ user2 = User.create!(username: 'Outdoor Explorer', password: 'password1')
 user3 = User.create!(username: 'Mountain Climber', password: 'password1') 
 user4 = User.create!(username: 'Animal Lover', password: 'password1') 
 user5 = User.create!(username: 'Bird Watcher', password: 'password1') 
-user6 = User.create!(username: 'test_user1', password: 'password1') 
 
 # north
 spot1 = Spot.create!(
@@ -462,3 +463,28 @@ Review.create!(
             spot_id: spot15.id,
             body: "Quaint and peaceful cabin. A home away from home. A short distance away from a state park."
         )
+
+Booking.create!(
+    spot_id: spot1.id,
+    user_id: user1.id,
+    capacity: 2,
+    check_in: DateTime.new(2022,2,3),
+    check_out: DateTime.new(2022,2,5)
+)
+Booking.create!(
+    spot_id: spot6.id,
+    user_id: user1.id,
+    capacity: 4,
+    check_in: DateTime.new(2022,2,14),
+    check_out: DateTime.new(2022,2,19)
+)
+Booking.create!(
+    spot_id: spot11.id,
+    user_id: user1.id,
+    capacity: 6,
+    check_in: DateTime.new(2022,3,1),
+    check_out: DateTime.new(2022,3,5)
+)
+
+    
+    
