@@ -9,7 +9,17 @@ class SearchBar extends React.Component{
         this.handleDateS = this.handleDateS.bind(this);
         this.handleDateE = this.handleDateE.bind(this);
         this.handleGuests = this.handleGuests.bind(this);
+
+        this.toggleClass= this.toggleClass.bind(this);
+        this.state = {
+            active: false,
+        };
     }
+
+    toggleClass() {
+        const currentState = this.state.active;
+        this.setState({ active: !currentState });
+    };
     
     handleSubmit(e){
         e.preventDefault()
@@ -30,7 +40,7 @@ class SearchBar extends React.Component{
     
     render(){
         return(
-            <div className='search-bar'>
+            <div className={this.state.active ? 'search-bar animated intensifies': 'search-bar'} onClick={this.toggleClass}>
                 <form className ='search-form' onSubmit={this.handleSubmit}>
                     
                     <div className='labels'>

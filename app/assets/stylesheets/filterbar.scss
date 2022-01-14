@@ -6,13 +6,17 @@
     background-color: white;
     z-index: 50;
 
+    .filter-bar-options{
+        height: 100%;
+    }
+
     ul {
     display: flex;
     flex-direction: row;
     align-items: center;
 
         li {
-            padding-bottom: 20px;
+            padding-bottom: 10px;
             padding-left: 20px;
             padding-right: 20px;
             padding-top: 15px;

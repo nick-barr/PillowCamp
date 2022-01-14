@@ -9,7 +9,7 @@ class Reviews extends React.Component{
         // debugger
         return(
             <div className='user-review-container'>
-                <h1>Reviews</h1>
+                <h1>3 Reviews</h1>
                 {this.props.reviews.map(review =>
                 <div className='user-review'>
                     <img src="https://sharespost-sharex-production.s3.us-west-2.amazonaws.com/uploads/issuer/100001872/logo/hipcamp-logo.png" alt="" />

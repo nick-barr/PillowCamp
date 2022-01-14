@@ -1,17 +1,20 @@
 .user-review-container{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding-bottom: 40px;
     margin: top 20px, bottom 20px;
+    
 
     h1 {
         font-weight: 900;
-        font-size: 25px;
+        font-size: 26px;
     }
 
     .user-review {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        margin: 15px;
         img {
             border-radius: 50px;
             height: 50px;
@@ -25,11 +28,12 @@
         h2 {
             font-weight: 800;
             font-size: 20px;
+            margin: 5px;
         }
         h3 {
             font-weight: 500;
-            font-size: 14px;
-
+            font-size: 16px;
+            margin: 5px;
         }
 
     }

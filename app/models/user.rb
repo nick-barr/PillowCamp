@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
     has_many :reviews, class_name: "Review", foreign_key: "user_id"
+    has_many :bookings, class_name: "Booking", foreign_key: "user_id"
 
     validates :username, :password_digest, :session_token, presence: true
     validates :username, :session_token, uniqueness: true

@@ -1,12 +1,17 @@
+.res-form-container {    
+    position: relative;
+    top:-35px;
+}
+
 .reservation-container {
-    border: 2px solid black;
+    border: 1px solid rgb(238, 238, 238);
     height: 400px;
     width: 300px;
     position: sticky;
     top: 0;
     z-index: 100;
     background-color: white;
-    box-shadow: 2px 3px 5px 2px grey;
+    box-shadow: 1px 4px 7px 2px lightgray;
     // position: relative;
     top: 100px;
 }
@@ -20,7 +25,7 @@
     padding: 15px;
 
     label {
-        font-size: 23px;
+        font-size: 18px;
         font-weight: 600;
     }
 
@@ -28,12 +33,12 @@
         margin-bottom: 10px;
         margin-top: 5px;
         height:53px;
-        width:100%;
-        margin: left 5px, right 5px;
+        width:265px;
+        // margin: left 5px, right 5px;
     }
     
     select {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         margin-top: 5px;
         height:53px;
         width:100%;
