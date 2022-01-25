@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 const icon = {
-    url: "https://cdn-icons.flaticon.com/png/512/1747/premium/1747612.png?token=exp=1642134168~hmac=1aa55f7c6ec9e7fcb8cd4d77dcbd64c0",
+    url: "https://cdn-icons-png.flaticon.com/512/853/853727.png",
     scaledSize: new google.maps.Size(80,80)
 
 };
@@ -34,7 +34,7 @@ class Maps extends React.Component{
         this.map = new google.maps.Map(this.mapNode, mapOptions);
 
         const icon = {
-            url: "https://cdn-icons.flaticon.com/png/512/1747/premium/1747612.png?token=exp=1642134168~hmac=1aa55f7c6ec9e7fcb8cd4d77dcbd64c0",
+            url: "https://cdn-icons-png.flaticon.com/512/853/853727.png",
             scaledSize: new google.maps.Size(70, 70)
         };
         let options = {position: {lat: 42.06, lng: -73.76242}, icon: icon}

@@ -19,7 +19,7 @@ class SplashList extends React.Component{
                 <ul>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'filter/south'}>
+                        <NavLink activeClassName="active" to={'filter/south'}>
                        
                             <p id='sun'>South</p>
                             <img src={window.rvcamper} className="photo-list"/>
@@ -28,7 +28,7 @@ class SplashList extends React.Component{
                     </li>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'filter/northeast'}>
+                        <NavLink activeClassName="active" to={'filter/northeast'}>
                             <p id='cozy'>Northeast</p>
                             <img src={window.treehousefancy} className="photo-list"/>
                         </NavLink>
@@ -36,7 +36,7 @@ class SplashList extends React.Component{
                     </li>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'filter/west'}>
+                        <NavLink activeClassName="active" to={'filter/west'}>
                             <p id='water'>West</p>
                             <img src={window.lake} className="photo-list"/>
                         </NavLink>
@@ -48,7 +48,7 @@ class SplashList extends React.Component{
                 <ul>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'filter/campsite'}>
+                        <NavLink activeClassName="active" to={'filter/campsite'}>
                         {/* <NavLink to={'search/weekend'}> */}
                        
                             <p id='tweek'>Campgrounds</p>
@@ -58,7 +58,7 @@ class SplashList extends React.Component{
                     </li>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'filter/openfield'}>
+                        <NavLink activeClassName="active" to={'filter/openfield'}>
                         {/* <NavLink to={'search/nextweek'}> */}
                             <p id='nweek'>Wilderness</p>
                             <img src={window.mist} className="photo-list"/>
@@ -67,7 +67,7 @@ class SplashList extends React.Component{
                     </li>
                     <li>
                         <div className='spot-list-card'>
-                        <NavLink to={'filter/luxury'}>
+                        <NavLink activeClassName="active" to={'filter/luxury'}>
                         {/* <NavLink to={'search/nextmonth'}> */}
                             <p id='tmonth'>Fancy</p>
                             <img src={window.tent} className="photo-list"/>
