@@ -254,92 +254,92 @@ Review.create!(
     body: "A beautiful mountain wonderland adventure. Great hiking trails for exploring, and farm animal friends to visit with. All the fun of feeling like you’re camping in the deep woods but with modern conveniences."
 )
 Review.create!(
-    user_id: user2.id,
+    user_id: user1.id,
     spot_id: spot4.id,
     body: "Could not recommend this place more. Amazing views while sleeping under a starry sky nestled in a warm bed with a beautiful fire going is an experience of a lifetime."
 )
 Review.create!(
-    user_id: user2.id,
+    user_id: user1.id,
     spot_id: spot5.id,
     body: "The view from the campsite is unbelievable! You must watch the sunset over the hill."
 )
 Review.create!(
-    user_id: user2.id,
+    user_id: user1.id,
     spot_id: spot6.id,
     body: "Beautiful spot with amazing views! Super private. Loved and will definitely be back again."
 )
 Review.create!(
-    user_id: user3.id,
+    user_id: user1.id,
     spot_id: spot7.id,
     body: "Amazing view, very clean campsite. Plenty of space for the tent, a nice fire pit for the evening and a good picnic table for the meals! We loved it!"
 )
 Review.create!(
-    user_id: user3.id,
+    user_id: user1.id,
     spot_id: spot8.id,
     body: "This spot is so beautiful! There are apples falling off of old trees and a view of the valley that is just breath taking. Word to the wise though. It is SUNNY!!! Bring sunblock."
 )
 Review.create!(
-    user_id: user3.id,
+    user_id: user1.id,
     spot_id: spot9.id,
     body: "This camp site is a little slice of heaven. We loved seeing the cows roaming and just relaxing, taking in the scenery. Our dog loved it too."
 )
 Review.create!(
-    user_id: user4.id,
+    user_id: user2.id,
     spot_id: spot10.id,
     body: "A simply beautiful cabin, well designed and immaculately maintained. Burt has thought of and put into place everything needed to make your experience top end. Ample roominess and very comfortable. "
 )
 Review.create!(
-    user_id: user4.id,
+    user_id: user2.id,
     spot_id: spot11.id,
     body: "A beautiful view, and a very private campsite. Directions were easy to follow. Highly recommend!"
 )
 Review.create!(
-    user_id: user5.id,
+    user_id: user2.id,
     spot_id: spot12.id,
     body: "Hiking trails are a less than 10 minute drive away, and the host provides an enormous amount of information about the area including takeout menus, historical news clippings, hiking trail descriptions, and that's barely scratching the surface."
 )
 Review.create!(
-    user_id: user5.id,
+    user_id: user2.id,
     spot_id: spot13.id,
     body: "Beautiful home in a small neighborhood close to the state park. Great spot to for day hikes on the Appalachian Trail. Lots of firewood. Very clean!"
 )
 Review.create!(
-    user_id: user5.id,
+    user_id: user2.id,
     spot_id: spot14.id,
     body: "Perfect spot, just what we are always looking for, quiet, private and simple. Can’t wait to come back in the summer to swim in the river. Thanks!"
 )
 Review.create!(
-    user_id: user5.id,
+    user_id: user2.id,
     spot_id: spot15.id,
     body: "Quaint and peaceful cabin. A home away from home. A short distance away from a state park."
 )
     Review.create!(
-        user_id: user1.id,
+        user_id: user2.id,
         spot_id: spot1.id,
         body: "Such a wonderful experience! We could not recommend this little gem more! The location was perfect!",
     )
     Review.create!(
-        user_id: user1.id,
+        user_id: user2.id,
         spot_id: spot2.id,
         body: "One of the best getaways I’ve ever had. The area is gorgeous, the hosts are Friendly kind and helpful. The little house is adorable and sits in a beautiful space."
     )
     Review.create!(
-        user_id: user1.id,
+        user_id: user2.id,
         spot_id: spot3.id,
         body: "A beautiful mountain wonderland adventure. Great hiking trails for exploring, and farm animal friends to visit with. All the fun of feeling like you’re camping in the deep woods but with modern conveniences."
     )
     Review.create!(
-        user_id: user2.id,
+        user_id: user3.id,
         spot_id: spot4.id,
         body: "Could not recommend this place more. Amazing views while sleeping under a starry sky nestled in a warm bed with a beautiful fire going is an experience of a lifetime."
     )
     Review.create!(
-        user_id: user2.id,
+        user_id: user3.id,
         spot_id: spot5.id,
         body: "The view from the campsite is unbelievable! You must watch the sunset over the hill."
     )
     Review.create!(
-        user_id: user2.id,
+        user_id: user3.id,
         spot_id: spot6.id,
         body: "Beautiful spot with amazing views! Super private. Loved and will definitely be back again."
     )
@@ -359,87 +359,87 @@ Review.create!(
         body: "This camp site is a little slice of heaven. We loved seeing the cows roaming and just relaxing, taking in the scenery. Our dog loved it too."
     )
     Review.create!(
-        user_id: user4.id,
+        user_id: user3.id,
         spot_id: spot10.id,
         body: "A simply beautiful cabin, well designed and immaculately maintained. Burt has thought of and put into place everything needed to make your experience top end. Ample roominess and very comfortable. "
     )
     Review.create!(
-        user_id: user4.id,
+        user_id: user3.id,
         spot_id: spot11.id,
         body: "A beautiful view, and a very private campsite. Directions were easy to follow. Highly recommend!"
     )
     Review.create!(
-        user_id: user5.id,
+        user_id: user3.id,
         spot_id: spot12.id,
         body: "Hiking trails are a less than 10 minute drive away, and the host provides an enormous amount of information about the area including takeout menus, historical news clippings, hiking trail descriptions, and that's barely scratching the surface."
     )
     Review.create!(
-        user_id: user5.id,
+        user_id: user4.id,
         spot_id: spot13.id,
         body: "Beautiful home in a small neighborhood close to the state park. Great spot to for day hikes on the Appalachian Trail. Lots of firewood. Very clean!"
     )
     Review.create!(
-        user_id: user5.id,
+        user_id: user4.id,
         spot_id: spot14.id,
         body: "Perfect spot, just what we are always looking for, quiet, private and simple. Can’t wait to come back in the summer to swim in the river. Thanks!"
     )
     Review.create!(
-        user_id: user5.id,
+        user_id: user4.id,
         spot_id: spot15.id,
         body: "Quaint and peaceful cabin. A home away from home. A short distance away from a state park."
     )
         Review.create!(
-            user_id: user1.id,
+            user_id: user4.id,
             spot_id: spot1.id,
             body: "Such a wonderful experience! We could not recommend this little gem more! The location was perfect!",
         )
         Review.create!(
-            user_id: user1.id,
+            user_id: user4.id,
             spot_id: spot2.id,
             body: "One of the best getaways I’ve ever had. The area is gorgeous, the hosts are Friendly kind and helpful. The little house is adorable and sits in a beautiful space."
         )
         Review.create!(
-            user_id: user1.id,
+            user_id: user4.id,
             spot_id: spot3.id,
             body: "A beautiful mountain wonderland adventure. Great hiking trails for exploring, and farm animal friends to visit with. All the fun of feeling like you’re camping in the deep woods but with modern conveniences."
         )
         Review.create!(
-            user_id: user2.id,
+            user_id: user4.id,
             spot_id: spot4.id,
             body: "Could not recommend this place more. Amazing views while sleeping under a starry sky nestled in a warm bed with a beautiful fire going is an experience of a lifetime."
         )
         Review.create!(
-            user_id: user2.id,
+            user_id: user4.id,
             spot_id: spot5.id,
             body: "The view from the campsite is unbelievable! You must watch the sunset over the hill."
         )
         Review.create!(
-            user_id: user2.id,
+            user_id: user4.id,
             spot_id: spot6.id,
             body: "Beautiful spot with amazing views! Super private. Loved and will definitely be back again."
         )
         Review.create!(
-            user_id: user3.id,
+            user_id: user5.id,
             spot_id: spot7.id,
             body: "Amazing view, very clean campsite. Plenty of space for the tent, a nice fire pit for the evening and a good picnic table for the meals! We loved it!"
         )
         Review.create!(
-            user_id: user3.id,
+            user_id: user5.id,
             spot_id: spot8.id,
             body: "This spot is so beautiful! There are apples falling off of old trees and a view of the valley that is just breath taking. Word to the wise though. It is SUNNY!!! Bring sunblock."
         )
         Review.create!(
-            user_id: user3.id,
+            user_id: user5.id,
             spot_id: spot9.id,
             body: "This camp site is a little slice of heaven. We loved seeing the cows roaming and just relaxing, taking in the scenery. Our dog loved it too."
         )
         Review.create!(
-            user_id: user4.id,
+            user_id: user5.id,
             spot_id: spot10.id,
             body: "A simply beautiful cabin, well designed and immaculately maintained. Burt has thought of and put into place everything needed to make your experience top end. Ample roominess and very comfortable. "
         )
         Review.create!(
-            user_id: user4.id,
+            user_id: user5.id,
             spot_id: spot11.id,
             body: "A beautiful view, and a very private campsite. Directions were easy to follow. Highly recommend!"
         )
@@ -468,22 +468,22 @@ Booking.create!(
     spot_id: spot1.id,
     user_id: user1.id,
     capacity: 2,
-    check_in: DateTime.new(2022,2,3),
-    check_out: DateTime.new(2022,2,5)
+    check_in: DateTime.new(2022,3,3),
+    check_out: DateTime.new(2022,3,5)
 )
 Booking.create!(
     spot_id: spot6.id,
     user_id: user1.id,
     capacity: 4,
-    check_in: DateTime.new(2022,2,14),
-    check_out: DateTime.new(2022,2,19)
+    check_in: DateTime.new(2022,4,14),
+    check_out: DateTime.new(2022,4,19)
 )
 Booking.create!(
     spot_id: spot11.id,
     user_id: user1.id,
     capacity: 6,
-    check_in: DateTime.new(2022,3,1),
-    check_out: DateTime.new(2022,3,5)
+    check_in: DateTime.new(2022,5,1),
+    check_out: DateTime.new(2022,5,5)
 )
 
     
