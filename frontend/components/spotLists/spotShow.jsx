@@ -89,7 +89,7 @@ class SpotShow extends React.Component{
                             <Reviews reviews={this.props.spot.reviews}/>
                         </div>
                         <div className='res-form-container'>
-                            <ReservationForm price={this.props.spot.price}/>
+                            <ReservationForm price={this.props.spot.price} spotId={this.props.spot.id}/>
                         </div>
                     </div>
                 </div>

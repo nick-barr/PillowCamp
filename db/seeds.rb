@@ -486,5 +486,13 @@ Booking.create!(
     check_out: DateTime.new(2022,5,5)
 )
 
+# Booking.new(
+#     spot_id: 7,
+#     user_id: 1,
+#     capacity: 5,
+#     check_in: DateTime.new(2022,3,3),
+#     check_out: DateTime.new(2022,3,5)
+# )
+
     
     

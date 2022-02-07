@@ -31,6 +31,7 @@ export const fetchUserBookings = (userId) => dispatch => {
   };
 
 export const createBooking = (booking) => dispatch => {
+    debugger
     return BookingUtil.createBooking(booking)
         .then(booking => dispatch(receiveBooking(booking)))
 };

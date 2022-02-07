@@ -1,6 +1,7 @@
 class Api::BookingsController < ApplicationController
 
     before_action :ensure_logged_in
+    skip_before_action :verify_authenticity_token
 
     # def index
     #     if booking_params[:user_id]
@@ -25,7 +26,7 @@ class Api::BookingsController < ApplicationController
         @booking = Booking.new(booking_params)
         @booking.user_id = current_user.id
         if @booking.save
-            render :show
+            # render :show
         else
             render json: @booking.errors.full_messages, status: 422
         end
@@ -51,7 +52,8 @@ class Api::BookingsController < ApplicationController
 
     private
 
-    def booking_params(params)
-        params.require(:booking).permit(:start_date, :end_date, :spot_id, :user_id)
+    def booking_params
+        params.require(:booking).permit(:check_in, :check_out, :spot_id, :user_id, :capacity)
+    end
 
 end
