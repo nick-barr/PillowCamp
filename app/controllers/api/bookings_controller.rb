@@ -1,13 +1,18 @@
 class Api::BookingsController < ApplicationController
 
-    before_action :require_logged_in
+    before_action :ensure_logged_in
+
+    # def index
+    #     if booking_params[:user_id]
+    #         @bookings = User.find(booking_params[:user_id]).bookings.includes(:spot)
+    #     else
+    #         @bookings = Booking.includes(:spot).all
+    #     end
+    #     render :index
+    # end
 
     def index
-        if booking_params[:user_id]
-            @bookings = User.find(booking_params[:user_id]).bookings.includes(:spot)
-        else
-            @bookings = Booking.includes(:spot).all
-        end
+        @bookings = Booking.includes(:spot).where(user_id: params[:user_id])
         render :index
     end
 
@@ -44,9 +49,9 @@ class Api::BookingsController < ApplicationController
         end
     end
 
-
     private
-    def booking_params
-        params.require(:booking).permit(:check_in, :check_out, :spot_id, :price, :capacity, :spot_name, :user_id, :host_id)
-    end
+
+    def booking_params(params)
+        params.require(:booking).permit(:start_date, :end_date, :spot_id, :user_id)
+
 end

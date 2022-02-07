@@ -25,10 +25,10 @@ export const receiveBookingErrors = (errors) => ({
     errors
 });
 
-// export const fetchUserBookings = (userId) => dispatch => {
-//     return BookingUtil.fetchUserBookings(userId)
-//     .then((bookings) => dispatch(receiveAllBookings(bookings)));
-//   };
+export const fetchUserBookings = (userId) => dispatch => {
+    return BookingUtil.fetchBookings(userId)
+    .then((bookings) => dispatch(receiveAllBookings(bookings)));
+  };
 
 export const createBooking = (booking) => dispatch => {
     return BookingUtil.createBooking(booking)
