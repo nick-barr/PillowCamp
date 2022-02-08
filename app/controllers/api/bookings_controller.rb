@@ -26,7 +26,7 @@ class Api::BookingsController < ApplicationController
         @booking = Booking.new(booking_params)
         @booking.user_id = current_user.id
         if @booking.save
-            # render :show
+            render :show
         else
             render json: @booking.errors.full_messages, status: 422
         end
@@ -44,7 +44,7 @@ class Api::BookingsController < ApplicationController
     def destroy
         @booking = Booking.find(params[:id])
         if @booking.destroy && current_user.id == @booking.user_id
-            render :show
+            # render :show
         else
             render json: @booking.errors.full_messages, status: 422
         end

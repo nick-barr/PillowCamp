@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class ReservationForm extends React.Component{
     constructor(props){
@@ -15,9 +16,11 @@ class ReservationForm extends React.Component{
     }
 
     handleSubmit(e){
-        console.log('submitted')
+        debugger
         e.preventDefault();
         this.props.createBooking(this.state);
+        this.props.history.push(`/profile/${this.props.userId}`);
+        //need withRouter
         
     }
     
@@ -56,4 +59,4 @@ class ReservationForm extends React.Component{
 }
 
 
-export default ReservationForm;
+export default withRouter(ReservationForm);

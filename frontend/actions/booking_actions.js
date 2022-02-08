@@ -15,9 +15,9 @@ export const receiveAllBookings = (bookings) => ({
     bookings
 });
 
-export const removeBooking = (booking) => ({
+export const removeBooking = (bookingId) => ({
     type: REMOVE_BOOKING,
-    booking: booking
+    booking: bookingId
 })
 
 export const receiveBookingErrors = (errors) => ({
@@ -31,12 +31,12 @@ export const fetchUserBookings = (userId) => dispatch => {
   };
 
 export const createBooking = (booking) => dispatch => {
-    debugger
     return BookingUtil.createBooking(booking)
+        // .then(bookings => dispatch(receiveAllBookings(bookings)))
         .then(booking => dispatch(receiveBooking(booking)))
 };
 
 export const deleteBooking = (bookingId) => dispatch => {
     return BookingUtil.deleteBooking(bookingId)
-    .then((bookingId) =>dispatch(removeBooking(bookingId)))
+    .then(() =>dispatch(removeBooking(bookingId)))
 };

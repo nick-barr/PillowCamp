@@ -1,58 +1,36 @@
 import React from 'react';
-// import BookingItem from '../bookings/booking_index_container';
+import UserShow from './userShow';
+import UserBookings from './userBookings';
 
 class Profile extends React.Component {
     constructor(props) {
         super(props)
-        this.dateFix = this.dateFix.bind(this);
-        this.removeBooking = this.removeBooking.bind(this);
-        // this.editBooking = this.editBooking.bind(this);
     }; 
-
-    dateFix(rubyDate){
-        const dateObject = new Date(Date.parse(rubyDate));
-        return dateObject.toDateString()
-    }
-
-    removeBooking(bookingId){
-        console.log(bookingId)
-    }
 
     componentDidMount () {
         window.scrollTo(0, 0);
-
-        const cUser = this.props.match.params.userId;
-        this.props.fetchUserBookings(cUser);
+        this.props.fetchUserBookings(this.props.match.params.userId);
     }
 
-    // static getDerivedStateFromProps(nextProps, prevProps) {
-    //     if (nextProps.bookings !== prevProps.bookings) {
-    //         return { bookings: nextProps.bookings }
-    //     } else {
-    //         return null
-    //     };
-    // }
-
     render() {
-        // debugger
+
         return (
           <div className="profile-background">
-            <div className="profile-form-container">
-                <ul>
-                    {this.props.bookings.map(booking =>(
-                        <li>
-                            <div>
-                                Booking ID: {booking.id} <br/>
-                                User ID: {booking.user_id} <br/>
-                                Spot ID: {booking.spot_id} <br/>
-                                Check-In: {this.dateFix(booking.check_in)} <br/>
-                                Check-Out: {this.dateFix(booking.check_out)} <br/>
-                            </div>
-                            <button onClick={() => this.removeBooking(booking.id)}>Cancel Booking</button>
-                        </li>
-                        )) 
-                    } 
-                </ul>
+            <div className="profile-container">
+                
+                <div className="user-show-container">
+                    <UserShow />
+                </div>
+
+                <div className="user-things-container">
+                    <div className="profile-nav">
+                        somethin here for now
+                    </div>
+                    <div className="profile-nav-content">
+                        <UserBookings bookings={this.props.bookings} deleteBooking={this.props.deleteBooking} />
+                    </div>
+
+                </div>
             </div>
           </div>
         )}

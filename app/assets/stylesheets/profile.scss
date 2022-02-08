@@ -6,24 +6,33 @@
     display: flex;
     justify-content: center;
     border: 2px solid black;
+}
 
+.profile-container{
+    border: 2px solid blue;
+    left:50%;
+    right:50%;
+    margin-top: 150px;
+    margin-bottom: 110px;
+    height:500px;
+    width: 400px;
 
-    .profile-form-container{
-        border: 2px solid blue;
-        left:50%;
-        right:50%;
-        margin-top: 150px;
-        margin-bottom: 110px;
-        height:500px;
-        width: 400px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center; 
-        text-align: center;
-        
-        ul > li {
-            border: 1px solid red;
-        }
+    display: flex;
+    // flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+    
+    ul > li {
+        border: 1px solid red;
     }
+}
+
+.user-show-container{
+    border: 2px solid green;
+}
+
+.profile-content{
+    display:flex;
+    flex-direction: column;
+    border: 2px solid pink;
 }

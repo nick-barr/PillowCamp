@@ -1,6 +1,7 @@
 import { RECEIVE_BOOKING, REMOVE_BOOKING, RECEIVE_ALL_BOOKINGS } from '../actions/booking_actions';
 
 const BookingsReducer = (oldState = {}, action) => {
+    // debugger
     Object.freeze(oldState);
     let newState;
     switch(action.type){
@@ -12,7 +13,7 @@ const BookingsReducer = (oldState = {}, action) => {
             return newState;
         case REMOVE_BOOKING:
             newState = Object.assign({}, oldState);
-            delete newState[action.booking.id];
+            delete newState[action.booking];
             return newState;
         default:
             return oldState
