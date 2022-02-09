@@ -1,7 +1,11 @@
 class Api::ReviewsController < ApplicationController
 
+  before_action :ensure_logged_in
+  skip_before_action :verify_authenticity_token
+
     def index
-        @reviews = Review.all
+        @reviews = Review.includes(:user).where(user_id: params[:user_id])
+        render :index
     end
 
     def create
@@ -17,7 +21,7 @@ class Api::ReviewsController < ApplicationController
       private
     
       def review_params
-        params.require(:review).permit(:body)
+        params.require(:review).permit(:body, :user_id)
       end
     
 
