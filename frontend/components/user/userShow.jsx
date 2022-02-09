@@ -7,7 +7,11 @@ class UserShow extends React.Component{
 
     render(){
         return(
-            <div className="user-show-container2">Hey</div>
+            <div className="user-show-container2">
+                picture <br/>
+                {this.props.user.username} <br/>
+                most upcoming trip (bonus)?                
+            </div>
         )
     }
 }

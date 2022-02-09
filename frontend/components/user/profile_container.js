@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import Profile from './profile';
 // import { requestUser } from '../../actions/user_actions';
-import { deleteBooking, fetchUserBookings } from '../../actions/booking_actions';
+import { deleteBooking, fetchUserBookings, } from '../../actions/booking_actions';
 // import { fetchSpots } from '../actions/spot_actions';
 
 const mSTP = (state, ownProps) => {
     // debugger
     return {
-      // user: state.entities.users[ownProps.match.params.userId],
+      user: Object.values(state.entities.users)[0],
       bookings: Object.values(state.entities.bookings)
     }
 };

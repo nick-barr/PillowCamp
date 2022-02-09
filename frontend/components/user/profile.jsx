@@ -1,6 +1,7 @@
 import React from 'react';
 import UserShow from './userShow';
 import UserBookings from './userBookings';
+import UserReviews from './userReviews';
 
 class Profile extends React.Component {
     constructor(props) {
@@ -13,21 +14,21 @@ class Profile extends React.Component {
     }
 
     render() {
-
         return (
           <div className="profile-background">
             <div className="profile-container">
                 
                 <div className="user-show-container">
-                    <UserShow />
+                    <UserShow user={this.props.user}/>
                 </div>
 
                 <div className="user-things-container">
                     <div className="profile-nav">
-                        somethin here for now
+                        picture, user name, most upcoming trip (bonus)?
                     </div>
                     <div className="profile-nav-content">
                         <UserBookings bookings={this.props.bookings} deleteBooking={this.props.deleteBooking} />
+                        <UserReviews reviews={this.props} />
                     </div>
 
                 </div>

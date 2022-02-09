@@ -34,6 +34,7 @@ class UserBookings extends React.Component{
                             Check-In: {this.dateFix(booking.check_in)} <br/>
                             Check-Out: {this.dateFix(booking.check_out)} <br/>
                         </div>
+                        <button onClick={() => this.ed(booking.id)}>Cancel Booking</button>
                         <button onClick={() => this.removeBooking(booking.id)}>Cancel Booking</button>
                     </li>
                     )) 
