@@ -36,6 +36,12 @@ export const createBooking = (booking) => dispatch => {
         .then(booking => dispatch(receiveBooking(booking)))
 };
 
+export const updateBooking = (booking) => dispatch => {
+    return BookingUtil.updateBooking(booking)
+        // .then(bookings => dispatch(receiveAllBookings(bookings)))
+        .then(booking => dispatch(receiveBooking(booking)))
+};
+
 export const deleteBooking = (bookingId) => dispatch => {
     return BookingUtil.deleteBooking(bookingId)
     .then(() =>dispatch(removeBooking(bookingId)))

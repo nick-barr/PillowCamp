@@ -8,7 +8,8 @@ class UserShow extends React.Component{
     render(){
         return(
             <div className="user-show-container2">
-                picture <br/>
+                {/* <img src="https://sharespost-sharex-production.s3.us-west-2.amazonaws.com/uploads/issuer/100001872/logo/hipcamp-logo.png" alt="" /> */}
+                <br/>
                 {this.props.user.username} <br/>
                 most upcoming trip (bonus)?                
             </div>
