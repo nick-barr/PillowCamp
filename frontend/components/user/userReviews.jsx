@@ -7,19 +7,16 @@ class UserReviews extends React.Component{
 
     render(){
         return(
-            <div>here are the reviews</div>
             <ul>
-            {this.props.bookings.map(booking =>(
-                <li key={booking.id}>
+            {this.props.reviews.map(review =>(
+                <li key={review.id}>
                     <div>
-                        Booking ID: {booking.id} <br/>
-                        User ID: {booking.user_id} <br/>
-                        Spot ID: {booking.spot_id} <br/>
-                        Check-In: {this.dateFix(booking.check_in)} <br/>
-                        Check-Out: {this.dateFix(booking.check_out)} <br/>
+                        User ID: {review.user_id} <br/>
+                        Spot ID: {review.spot_id} <br/>
+                        review ID: {review.id} <br/>
+                        Review: {review.body} <br/>
                     </div>
-                    <button onClick={() => this.ed(booking.id)}>Cancel Booking</button>
-                    <button onClick={() => this.removeBooking(booking.id)}>Cancel Booking</button>
+                    {/* <button onClick={() => this.removeReview(review.id)}>Delete Review</button> */}
                 </li>
                 )) 
             } 
