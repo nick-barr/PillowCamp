@@ -13,7 +13,7 @@ const AuthBar = ({ currentUser, logout }) => {
     <nav className="user-links">
       {/* <h2 className="user-greet">Hi, {currentUser.username}!</h2> */}
       <h2 className="user-greet"></h2>
-        <Link to={`/profile/${currentUser.id}`} className="auth-options">Profile</Link>
+        <Link to={`/profile/${currentUser.id}/bookings`} className="auth-options">Profile</Link>
         <Link to="/" className="auth-options" onClick={logout}>Logout</Link>
       {/* <button className="header-button" >Log Out</button> */}
     </nav>

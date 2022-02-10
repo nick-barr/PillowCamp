@@ -15,7 +15,7 @@ class UserBookings extends React.Component{
                             booking={booking} 
                             updateBooking={this.props.updateBooking}
                             deleteBooking={this.props.deleteBooking}
-                            /> 
+                        /> 
                     </li>
                     )) 
                 } 

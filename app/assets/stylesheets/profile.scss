@@ -1,11 +1,9 @@
 .profile-background {
-    // position: fixed;
     width: 100%;
     height: calc(100vh - 280px);
     background: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
-    border: 2px solid black;
 }
 
 .profile-container{
@@ -15,7 +13,7 @@
     margin-top: 150px;
     margin-bottom: 110px;
     height:500px;
-    width: 400px;
+    width: 50%;
 
     display: flex;
     // flex-direction: column;
@@ -28,6 +26,7 @@
 }
 
 .user-show-container{
+    min-width: 300px;
     border: 2px solid green;
 }
 

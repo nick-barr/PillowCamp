@@ -16,12 +16,9 @@ class ReservationForm extends React.Component{
     }
 
     handleSubmit(e){
-        debugger
         e.preventDefault();
         this.props.createBooking(this.state);
-        this.props.history.push(`/profile/${this.props.userId}`);
-        //need withRouter
-        
+        this.props.history.push(`/profile/${this.props.userId}/bookings`);        
     }
     
     formUpdates(field){

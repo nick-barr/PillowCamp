@@ -1,4 +1,5 @@
 import React from 'react';
+import {Switch, Route, NavLink} from 'react-router-dom';
 import UserShow from './userShow';
 import UserBookings from './userBookings';
 import UserReviews from './userReviews';
@@ -27,10 +28,10 @@ class Profile extends React.Component {
                     view = <UserBookings bookings={this.props.bookings} deleteBooking={this.props.deleteBooking} updateBooking={this.props.updateBooking} />
                     return view;
                 case "reviews":
-                    let view = <UserReviews reviews={this.props.reviews} />
+                    let view = <UserReviews {...props} reviews={this.props.reviews} />
                     return view;
                 default:
-                    view = <UserBookings bookings={this.props.bookings} deleteBooking={this.props.deleteBooking} updateBooking={this.props.updateBooking} />
+                    view = <UserBookings {...props} bookings={this.props.bookings} deleteBooking={this.props.deleteBooking} updateBooking={this.props.updateBooking} />
                     return view;
             }
         }
@@ -50,10 +51,23 @@ class Profile extends React.Component {
 
                 <div className="user-things-container">
                     <div className="profile-nav">
-                        picture, user name, most upcoming trip (bonus)?
+                        <NavLink activeClassName="activeBookings" to={`/profile/${this.props.user.id}/bookings`}>
+                            Bookings
+                        </NavLink>
+                        <NavLink activeClassName="activeReviews" to={`/profile/${this.props.user.id}/reviews`}>
+                            Reviews
+                        </NavLink>
+                        <NavLink activeClassName="activeReviews" to={`/profile/${this.props.user.id}/upcoming`}>
+                            Latest Trip
+                        </NavLink>
                     </div>
                     <div className="profile-nav-content">
-                        {this.activeView()}
+                        {/* {this.activeView()} */}
+                        <Switch>
+                            <Route path="/profile/:userId/bookings" render={(props) => <UserBookings {...props} bookings={this.props.bookings} deleteBooking={this.props.deleteBooking} updateBooking={this.props.updateBooking} />} />
+                            <Route path="/profile/:userId/reviews" render={(props) => <UserReviews {...props} reviews={this.props.reviews} />} />
+                            <Route path="/profile/:userId/upcoming" render={(props) => <UserReviews {...props} reviews={this.props.reviews} />} />
+                        </Switch>
                     </div>
 
                 </div>
