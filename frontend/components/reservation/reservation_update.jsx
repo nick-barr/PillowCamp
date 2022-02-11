@@ -25,12 +25,8 @@ class ReservationUpdate extends React.Component{
     }
     
     dateFix(rubyDate){
-        // const dateObject = new Date(Date.parse(rubyDate));
-        // const newDate = dateObject.toLocaleDateString('en-GB').split('/').reverse().join('-');
-        // return newDate
-    }
-    dateFix(rubyDate){
-        return (new Date((new Date(rubyDate)).getTime() + (new Date(rubyDate)).getTimezoneOffset() * 60000)).toLocaleString("en-us", {month: 'short', weekday: 'short', day: 'numeric', year: 'numeric'})
+        const newDate = (new Date((new Date(rubyDate)).getTime() + (new Date(rubyDate)).getTimezoneOffset() * 60000)).toLocaleDateString('en-GB').split('/').reverse().join('-');
+        return newDate
     }
     
     formUpdates(field){
@@ -44,18 +40,17 @@ class ReservationUpdate extends React.Component{
                 <div className='reservation-container'>
                 <form className='reservation-form' onSubmit={this.handleSubmit}>
                     
-                    {/* <div className='res-price'>
-                        <h1>${this.props.price}</h1>
-                        <p>&nbsp;/ per night</p>
-                    </div> */}
+                    <div className='res-price'>
+                        {/* <h1>${this.props.price}</h1>
+                        <p>&nbsp;/ per night</p> */}
+                        Change Your Reservation
+                    </div>
                     
                     <label >Check in</label>
-                    {/* <input type="date" value={this.dateFix(this.state.check_in)} onChange={this.formUpdates("check_in")}/> */}
-                    <input type="date" onChange={this.formUpdates("check_in")}/>
+                    <input type="date" value={this.dateFix(this.state.check_in)} onChange={this.formUpdates("check_in")}/>
                     
                     <label >Check out</label>
-                    <input type="date" onChange={this.formUpdates("check_out")}/>
-                    {/* <input type="date" value={this.dateFix(this.state.check_out)} onChange={this.formUpdates("check_out")}/> */}
+                    <input type="date" value={this.dateFix(this.state.check_out)} onChange={this.formUpdates("check_out")}/>
                     
                     <label >Guests</label>
                     <select onChange={this.formUpdates("capacity")}>
