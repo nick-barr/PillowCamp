@@ -2,7 +2,6 @@ import {connect} from 'react-redux';
 import ReservationForm from './reservation_form';
 import { createBooking } from '../../actions/booking_actions';
 
-
 const mSTP = (state) => {
     return{
         userId: state.session.id

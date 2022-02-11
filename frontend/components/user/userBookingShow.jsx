@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from '../modal/modal_container';
 
 class UserBookingShow extends React.Component{
     constructor(props){
@@ -14,18 +15,26 @@ class UserBookingShow extends React.Component{
 
         this.dateFix = this.dateFix.bind(this);
         this.removeBooking = this.removeBooking.bind(this);
-        this.updateBooking = this.updateBooking.bind(this);
+        this.update = this.update.bind(this);
     }
 
     dateFix(rubyDate){
         const dateObject = new Date(Date.parse(rubyDate));
-        return dateObject.toDateString()
+        const weekday = dateObject.toLocaleString('default', { weekday: 'short' });
+        const month = dateObject.toLocaleString('default', { month: 'short' });
+        const day = dateObject.toLocaleString('default', { day: 'numeric' });
+        const year = dateObject.getFullYear();
+        return `${weekday}, ${month} ${day}, ${year}` 
     }
 
-    updateBooking(booking){
-        console.log("did it work?")
+    update(booking){
         // debugger
-        this.props.updateBooking(booking);
+        console.log("did it work?")
+        this.props.getBooking(booking)
+        this.props.activateModal("bookingUpdate")
+        //need to skim down the booking details to dates and capacity only.
+        //:id, :photoUrls not needed
+        // this.props.updateBooking(booking);
     }
     
     removeBooking(bookingId){
@@ -33,16 +42,31 @@ class UserBookingShow extends React.Component{
     }
 
     render(){
-        let {booking} = this.props
+        let {booking} = this.props;
+        // let modal;
+        // if (booking) {
+        //    modal =  
+        // }
+        debugger
         return(
             <div>
                 Booking ID: {booking.id} <br/>
-                User ID: {booking.user_id} <br/>
+                {/* <img src={booking.photoUrls} /> */}
                 Spot ID: {booking.spot_id} <br/>
-                Check-In: {this.dateFix(booking.check_in)} <br/>
-                Check-Out: {this.dateFix(booking.check_out)} <br/>
-                <button onClick={() => this.updateBooking(booking)}>Update Booking</button>
+                {/* Check-In: {this.dateFix(booking.check_in)} <br/>
+                Check-Out: {this.dateFix(booking.check_out)} <br/> */}
+                Check-In: 
+                {(new Date(booking.check_in))
+                    .toLocaleDateString("en-us", {month: 'short', weekday: 'short', day: 'numeric', year: 'numeric'})} 
+                    <br/>
+                Check-Out: 
+                {(new Date(booking.check_out))
+                    .toLocaleDateString("en-us", {month: 'short', weekday: 'short', day: 'numeric', year: 'numeric'})} 
+                    <br/>
+                <button onClick={() => this.update(booking)}>Update Booking</button>
                 <button onClick={() => this.removeBooking(booking.id)}>Cancel Booking</button>
+                {/* {booking ? <Modal booking={booking} updateBooking={updateBooking} /> : null} */}
+                <Modal />
             </div>
         )
     }

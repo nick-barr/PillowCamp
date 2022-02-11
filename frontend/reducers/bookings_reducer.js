@@ -1,4 +1,4 @@
-import { RECEIVE_BOOKING, REMOVE_BOOKING, RECEIVE_ALL_BOOKINGS } from '../actions/booking_actions';
+import { RECEIVE_BOOKING, REMOVE_BOOKING, RECEIVE_ALL_BOOKINGS, RECEIVE_UPDATE_BOOKING, REMOVE_UPDATE_BOOKING } from '../actions/booking_actions';
 
 const BookingsReducer = (oldState = {}, action) => {
     // debugger
