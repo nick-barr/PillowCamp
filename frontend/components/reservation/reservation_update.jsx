@@ -29,9 +29,11 @@ class ReservationUpdate extends React.Component{
         // const newDate = dateObject.toLocaleDateString('en-GB').split('/').reverse().join('-');
         // return newDate
     }
+    dateFix(rubyDate){
+        return (new Date((new Date(rubyDate)).getTime() + (new Date(rubyDate)).getTimezoneOffset() * 60000)).toLocaleString("en-us", {month: 'short', weekday: 'short', day: 'numeric', year: 'numeric'})
+    }
     
     formUpdates(field){
-        debugger
         return e => this.setState({[field]: e.currentTarget.value})
     }
     
