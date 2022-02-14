@@ -1,6 +1,7 @@
 class Booking < ApplicationRecord
     # status = %w(PENDING APPROVED DENIED)
-    validates :check_in, :check_out, :spot_id, :user_id, :capacity ,presence: true
+    # validates :check_in, :check_out, :spot_id, :user_id, :capacity ,presence: true
+    validates :check_in, :check_out, :spot_id, :user_id, :capacity, presence: true
     # validate :validate_other_booking_overlap
     # validates :status, inclusion: {in: STATUS}
 
@@ -12,10 +13,9 @@ class Booking < ApplicationRecord
     belongs_to :spot
     # foreign_key: :spot_id
 
-    def period
-        :check_in...:check_out
-    end
-
+    # def period
+    #     :check_in...:check_out
+    # end
 
     # def validate_other_booking_overlap
     #     #prevents OTHERS from booking when booked

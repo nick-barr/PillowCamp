@@ -1,104 +1,64 @@
 import React from 'react';
-// import BookingItem from '../bookings/booking_index_container';
+import {Switch, Route, NavLink} from 'react-router-dom';
+import UserShow from './userShow';
+import UserBookings from './userBookings';
+import UserReviews from './userReviews';
+import ProfileNav from './profileNav';
 
 class Profile extends React.Component {
     constructor(props) {
         super(props)
-
-        this.state = {
-            bookings: {}
-        };
+        this.state = {loaded: false}
     }; 
-
-    
 
     componentDidMount () {
         window.scrollTo(0, 0);
-        // this.props.fetchBookings(this.props.match.params.userId);
-        // this.props.fetchListings(this.props.match.params.userId);
+        this.props.fetchUserBookings(this.props.match.params.userId);
+        this.props.fetchUserReviews(this.props.match.params.userId);
+        this.setState(prevState => ({loaded: !prevState.loading}))
     }
 
-    // static getDerivedStateFromProps(nextProps, prevProps) {
-    //     if (nextProps.bookings !== prevProps.bookings) {
-    //         return { bookings: nextProps.bookings }
-    //     } else {
-    //         return null
-    //     };
-    // }
-
     render() {
-        debugger
         return (
           <div className="profile-background">
-            <div className="profile-form-container">
+            <div className="profile-container">
+                
+                <div className="user-show-container">
+                    <UserShow user={this.props.user}/>
+                </div>
+
+                <div className="user-things-container">
+                    <div className="profile-nav">
+                        <ProfileNav user={this.props.user} />
+                    </div>
+
+                    <div className="profile-nav-content">
+                        <Switch>
+                            <Route path="/profile/:userId/bookings" render={(props) => 
+                                <UserBookings {...props} 
+                                    bookings={this.props.bookings} 
+                                    deleteBooking={this.props.deleteBooking} 
+                                    updateBooking={this.props.updateBooking}
+                                    activateModal={this.props.activateModal} 
+                                    getBooking={this.props.getBooking}
+                                />} 
+                            />
+
+                            <Route path="/profile/:userId/reviews" render={(props) => 
+                                <UserReviews {...props} 
+                                    reviews={this.props.reviews} 
+                                />} 
+                            />
+
+                            {/* <Route path="/profile/:userId/upcoming" render={(props) => <UserBookings {...props} bookings={this.props.bookings} deleteBooking={this.props.deleteBooking} updateBooking={this.props.updateBooking} />} /> */}
+                        </Switch>
+                    </div>
+                </div>
+                
             </div>
           </div>
         )}
-        // if ((this.state.bookings).length < 1) {
-        //     return (
-        //         <div className="userBody">
-        //             <div className="left_panel">
-        //                 <div className="bioPanel">
-        //                     {this.props.user.first_name + " " + this.props.user.last_name}
-        //                     <div className="panelHeader">
-        //                         <div className="left_avatar">
-        //                             <img src="https://supertramp-mast.s3-us-west-1.amazonaws.com/24-248366_profile-clipart-generic-user-generic-profile-picture-gender.png" alt="" />
-        //                         </div>
-        //                         <div className="right_header">
-        //                             <h2 className="userName_show">Username: {this.props.user.username}</h2>
-        //                             <h2 className="email_show">Email: {this.props.user.email}</h2>
-        //                             {/* <button onClick={open modal?}>Update User Info</button> */}
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //             </div>
 
-        //             <div className="middleBody">
-        //                 <div className="bookings">
-        //                 </div>
-        //                 <div className="reviews-comp">
-        //                     {/* will eventually be review item index */}
-        //                 </div>
-        //             </div>
-
-        //         </div>
-        //     )
-        // } else {
-
-        
-
-        // return (
-            // <div className="userBody">
-            //     <div className="left_panel">
-            //         <div className="bioPanel">
-            //             {this.props.user.first_name + " " + this.props.user.last_name}
-            //             <div className="panelHeader">
-            //                 <div className="left_avatar">
-            //                     <img src="https://supertramp-mast.s3-us-west-1.amazonaws.com/24-248366_profile-clipart-generic-user-generic-profile-picture-gender.png" alt=""/>
-            //                 </div>
-            //                 <div className="right_header">
-            //                     <h2 className="userName_show">Username: {this.props.user.username}</h2>
-            //                     <h2 className="email_show">Email: {this.props.user.email}</h2>
-            //                     {/* <button onClick={open modal?}>Update User Info</button> */}
-            //                 </div>
-            //             </div>
-            //         </div>
-            //     </div>
-
-            //     <div className="middleBody">
-            //         <BookingItem 
-            //         user={this.props.user}
-            //         fetchListings={this.props.fetchListings}
-            //         />
-
-            //         <div className="reviews-comp">
-            //             {/* bonus feature. will eventually be review item index */}
-            //         </div>
-            //     </div>
-
-            // </div>
-        // )};
-    // }
 }
 
 

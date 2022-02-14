@@ -4,6 +4,9 @@ export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
 export const RECEIVE_BOOKING_ERRORS = "RECEIVE_BOOKING_ERRORS";
 export const REMOVE_BOOKING = 'REMOVE_BOOKING';
 export const RECEIVE_ALL_BOOKINGS = 'RECEIVE_ALL_BOOKINGS';
+export const RECEIVE_UPDATE_BOOKING = 'RECEIVE_UPDATE_BOOKING';
+export const REMOVE_UPDATE_BOOKING = 'REMOVE_UPDATE_BOOKING';
+
 
 export const receiveBooking = (booking) => ({
     type: RECEIVE_BOOKING,
@@ -15,9 +18,9 @@ export const receiveAllBookings = (bookings) => ({
     bookings
 });
 
-export const removeBooking = (booking) => ({
+export const removeBooking = (bookingId) => ({
     type: REMOVE_BOOKING,
-    booking: booking
+    booking: bookingId
 })
 
 export const receiveBookingErrors = (errors) => ({
@@ -25,17 +28,33 @@ export const receiveBookingErrors = (errors) => ({
     errors
 });
 
-// export const fetchUserBookings = (userId) => dispatch => {
-//     return BookingUtil.fetchUserBookings(userId)
-//     .then((bookings) => dispatch(receiveAllBookings(bookings)));
-//   };
+export const receiveUpdateBooking = booking => ({
+    type: RECEIVE_UPDATE_BOOKING,
+    booking: booking
+})
+
+export const removeUpdateBooking = () => ({
+    type: REMOVE_UPDATE_BOOKING
+})
+
+export const fetchUserBookings = (userId) => dispatch => {
+    return BookingUtil.fetchBookings(userId)
+    .then((bookings) => dispatch(receiveAllBookings(bookings)));
+  };
 
 export const createBooking = (booking) => dispatch => {
     return BookingUtil.createBooking(booking)
+        // .then(bookings => dispatch(receiveAllBookings(bookings)))
+        .then(booking => dispatch(receiveBooking(booking)))
+};
+
+export const updateBooking = (booking) => dispatch => {
+    return BookingUtil.updateBooking(booking)
+        // .then(bookings => dispatch(receiveAllBookings(bookings)))
         .then(booking => dispatch(receiveBooking(booking)))
 };
 
 export const deleteBooking = (bookingId) => dispatch => {
     return BookingUtil.deleteBooking(bookingId)
-    .then((bookingId) =>dispatch(removeBooking(bookingId)))
+    .then(() =>dispatch(removeBooking(bookingId)))
 };

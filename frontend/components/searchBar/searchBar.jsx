@@ -1,4 +1,7 @@
 import React from 'react';
+// import 'react-dates/initialize';
+// import { DateRangePicker } from 'react-dates';
+import DateRange from './rangeBar';
 
 class SearchBar extends React.Component{
     constructor(props){
@@ -39,8 +42,13 @@ class SearchBar extends React.Component{
     }
     
     render(){
+
         return(
-            <div className={this.state.active ? 'search-bar animated intensifies': 'search-bar'} onClick={this.toggleClass}>
+            // <div className={this.state.active ? 'search-bar animated intensifies': 'search-bar'} onClick={this.toggleClass}>
+            <div className='search-bar'>
+                        {/* <div>
+                        <DateRange />
+                        </div> */}
                 <form className ='search-form' onSubmit={this.handleSubmit}>
                     
                     <div className='labels'>

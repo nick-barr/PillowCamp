@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import SplashListContainer from './splashList_container';
 import SearchBarContainer from '../searchBar/searchBar_container';
+import DateRange from '../searchBar/rangeBar';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -31,6 +32,8 @@ class Splash extends React.Component {
                     <img src={window.tentf} className="splash-hero"/>
                     
                     <SearchBarContainer />
+                    {/* <DateRange /> */}
+
                 </div>
 
                 <div className="splash-spot-list">

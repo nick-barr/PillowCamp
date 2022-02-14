@@ -1,13 +1,19 @@
 class Api::BookingsController < ApplicationController
 
-    before_action :require_logged_in
+    before_action :ensure_logged_in
+    skip_before_action :verify_authenticity_token
+
+    # def index
+    #     if booking_params[:user_id]
+    #         @bookings = User.find(booking_params[:user_id]).bookings.includes(:spot)
+    #     else
+    #         @bookings = Booking.includes(:spot).all
+    #     end
+    #     render :index
+    # end
 
     def index
-        if booking_params[:user_id]
-            @bookings = User.find(booking_params[:user_id]).bookings.includes(:spot)
-        else
-            @bookings = Booking.includes(:spot).all
-        end
+        @bookings = Booking.includes(:spot).where(user_id: params[:user_id])
         render :index
     end
 
@@ -26,27 +32,28 @@ class Api::BookingsController < ApplicationController
         end
     end
 
-    # def update
-    #     @booking = Booking.find(params[:id])
-    #     if @booking.update(booking_params)
-    #         render :show
-    #     else
-    #         render json: @booking.errors.full_messages, status: 422
-    #     end
-    # end
-
-    def destroy
+    def update
         @booking = Booking.find(params[:id])
-        if @booking.destroy && current_user.id == @booking.user_id
+        if @booking.update(booking_params)
             render :show
         else
             render json: @booking.errors.full_messages, status: 422
         end
     end
 
+    def destroy
+        @booking = Booking.find(params[:id])
+        if @booking.destroy && current_user.id == @booking.user_id
+            # render :show
+        else
+            render json: @booking.errors.full_messages, status: 422
+        end
+    end
 
     private
+
     def booking_params
-        params.require(:booking).permit(:check_in, :check_out, :spot_id, :price, :capacity, :spot_name, :user_id, :host_id)
+        params.require(:booking).permit(:check_in, :check_out, :spot_id, :user_id, :capacity)
     end
+
 end
