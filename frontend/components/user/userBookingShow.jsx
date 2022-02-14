@@ -14,7 +14,7 @@ class UserBookingShow extends React.Component{
         }
 
         this.dateFix = this.dateFix.bind(this);
-        this.removeBooking = this.removeBooking.bind(this);
+        this.delete = this.delete.bind(this);
         this.update = this.update.bind(this);
     }
 
@@ -27,8 +27,9 @@ class UserBookingShow extends React.Component{
         this.props.activateModal("bookingUpdate")
     }
     
-    removeBooking(bookingId){
-        this.props.deleteBooking(bookingId);
+    delete(booking){
+        this.props.getBooking(booking);
+        this.props.activateModal("bookingDelete")
     }
 
     render(){
@@ -45,7 +46,7 @@ class UserBookingShow extends React.Component{
 
             
                 <button onClick={() => this.update(booking)}>Update Booking</button>
-                <button onClick={() => this.removeBooking(booking.id)}>Cancel Booking</button>
+                <button onClick={() => this.delete(booking)}>Cancel Booking</button>
                 <Modal />
             </div>
         )

@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
 class ReservationUpdate extends React.Component{
     constructor(props){
@@ -32,7 +31,6 @@ class ReservationUpdate extends React.Component{
     formUpdates(field){
         return e => this.setState({[field]: e.currentTarget.value})
     }
-    
 
     render(){
         return(
@@ -67,4 +65,4 @@ class ReservationUpdate extends React.Component{
 }
 
 
-export default withRouter(ReservationUpdate);
+export default ReservationUpdate;

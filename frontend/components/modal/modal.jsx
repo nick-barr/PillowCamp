@@ -1,5 +1,6 @@
 import React from 'react';
 import ReservationUpdate from '../reservation/reservationUpdate_container';
+import ReservationCancel from '../reservation/reservationCancel_container';
 
 class Modal extends React.Component{
     constructor(props){
@@ -21,6 +22,9 @@ class Modal extends React.Component{
         switch (this.props.modal) {
             case 'bookingUpdate':
                 component = <ReservationUpdate />;
+                break;
+            case 'bookingDelete':
+                component = <ReservationCancel />;
                 break;
             default:
                 return null;
