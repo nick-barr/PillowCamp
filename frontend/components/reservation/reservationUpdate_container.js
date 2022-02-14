@@ -1,4 +1,4 @@
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import ReservationUpdate from './reservation_update';
 import { updateBooking } from '../../actions/booking_actions';
 import { inactiveModal } from '../../actions/modal_actions';

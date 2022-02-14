@@ -18,7 +18,7 @@ class ReservationCancel extends React.Component{
                 <div className='reservation-container'>
                     Are you sure you want to cancel your reservation?
                     <div className='reservation-form'>    
-                        <button onClick={()=> this.deleteBooking()}>Cancel Reservation</button>
+                        <button className='' onClick={()=> this.deleteBooking()}>Cancel Reservation</button>
                         <button onClick={() => this.props.inactiveModal()}>Keep Reservation</button>
                     </div>
                 </div>
