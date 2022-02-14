@@ -5,20 +5,16 @@ class UserBookingShow extends React.Component{
     constructor(props){
         super(props)
 
-        this.state = {
-            check_in: '',
-            check_out: '',
-            spot_id: this.props.spotId,
-            user_id: this.props.userId,
-            capacity: 1
-        }
-
         this.dateFix = this.dateFix.bind(this);
         this.delete = this.delete.bind(this);
         this.update = this.update.bind(this);
     }
 
     dateFix(rubyDate){
+        return (new Date((new Date(rubyDate)).getTime() + (new Date(rubyDate)).getTimezoneOffset() * 60000)).toLocaleString("en-us", {month: 'short', weekday: 'short', day: 'numeric', year: 'numeric'})
+    }
+
+    totalPrice(){
         return (new Date((new Date(rubyDate)).getTime() + (new Date(rubyDate)).getTimezoneOffset() * 60000)).toLocaleString("en-us", {month: 'short', weekday: 'short', day: 'numeric', year: 'numeric'})
     }
 
@@ -37,17 +33,22 @@ class UserBookingShow extends React.Component{
         let {booking} = this.props;
 
         return(
-            <div>
-                Booking ID: {booking.id} <br/>
+            <div className='UBS-container'>
+                Booking picture here: {booking.id}
                 {/* <img src={booking.photoUrls} /> */}
-                Spot ID: {booking.spot_id} <br/>
-            
-                Check-In: {this.dateFix(booking.check_in)} <br/>
-                Check-Out: {this.dateFix(booking.check_out)} <br/>
-
-            
-                <button onClick={() => this.update(booking)}>Update Booking</button>
-                <button onClick={() => this.delete(booking)}>Cancel Booking</button>
+                
+                <div className='UBS-container__details'>
+                    <div className='UBS-container__info'>
+                        {booking.title}
+                        Check-In: {this.dateFix(booking.check_in)}
+                        Check-Out: {this.dateFix(booking.check_out)}
+                    </div>
+                    
+                    <div className='UBS-container__buttons'>
+                        <button onClick={() => this.update(booking)}>Update Booking</button>
+                        <button onClick={() => this.delete(booking)}>Cancel Booking</button>
+                    </div>
+                </div>
                 <Modal />
             </div>
         )

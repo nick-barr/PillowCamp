@@ -52,7 +52,7 @@ class ReservationUpdate extends React.Component{
                     
                     <label >Guests</label>
                     <select onChange={this.formUpdates("capacity")}>
-                        <option value="none" selected disabled hidden>{this.props.booking}</option>
+                        <option value="none" selected disabled hidden>{this.props.booking.capacity} guests</option>
                         <option value="1">1 guest</option>
                         <option value="2">2 guests</option>
                         <option value="3">3 guests</option>
