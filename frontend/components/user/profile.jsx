@@ -28,7 +28,7 @@ class Profile extends React.Component {
                 </div>
 
                 <div className="user-things-container">
-                    <div className="profile-nav">
+                    <div className="profile-nav-container">
                         <ProfileNav user={this.props.user} />
                     </div>
 

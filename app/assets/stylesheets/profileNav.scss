@@ -1,7 +1,10 @@
+.profile-nav-container{
+    border-bottom: 1px solid lightgray;
+}
+
 .profile-nav{
     display: flex;
     position: sticky;
-    border-bottom: 1px solid lightgray;
     top: 0;
     background: rgb(255, 255, 255);
     padding-left: 10px;
