@@ -33,6 +33,7 @@ class UserBookingShow extends React.Component{
     }
 
     render(){
+        debugger
         let {booking} = this.props;
 
         return(

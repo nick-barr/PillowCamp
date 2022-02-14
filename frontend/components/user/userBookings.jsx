@@ -13,7 +13,6 @@ class UserBookings extends React.Component{
                     <li key={booking.id}>
                         <UserBookingShow 
                             booking={booking} 
-                            // deleteBooking={this.props.deleteBooking}
                             activateModal={this.props.activateModal}
                             getBooking={this.props.getBooking}
                         /> 
