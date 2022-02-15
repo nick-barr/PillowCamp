@@ -49,6 +49,15 @@
         width:265px;
         // margin: left 5px, right 5px;
     }
+
+    input::-webkit-calendar-picker-indicator {
+        position: absolute;
+        left: -10px;
+        width: 260px;
+        height: 50px;
+        cursor: pointer;
+        opacity: 0;
+    }
     
     select {
         margin-bottom: 20px;

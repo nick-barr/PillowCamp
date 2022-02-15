@@ -13,6 +13,7 @@ class ReservationForm extends React.Component{
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.dateFix = this.dateFix.bind(this);
     }
 
     handleSubmit(e){
@@ -23,6 +24,24 @@ class ReservationForm extends React.Component{
     
     formUpdates(field){
         return e => this.setState({[field]: e.currentTarget.value})
+    }
+
+    dateFix(rubyDate){
+        const newDate = (new Date((new Date(rubyDate)).getTime() + (new Date(rubyDate)).getTimezoneOffset() * 60000)).toLocaleDateString('en-GB').split('/').reverse().join('-');
+        return newDate
+    }
+
+    dateMin(checkIn){
+        let today;
+
+        if (!checkIn) {
+            today = new Date();
+        } else {
+            today = new Date(checkIn)
+        }
+
+        const tomorrow = this.dateFix(today.setDate(today.getDate() + 1))
+        return tomorrow;
     }
 
 
@@ -37,10 +56,10 @@ class ReservationForm extends React.Component{
                     </div>
                     
                     <label >Check in</label>
-                    <input type="date" onChange={this.formUpdates("check_in")}/>
+                    <input type="date" min={this.dateMin()} onChange={this.formUpdates("check_in")}/>
                     
                     <label >Check out</label>
-                    <input type="date" onChange={this.formUpdates("check_out")}/>
+                    <input type="date" min={this.dateMin(this.state.check_in)} onChange={this.formUpdates("check_out")}/>
                     
                     <label >Guests</label>
                     <select onChange={this.formUpdates("capacity")}>
