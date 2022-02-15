@@ -18,7 +18,9 @@
         justify-content: space-between;
         align-items: center;
         // border: 1px solid rgb(255, 0, 0);
-        width: 900px;
+        min-width: 600px;
+        width: 60vw;
+        max-width: 900px;
     }
 
     .show-photos{
@@ -28,9 +30,10 @@
     }
 
     .spot-show-image{
-        min-width: 1000px;
-        min-height: 500px;
+        min-width: 900px;
+        min-height: 350px;
         max-height: 600px;
+        height: 60vh;
         width:100vh;
         border-radius: 5px;
         object-fit: cover;
@@ -40,6 +43,8 @@
         // border: 1px solid rgb(17, 0, 255);
         padding-top: 25px;
         padding-bottom: 25px;
+        height:100%;
+        width: 100%;
         
         p {
             padding: 10px;
@@ -95,6 +100,7 @@
         padding: 15px;
         padding-top: 25px;
         margin-bottom: 25px;
+        margin-right: 10px;
         border: 1px solid rgb(238, 238, 238);
         border-radius: 5px;
         box-shadow: 1px 2px 7px 2px lightgray;
