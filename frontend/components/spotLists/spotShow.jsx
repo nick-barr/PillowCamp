@@ -79,8 +79,8 @@ class SpotShow extends React.Component{
                                     </div>
                                     <div>
                                         <p>
-                                        <b>On arrival:</b> Have existential crisis <br />
-                                        <b>Check out:</b> These views <br />
+                                        <b>On arrival:</b> Call host <br />
+                                        <b>Check out:</b> The views! <br />
                                         </p>
                                     </div>
                                 </div>

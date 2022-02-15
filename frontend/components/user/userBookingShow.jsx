@@ -15,12 +15,13 @@ class UserBookingShow extends React.Component{
     }
 
     totalPrice(){
-        debugger
-        const {} = this.props.booking;
+        const { check_in, check_out, cost} = this.props.booking;
 
-        const dateDiff = (new Date(this.props.)).getTime()
-
-        // return (new Date((new Date(rubyDate)).getTime() + (new Date(rubyDate)).getTimezoneOffset() * 60000)).toLocaleString("en-us", {month: 'short', weekday: 'short', day: 'numeric', year: 'numeric'})
+        const timeDiff = (new Date(check_out)).getTime() - (new Date(check_in)).getTime();
+        const daysDiff = timeDiff / (1000*60*60*24);
+        const finalPrice = daysDiff * cost
+        
+        return finalPrice;
     }
 
     update(booking){
@@ -51,7 +52,7 @@ class UserBookingShow extends React.Component{
                             <span>Check-Out: </span>{this.dateFix(booking.check_out)}
                         </h2>
                         <h2>
-                            <span>Total: </span>{this.dateFix(booking.check_out)}
+                            <span>Total Cost: </span>${this.totalPrice()} (${booking.cost} / per night)
                         </h2>
                     </div>
                     
