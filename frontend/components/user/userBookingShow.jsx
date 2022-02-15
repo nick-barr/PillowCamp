@@ -15,7 +15,12 @@ class UserBookingShow extends React.Component{
     }
 
     totalPrice(){
-        return (new Date((new Date(rubyDate)).getTime() + (new Date(rubyDate)).getTimezoneOffset() * 60000)).toLocaleString("en-us", {month: 'short', weekday: 'short', day: 'numeric', year: 'numeric'})
+        debugger
+        const {} = this.props.booking;
+
+        const dateDiff = (new Date(this.props.)).getTime()
+
+        // return (new Date((new Date(rubyDate)).getTime() + (new Date(rubyDate)).getTimezoneOffset() * 60000)).toLocaleString("en-us", {month: 'short', weekday: 'short', day: 'numeric', year: 'numeric'})
     }
 
     update(booking){
@@ -29,19 +34,25 @@ class UserBookingShow extends React.Component{
     }
 
     render(){
-        debugger
-        let {booking} = this.props;
+        const {booking} = this.props;
 
         return(
             <div className='UBS-container'>
-                Booking picture here: {booking.id}
-                {/* <img src={booking.photoUrls} /> */}
+                {/* Booking picture here: {booking.id} */}
+                <img src={booking.photoUrls} />
                 
                 <div className='UBS-container__details'>
                     <div className='UBS-container__info'>
-                        {booking.title}
-                        Check-In: {this.dateFix(booking.check_in)}
-                        Check-Out: {this.dateFix(booking.check_out)}
+                        <h1>{booking.title}</h1>
+                        <h2>
+                            <span>Check-In: </span>{this.dateFix(booking.check_in)}
+                        </h2>
+                        <h2>
+                            <span>Check-Out: </span>{this.dateFix(booking.check_out)}
+                        </h2>
+                        <h2>
+                            <span>Total: </span>{this.dateFix(booking.check_out)}
+                        </h2>
                     </div>
                     
                     <div className='UBS-container__buttons'>

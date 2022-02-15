@@ -15,12 +15,6 @@ function ProfileNav(props) {
                 Reviews
             </NavLink>
             </div>
-
-            {/* <div className='pNav-box'>
-            <NavLink activeClassName="active-pNav" className="pNav" to={`/profile/${props.user.id}/upcoming`}>
-                Upcoming
-            </NavLink>
-            </div> */}
         </div>
     )
   }

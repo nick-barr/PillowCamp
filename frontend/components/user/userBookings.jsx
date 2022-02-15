@@ -10,7 +10,7 @@ class UserBookings extends React.Component{
         return(
             <ul>
                 {this.props.bookings.map(booking =>(
-                    <li key={booking.id}>
+                    <li className='booking-show' key={booking.id}>
                         <UserBookingShow 
                             booking={booking} 
                             activateModal={this.props.activateModal}

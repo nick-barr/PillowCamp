@@ -49,8 +49,6 @@ class Profile extends React.Component {
                                     reviews={this.props.reviews} 
                                 />} 
                             />
-
-                            {/* <Route path="/profile/:userId/upcoming" render={(props) => <UserBookings {...props} bookings={this.props.bookings} deleteBooking={this.props.deleteBooking} updateBooking={this.props.updateBooking} />} /> */}
                         </Switch>
                     </div>
                 </div>
