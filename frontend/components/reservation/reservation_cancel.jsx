@@ -12,13 +12,13 @@ class ReservationCancel extends React.Component{
         this.props.inactiveModal();        
     }
     
-    render(){
+render(){
         return(
             <div className='reservation-delete-container'>
                 <div className='reservation-container'>
-                    Are you sure you want to cancel your reservation?
+                    <h1>Are you sure you want to cancel your reservation?</h1>
                     <div className='reservation-form'>    
-                        <button className='' onClick={()=> this.deleteBooking()}>Cancel Reservation</button>
+                        <button onClick={()=> this.deleteBooking()}>Cancel Reservation</button>
                         <button onClick={() => this.props.inactiveModal()}>Keep Reservation</button>
                     </div>
                 </div>
