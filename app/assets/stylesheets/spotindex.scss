@@ -3,25 +3,23 @@
     justify-content: center;
     background-color: rgb(253, 253, 253);
     flex-direction: column;
-    padding-left: 20px;
 }
 
 .spot-index-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     background-color: rgb(253, 253, 253);
     height: calc(100vh - 140px);
     justify-content: center;
     // margin-left: 20px;
     // max-width: 1800px;
-
     // border: 10px solid rgb(15, 199, 255);
 
     ul {
         // border: 1px solid rgb(35, 255, 15);
-        width: 720px;
+        // width: 720px;
 
     }
 
@@ -51,12 +49,13 @@
     
 .spot-index-box {
     // min-height: 500px;
-    max-width: 660px;
-    min-width: 660px;
+    // max-width: 660px;
+    min-width: 510px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    padding-top:10px;
     // z-index: 1;
     // overflow-y: scroll;
     // border: 1px solid rgb(0, 155, 83);
@@ -70,7 +69,7 @@
     li {
         display: flex;
         flex-direction: row;
-        width: 630px;
+        width: 100%;
         // margin: 10px;
         // border: 1px solid red;
     }
@@ -83,18 +82,21 @@
 }
 
 .spot-index-image {
-    min-width: 350px;
+    min-width: 300px;
+    width: 30%;
     height: 200px;
     object-fit: cover;
     object-position: 20% 50%; 
     border-radius: 15px;
+    margin-left: 20px;
+
 }
 
 .spot-index-stuff{
     display: flex;
     padding: 11px;
     padding-bottom: 3px;
-    width: 100%;
+    width: auto;
     flex-direction: column;
     justify-content: space-between;
     // border: 1px solid blue;

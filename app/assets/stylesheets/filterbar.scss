@@ -1,6 +1,6 @@
 .filter-bar-container{
     position: sticky;
-    width:100%;
+    width:100vw;
     top: 85px;
     height: 55px;
     background-color: white;
@@ -8,6 +8,8 @@
 
     .filter-bar-options{
         height: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
     }
 
     ul {
