@@ -22,7 +22,7 @@
             padding-top: 15px;
             display: flex;
 
-            p {
+            a {
                 // border: 3px solid rgb(0, 0, 0);    
                 color: black;
                 text-decoration: none;
@@ -36,18 +36,16 @@
         
             }
             
-            p:hover {
-                
+            a:hover {
                 padding-bottom: 2px;
                 border-bottom: 2px solid rgba(0, 179, 60, 0.911);
-                // line-height: 23px;
             }
-            p:focus {    
-                padding-bottom: 2px;
+
+            .filterBar-active {
                 border-bottom: 2px solid rgba(0, 179, 60, 0.911);
-                // line-height: 23px;
             }
 
         }
     }
 }
+

@@ -4,47 +4,47 @@ import { withRouter, NavLink, Link } from 'react-router-dom';
 class FilterBar extends React.Component{
     constructor(props){
         super(props)
-        this.changeURL = this.changeURL.bind(this)
+        // this.changeURL = this.changeURL.bind(this)
     }
 
-    changeURL(url){
+    // changeURL(url){
         // debugger
         // e.preventDefault();
-        this.props.history.push(url);
-    }
+        // this.props.history.push(url);
+    // }
 
     render(){
     
         return(
             <div className='filter-bar-container'>
                 <ul className='filter-bar-options'>
-                    <li onClick={() => this.changeURL('/filter/all')}>
-                        <p>All</p>
-                    </li>
+                    <li><NavLink activeClassName='filterBar-active'to='/filter/all'>
+                        All
+                    </NavLink></li>
 
-                    <li onClick={() => this.changeURL('/filter/south')}>
-                        <p>South</p>
-                    </li>
+                    <li><NavLink activeClassName='filterBar-active'to='/filter/south'>
+                        South
+                    </NavLink></li>
 
-                    <li onClick={() => this.changeURL('/filter/northeast')}>
-                        <p>Northeast</p>
-                    </li>
+                    <li><NavLink activeClassName='filterBar-active'to='/filter/northeast'>
+                        Northeast
+                    </NavLink></li>
     
-                    <li onClick={() => this.changeURL('/filter/west')}>
-                        <p>West</p>
-                    </li>   
+                    <li><NavLink activeClassName='filterBar-active'to='/filter/west'>
+                        West
+                    </NavLink></li>
 
-                    <li onClick={() => this.changeURL('/filter/campsite')}>
-                        <p>Campgrounds</p>
-                    </li>
+                    <li><NavLink activeClassName='filterBar-active'to='/filter/campsite'>
+                        Campgrounds
+                    </NavLink></li>
 
-                    <li onClick={() => this.changeURL('/filter/openfield')}>
-                        <p>Wilderness</p>
-                    </li>
+                    <li><NavLink activeClassName='filterBar-active'to='/filter/openfield'>
+                        Wilderness
+                    </NavLink></li>
 
-                    <li onClick={() => this.changeURL('/filter/luxury')}>
-                        <p>Fancy</p>
-                    </li>
+                    <li><NavLink activeClassName='filterBar-active'to='/filter/luxury'>
+                        Fancy
+                    </NavLink></li>
 
                 </ul>
             </div>

@@ -45,7 +45,7 @@ class ReservationUpdate extends React.Component{
                     </div>
                     
                     <label >Check in</label>
-                    <input type="date" value={this.dateFix(this.state.check_in)} onChange={this.formUpdates("check_in")}/>
+                    <input type="date" data-date-inline-picker="true" value={this.dateFix(this.state.check_in)} onChange={this.formUpdates("check_in")}/>
                     
                     <label >Check out</label>
                     <input type="date" value={this.dateFix(this.state.check_out)} onChange={this.formUpdates("check_out")}/>

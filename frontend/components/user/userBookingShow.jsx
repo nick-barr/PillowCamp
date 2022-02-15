@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from '../modal/modal_container';
+import { Link } from 'react-router-dom';
 
 class UserBookingShow extends React.Component{
     constructor(props){
@@ -40,11 +41,15 @@ class UserBookingShow extends React.Component{
         return(
             <div className='UBS-container'>
                 {/* Booking picture here: {booking.id} */}
-                <img src={booking.photoUrls} />
+                <Link to={`/spot/${booking.spot_id}`}>
+                    <img src={booking.photoUrls} />
+                </Link>
                 
                 <div className='UBS-container__details'>
                     <div className='UBS-container__info'>
-                        <h1>{booking.title}</h1>
+                        <Link to={`/spot/${booking.spot_id}`}>
+                            <h1>{booking.title}</h1>
+                        </Link>
                         <h2>
                             <span>Check-In: </span>{this.dateFix(booking.check_in)}
                         </h2>

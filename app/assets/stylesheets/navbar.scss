@@ -1,6 +1,6 @@
 header {
     height: 85px;
-    z-index: 10;
+    z-index: 100;
     width: 100%;
     position: sticky;
     top: 0px;
@@ -94,6 +94,11 @@ header {
         padding-bottom: 2px;
         border-bottom: 2px solid rgba(0, 179, 60, 0.911);
         // line-height: 23px;
+    }
+
+    .authbar-active {
+        padding-bottom: 2px;
+        border-bottom: 2px solid rgba(0, 179, 60, 0.911);
     }
 
 

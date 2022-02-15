@@ -1,19 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const AuthBar = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
-      <Link to="/login" className="auth-options">Login</Link>
+      <NavLink activeClassName="authbar-active" to="/login" className="auth-options">Login</NavLink>
       <br />
-      <Link to="/signup" className="auth-options">Sign up</Link>
+      <NavLink activeClassName="authbar-active" to="/signup" className="auth-options">Sign up</NavLink>
     </nav>
   );
   const personalGreeting = () => (
     <nav className="user-links">
       {/* <h2 className="user-greet">Hi, {currentUser.username}!</h2> */}
       <h2 className="user-greet"></h2>
-        <Link to={`/profile/${currentUser.id}/bookings`} className="auth-options">Profile</Link>
+        <NavLink activeClassName="authbar-active" to={`/profile/${currentUser.id}/bookings`} className="auth-options">Profile</NavLink>
         <Link to="/" className="auth-options" onClick={logout}>Logout</Link>
       {/* <button className="header-button" >Log Out</button> */}
     </nav>

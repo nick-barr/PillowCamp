@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class UserReviews extends React.Component{
     constructor(props){
@@ -10,9 +11,13 @@ class UserReviews extends React.Component{
             <ul className='profile-user-reviews'>
             {this.props.reviews.map(review =>(
                 <li key={review.id} className='user-review-show'>
-                    <img src={review.photoUrls} />
+                    <Link to={`/spot/${review.spot_id}`}>
+                        <img src={review.photoUrls} />
+                    </Link>
                     <div className='user-review-content'>
-                        <h1>{review.title}</h1>
+                        <Link to={`/spot/${review.spot_id}`}>
+                            <h1>{review.title}</h1>
+                        </Link>
                         <h2><span>Your review: </span>{review.body}</h2>
                     </div>
                     {/* <button onClick={() => this.removeReview(review.id)}>Delete Review</button> */}
