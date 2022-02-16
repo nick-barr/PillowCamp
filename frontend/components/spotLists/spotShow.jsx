@@ -18,11 +18,9 @@ class SpotShow extends React.Component{
     componentDidMount(){
         this.props.fetchSpot(this.props.match.params.spotId)
         .then(() => {this.setState({ loading: false})})
-        // debugger
     }
     
     render() {
-        // debugger
         if (this.state.loading) return (<h1> Loading </h1>);
 
         return(
@@ -34,7 +32,7 @@ class SpotShow extends React.Component{
                         <img src={window.defaultspot} className='spot-show-image'/>
                         <img src={window.defaultspot} className='spot-show-image'/> */}
 
-                        <img src={this.props.spot.photoUrl} className='spot-show-image'/>
+                        {/* <img src={this.props.spot.photoUrl} className='spot-show-image'/> */}
                     </div>
 
                     <div className='show-box'>

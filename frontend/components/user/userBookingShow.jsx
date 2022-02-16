@@ -40,7 +40,6 @@ class UserBookingShow extends React.Component{
 
         return(
             <div className='UBS-container'>
-                {/* Booking picture here: {booking.id} */}
                 <Link to={`/spot/${booking.spot_id}`}>
                     <img src={booking.photoUrls} />
                 </Link>

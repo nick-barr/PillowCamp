@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from '../modal/modal_container';
 import { withRouter } from 'react-router-dom';
 
 class ReservationForm extends React.Component{
@@ -18,8 +19,13 @@ class ReservationForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.createBooking(this.state);
-        this.props.history.push(`/profile/${this.props.userId}/bookings`);        
+
+        if (!this.props.userId) {
+            this.props.activateModal('login');
+        } else {
+            this.props.createBooking(this.state);
+            this.props.history.push(`/profile/${this.props.userId}/bookings`);
+        }
     }
     
     formUpdates(field){
@@ -56,10 +62,10 @@ class ReservationForm extends React.Component{
                     </div>
                     
                     <label >Check in</label>
-                    <input type="date" min={this.dateMin()} onChange={this.formUpdates("check_in")}/>
+                    <input type="date" min={this.dateMin()} onChange={this.formUpdates("check_in")} required/>
                     
                     <label >Check out</label>
-                    <input type="date" min={this.dateMin(this.state.check_in)} onChange={this.formUpdates("check_out")}/>
+                    <input type="date" min={this.dateMin(this.state.check_in)} onChange={this.formUpdates("check_out")} required/>
                     
                     <label >Guests</label>
                     <select onChange={this.formUpdates("capacity")}>
@@ -71,6 +77,7 @@ class ReservationForm extends React.Component{
                     </select>
                     
                     <button>Book Reservation</button>
+                    <Modal />
                 </form>
             </div>
         )

@@ -46,7 +46,7 @@ margin: 5px;
         font-size: 35px;
         color: rgb(53, 53, 53);
     }
-    .login-sub-head {
+    .login-sub-head, .auth-alternate-link{
         font-weight: 400;
         font-size: 19px;
         color: rgb(102, 102, 102);
@@ -54,6 +54,7 @@ margin: 5px;
     }
 
     hr {border-top: 1px solid grey; margin-bottom: 25px; padding: 0px;}
+    .hr-last { margin-bottom: 15px;}
 }
 
 // .demo-submit <#sess-button{    background-color: rgb(32, 32, 32);
@@ -105,3 +106,4 @@ margin: 5px;
     background-color:rgb(0, 0, 0);
     height: 60px;
 }
+

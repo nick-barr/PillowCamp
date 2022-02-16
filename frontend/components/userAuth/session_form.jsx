@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../footer/footer'
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -59,7 +58,6 @@ class SessionForm extends React.Component {
             <p className='login-head'>{this.props.welcome}</p>
             <p className='login-sub-head'>{this.props.subline}</p>
             <hr />
-            {/* Please {this.props.formType} or {this.props.navLink} */}
             <button className="session-submit" id="sess-button" onClick={this.handleDemoAccount}>Demo Account</button>
 
             <div>{this.renderErrors()}</div>
@@ -82,8 +80,8 @@ class SessionForm extends React.Component {
               <input className="session-submit" id="sess-button" type="submit" value={this.props.formType} />
               
               <br /><br />
-              <hr />
-              
+              <hr className='hr-last' />
+              <div className='auth-alternate-link'>{this.props.navLink}</div>
           </form>
         </div>
       </div>

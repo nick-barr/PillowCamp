@@ -1,6 +1,7 @@
 import React from 'react';
 import ReservationUpdate from '../reservation/reservationUpdate_container';
 import ReservationCancel from '../reservation/reservationCancel_container';
+import Login from '../userAuth/login_container_modal';
 
 class Modal extends React.Component{
     constructor(props){
@@ -25,6 +26,9 @@ class Modal extends React.Component{
                 break;
             case 'bookingDelete':
                 component = <ReservationCancel />;
+                break;
+            case 'login':
+                component = <Login wrapperClassName='login-modal'/>;
                 break;
             default:
                 return null;

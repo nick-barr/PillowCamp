@@ -56,9 +56,22 @@ class ReservationUpdate extends React.Component{
                     <h1>Change Your Reservation</h1>
                     <hr />
                     <label >Check in</label>
-                    <input type="date" min={this.dateMin()} value={this.dateFix(this.state.check_in)} onChange={this.formUpdates("check_in")}/>
+                    <input 
+                        type="date" 
+                        min={this.dateMin()} 
+                        value={this.dateFix(this.state.check_in)} 
+                        onChange={this.formUpdates("check_in")} 
+                        required
+                    />
+                    
                     <label >Check out</label>
-                    <input type="date" min={this.dateMin(this.state.check_in)} value={this.dateFix(this.state.check_out)} onChange={this.formUpdates("check_out")}/>
+                    <input 
+                        type="date" 
+                        min={this.dateMin(this.state.check_in)} 
+                        value={this.dateFix(this.state.check_out)} 
+                        onChange={this.formUpdates("check_out")}
+                        required
+                    />
                     
                     <label >Guests</label>
                     <select onChange={this.formUpdates("capacity")}>
