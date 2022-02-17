@@ -9,11 +9,11 @@ const mapStateToProps = (state) => {
   return {
     errors: state.errors.session,
     currentUser: state.entities.users[state.session.id],
-    formType: 'Login',
-    navLink: <a>Or click here to sign up instead</a>,
-    modalType: 'signup',
+    formType: 'Signup',
+    navLink: <a>Or click here to log in</a>,
+    modalType: 'login',
     welcome: 'Almost there',
-    subline: `Please login to make a reservation.`
+    subline: `Please sign up to make a reservation.`
   };
 };
 

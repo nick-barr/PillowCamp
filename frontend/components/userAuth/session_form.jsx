@@ -17,7 +17,7 @@ class SessionForm extends React.Component {
       username: "Happy Camper", 
       password: "password1"
     }
-    this.props.processFormDemo(demo);
+    this.props.processFormDemo(demo).then(this.props.closeModal());
   }
 
   update(field) {
@@ -34,8 +34,8 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
+
     this.props.processForm(user);
-    // this.props.processForm(user).then(() => this.props.history.replace('/'));
   }
 
   renderErrors() {
@@ -51,6 +51,9 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    if (this.props.currentUser) {
+      this.props.closeModal()
+    }
     return (
       <div className="login-background">
         <div className="login-form-container">
@@ -77,11 +80,11 @@ class SessionForm extends React.Component {
                 />
               <br/>
 
-              <input className="session-submit" id="sess-button" type="submit" value={this.props.formType} />
+              <input className="session-submit" id="sess-button" type="submit" value={this.props.formType} onClick={this.handleSubmit}/>
               
               <br /><br />
               <hr className='hr-last' />
-              <div className='auth-alternate-link'>{this.props.navLink}</div>
+              <div className='auth-alternate-link' onClick={() => this.props.switchModal(this.props.modalType)}>{this.props.navLink}</div>
           </form>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import ReservationUpdate from '../reservation/reservationUpdate_container';
 import ReservationCancel from '../reservation/reservationCancel_container';
 import Login from '../userAuth/login_container_modal';
+import Signup from '../userAuth/signup_container_modal';
 
 class Modal extends React.Component{
     constructor(props){
@@ -28,7 +29,10 @@ class Modal extends React.Component{
                 component = <ReservationCancel />;
                 break;
             case 'login':
-                component = <Login wrapperClassName='login-modal'/>;
+                component = <Login />;
+                break;
+            case 'signup':
+                component = <Signup />;
                 break;
             default:
                 return null;

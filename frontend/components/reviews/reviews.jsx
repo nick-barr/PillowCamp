@@ -3,12 +3,44 @@ import React from 'react';
 class Reviews extends React.Component{
     constructor(props){
         super(props)
+
+        this.state = {
+            user_id: this.props.userId,
+            spot_id: this.props.spotId
+        }
+
+        this.newReviewInput = this.newReviewInput.bind(this);
+        this.handleCreate = this.handleCreate.bind(this);
+    }
+
+    newReviewInput(){
+        if (this.props.userId) {
+                return(
+                    <form className='review-form' onSubmit={this.handleCreate}>
+                        <label>Leave a review</label>
+                        <div className='review-form-controls'>
+                            <textarea onChange={this.formUpdates("body")} placeholder="Tell us your thoughts" required></textarea>
+                            <button className='review-form__submit'>Submit Review</button>
+                        </div>
+                    </form>
+                )
+        }
+    }
+
+    handleCreate(e){
+        // e.preventDefault();
+        this.props.createReview(this.state)
+    }
+    
+    formUpdates(field){
+        return e => this.setState({[field]: e.currentTarget.value})
     }
 
     render(){
         // debugger
         return(
             <div className='user-review-container'>
+                <div>{this.newReviewInput()}</div>
                 <h1>3 Reviews</h1>
                 {this.props.reviews.map(review =>
                 <div className='user-review'>

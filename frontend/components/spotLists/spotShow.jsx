@@ -1,6 +1,6 @@
 import React from 'react';
 import ReservationForm from '../reservation/reservation_container'
-import Reviews from '../reviews/reviews'
+import Reviews from '../reviews/reviews_container'
 import Map from '../maps/maps'
 import {FaCampground, FaPeopleCarry, FaWalking,
     FaFire, FaToiletPaper, FaDog,
@@ -32,7 +32,7 @@ class SpotShow extends React.Component{
                         <img src={window.defaultspot} className='spot-show-image'/>
                         <img src={window.defaultspot} className='spot-show-image'/> */}
 
-                        {/* <img src={this.props.spot.photoUrl} className='spot-show-image'/> */}
+                        <img src={this.props.spot.photoUrl} className='spot-show-image'/>
                     </div>
 
                     <div className='show-box'>
@@ -84,7 +84,11 @@ class SpotShow extends React.Component{
                                 </div>
                                 <hr />
                             </div>
-                            <Reviews reviews={this.props.spot.reviews}/>
+                            <Reviews 
+                                reviews={this.props.spot.reviews} 
+                                spotTitle={this.props.spot.title}
+                                spotId={this.props.spot.id}
+                            />
                         </div>
                         <div className='res-form-container'>
                             <ReservationForm price={this.props.spot.price} spotId={this.props.spot.id}/>
