@@ -14,12 +14,10 @@ class Reviews extends React.Component{
     }
 
     componentDidMount(){
-        debugger
         this.props.fetchSpotReviews({spot_id: this.state.spot_id})
     }
 
     componentDidUnmount(){
-        debugger
         this.props.clearAllReviews();
     }
     
@@ -27,7 +25,7 @@ class Reviews extends React.Component{
         e.preventDefault();
         this.props.createReview(this.state);
         this.setState({body: ''});
-        location.reload();
+        document.getElementById('textarea-review').value='';
     }
     
     formUpdates(field){
@@ -40,7 +38,8 @@ class Reviews extends React.Component{
                     <form className='review-form' onSubmit={this.handleCreate}>
                         <label>Leave a review</label>
                         <div className='review-form-controls'>
-                            <textarea 
+                            <textarea
+                                id='textarea-review' 
                                 onChange={this.formUpdates("body")} 
                                 placeholder="Tell us your thoughts" 
                                 required>
@@ -53,7 +52,6 @@ class Reviews extends React.Component{
     }
 
     render(){
-        debugger
         return(
             <div className='user-review-container'>
                 <div>{this.newReviewInput()}</div>
