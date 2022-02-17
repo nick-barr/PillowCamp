@@ -18,6 +18,22 @@ class Reviews extends React.Component{
         this.props.fetchSpotReviews({spot_id: this.state.spot_id})
     }
 
+    componentDidUnmount(){
+        debugger
+        this.props.clearAllReviews();
+    }
+    
+    handleCreate(e){
+        e.preventDefault();
+        this.props.createReview(this.state);
+        this.setState({body: ''});
+        location.reload();
+    }
+    
+    formUpdates(field){
+        return e => this.setState({[field]: e.currentTarget.value})
+    }
+
     newReviewInput(){
         if (this.props.userId) {
                 return(
@@ -34,15 +50,6 @@ class Reviews extends React.Component{
                     </form>
                 )
         }
-    }
-
-    handleCreate(e){
-        // e.preventDefault();
-        this.props.createReview(this.state)
-    }
-    
-    formUpdates(field){
-        return e => this.setState({[field]: e.currentTarget.value})
     }
 
     render(){
