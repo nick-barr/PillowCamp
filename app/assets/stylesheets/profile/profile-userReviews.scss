@@ -18,6 +18,11 @@
     }
 }
 
+.profile-user-reviews {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .user-review-content {
     display: flex;
     flex-direction: column;

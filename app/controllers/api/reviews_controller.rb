@@ -4,8 +4,13 @@ class Api::ReviewsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
     def index
-        @reviews = Review.includes(:user).where(user_id: params[:user_id])
-        render :index
+      if params[:spot_id] == nil 
+          @reviews = Review.includes(:user).where(user_id: params[:user_id])
+          render :index
+        else 
+          @reviews = Review.includes(:spot).where(spot_id: params[:spot_id])
+          render :index
+        end
     end
 
     def create

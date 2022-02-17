@@ -19,7 +19,11 @@ class Reviews extends React.Component{
                     <form className='review-form' onSubmit={this.handleCreate}>
                         <label>Leave a review</label>
                         <div className='review-form-controls'>
-                            <textarea onChange={this.formUpdates("body")} placeholder="Tell us your thoughts" required></textarea>
+                            <textarea 
+                                onChange={this.formUpdates("body")} 
+                                placeholder="Tell us your thoughts" 
+                                required>
+                            </textarea>
                             <button className='review-form__submit'>Submit Review</button>
                         </div>
                     </form>
