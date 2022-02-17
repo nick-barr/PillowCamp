@@ -7,6 +7,7 @@ class UserReviews extends React.Component{
     }
 
     render(){
+        debugger
         return(
             <ul className='profile-user-reviews'>
             {this.props.reviews.map(review =>(

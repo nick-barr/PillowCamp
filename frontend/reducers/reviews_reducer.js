@@ -16,7 +16,7 @@ const ReviewsReducer = (oldState = {}, action) => {
             delete newState[action.review];
             return newState;
         case CLEAR_REVIEWS:
-            return []
+            return [];
             
         default:
             return oldState

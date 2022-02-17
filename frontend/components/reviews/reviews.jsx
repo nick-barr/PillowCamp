@@ -3,6 +3,7 @@ import React from 'react';
 class Reviews extends React.Component{
     constructor(props){
         super(props)
+        
 
         this.state = {
             user_id: this.props.userId,
@@ -14,10 +15,11 @@ class Reviews extends React.Component{
     }
 
     componentDidMount(){
-        this.props.fetchSpotReviews({spot_id: this.state.spot_id})
+        debugger
+        this.props.fetchSpotReviews({spot_id: this.props.spotId})
     }
 
-    componentDidUnmount(){
+    componentWillUnmount(){
         this.props.clearAllReviews();
     }
     
@@ -33,6 +35,7 @@ class Reviews extends React.Component{
     }
 
     newReviewInput(){
+        // debugger
         if (this.props.userId) {
                 return(
                     <form className='review-form' onSubmit={this.handleCreate}>
@@ -52,10 +55,14 @@ class Reviews extends React.Component{
     }
 
     render(){
+        debugger
+        if (this.props.reviews.length === 0) return null;
+
+        debugger
         return(
             <div className='user-review-container'>
                 <div>{this.newReviewInput()}</div>
-                <h1>3 Reviews</h1>
+                <h1>fix Reviews</h1>
                 {this.props.reviews.map(review =>
                 <div className='user-review'>
                     <img src="https://sharespost-sharex-production.s3.us-west-2.amazonaws.com/uploads/issuer/100001872/logo/hipcamp-logo.png" alt="" />

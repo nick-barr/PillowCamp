@@ -1,15 +1,19 @@
-import React from "react";
-import { connect } from "react-redux";
-import { withRouter } from "react-router";
-import { fetchSearches } from "../../actions/search_actions"
-import SearchBar from "./search_bar";
+import { connect } from 'react-redux';
+import { logout } from '../../actions/session_actions';
+import SearchBar from './searchBar';
 
-const mSTP = state => ({
-    parks: state.entities.search
-})
+const mSTP = ({ session, entities: { users } }) => ({
+  currentUser: users[session.id],
+  search: {
+    destination: '',
+    dateS: '',
+    dateE: '',
+    guests: ''
+  }
+});
 
 const mDTP = dispatch => ({
-    fetchSearches: () => dispatch(fetchSearches())
-})
+  logout: () => dispatch(logout())
+});
 
-export default withRouter(connect(mSTP, mDTP)(SearchBar))
+export default connect(mSTP, mDTP)(SearchBar);

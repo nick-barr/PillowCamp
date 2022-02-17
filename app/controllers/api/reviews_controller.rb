@@ -1,6 +1,6 @@
 class Api::ReviewsController < ApplicationController
 
-  before_action :ensure_logged_in
+  before_action :ensure_logged_in, only: [:create]
   skip_before_action :verify_authenticity_token
 
     def index
