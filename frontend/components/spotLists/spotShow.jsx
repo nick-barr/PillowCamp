@@ -85,8 +85,6 @@ class SpotShow extends React.Component{
                                 <hr />
                             </div>
                             <Reviews 
-                                reviews={this.props.spot.reviews} 
-                                spotTitle={this.props.spot.title}
                                 spotId={this.props.spot.id}
                             />
                         </div>

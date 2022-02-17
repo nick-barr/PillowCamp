@@ -17,7 +17,7 @@ class SessionForm extends React.Component {
       username: "Happy Camper", 
       password: "password1"
     }
-    this.props.processFormDemo(demo).then(this.props.closeModal());
+    this.props.processFormDemo(demo);
   }
 
   update(field) {
@@ -51,6 +51,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    debugger
     if (this.props.currentUser) {
       this.props.closeModal()
     }

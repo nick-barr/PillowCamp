@@ -1,7 +1,7 @@
-export const fetchReviews = (user_id) =>{
+export const fetchReviews = data =>{
     return  $.ajax({
         url: "/api/reviews",
-        data: {user_id: user_id}
+        data: data
     })
 };
      

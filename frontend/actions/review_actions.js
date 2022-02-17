@@ -30,6 +30,11 @@ export const fetchUserReviews = (userId) => dispatch => {
     .then((reviews) => dispatch(receiveAllReviews(reviews)));
   };
 
+export const fetchSpotReviews = spotId => dispatch => {
+    return ReviewUtil.fetchReviews(spotId)
+        .then(reviews => dispatch(receiveAllReviews(reviews)));
+}
+
 export const createReview = (review) => dispatch => {
     return ReviewUtil.createReview(review)
         // .then(reviews => dispatch(receiveAllReviews(reviews)))

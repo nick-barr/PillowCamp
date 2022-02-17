@@ -13,6 +13,11 @@ class Reviews extends React.Component{
         this.handleCreate = this.handleCreate.bind(this);
     }
 
+    componentDidMount(){
+        debugger
+        this.props.fetchSpotReviews({spot_id: this.state.spot_id})
+    }
+
     newReviewInput(){
         if (this.props.userId) {
                 return(
@@ -41,7 +46,7 @@ class Reviews extends React.Component{
     }
 
     render(){
-        // debugger
+        debugger
         return(
             <div className='user-review-container'>
                 <div>{this.newReviewInput()}</div>
