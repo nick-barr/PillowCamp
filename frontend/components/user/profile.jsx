@@ -14,7 +14,7 @@ class Profile extends React.Component {
     componentDidMount () {
         window.scrollTo(0, 0);
         this.props.fetchUserBookings(this.props.match.params.userId);
-        this.props.fetchUserReviews(this.props.match.params.userId);
+        this.props.fetchUserReviews({user_id: this.props.match.params.userId});
         this.setState(prevState => ({loaded: !prevState.loading}))
     }
 
