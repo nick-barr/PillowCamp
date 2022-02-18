@@ -18,6 +18,12 @@ class Reviews extends React.Component{
         this.props.fetchSpotReviews({spot_id: this.props.spotId})
     }
 
+    componentDidUpdate(prevProps){
+        if (prevProps.userId !== this.props.userId) {
+            this.setState({user_id: this.props.userId})
+        }
+    }
+
     componentWillUnmount(){
         this.props.clearAllReviews();
     }
@@ -35,7 +41,8 @@ class Reviews extends React.Component{
 
     newReviewInput(){
         if (this.props.userId) {
-                return(
+        
+            return(
                     <form className='review-form' onSubmit={this.handleCreate}>
                         <label>Leave a review</label>
                         <div className='review-form-controls'>

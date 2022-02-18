@@ -1,0 +1,125 @@
+.search-bar2 {
+    // position:absolute;left: 0; 
+    right: 0; 
+    margin-top: 47px;
+    margin-left: auto; 
+    margin-right: auto; 
+    // top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 700px;
+    // width: 1040px;
+    height: 107px;
+    left: 270px;
+    top: 395px;
+    z-index: 30;
+    background: #F3F2EE;
+    border: 0.5px solid #E5ECD9;
+    box-sizing: border-box;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 900px;
+    width: 70%;
+
+    // border: 2.5px solid black;
+    
+}
+
+
+.search-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    // margin-top: 23px;
+    width: 100%;
+    max-width: 870px;
+    // border: 2.5px solid rgb(177, 38, 38);
+    
+    .labels {
+        display: flex;
+        justify-content: start;
+        width: 90%;
+        margin-bottom: 10px;
+        // border: 2.5px solid black;
+    }
+    
+    .inputs {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        justify-content: space-between;
+        // border: 2.5px solid rgb(34, 0, 224);
+    }
+    
+    input[type="text"] {
+        width:100%;
+        padding-left: 15px;
+        padding-left: 15px;
+        color: black;
+    }
+
+    label {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 900;
+        font-size: 13px;
+    }
+    
+    .search-button {
+        // position: absolute;
+        position: relative;
+        width: 46px;
+        height: 46px;
+        top: 0px;
+        left: 20px;
+    }
+}
+
+.date-picker{
+  width:100%;
+  border-radius: 100px;
+}
+.date-picker2{
+  width:100%;
+  border-radius: 100px;
+}
+
+.react-datepicker__input-container input {
+  width: 200px;
+  border-radius: 100px;
+}
+
+
+.search-results {
+    position: absolute;
+    left: 13%;
+    top: 435px;
+    
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: none;
+    
+    .search-results__li {
+        display: flex;
+        border: 1px solid blue;
+        list-style-type: none;
+        background-color: white;
+        // width: 100%;
+        padding:15px;
+    }
+}
+
+.search-results__details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hidden{
+    display: none;
+}

@@ -46,7 +46,8 @@ class Profile extends React.Component {
 
                             <Route path="/profile/:userId/reviews" render={(props) => 
                                 <UserReviews {...props} 
-                                    reviews={this.props.reviews} 
+                                    reviews={this.props.reviews}
+                                    clearAllReviews={this.props.clearAllReviews} 
                                 />} 
                             />
                         </Switch>

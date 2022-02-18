@@ -1,19 +1,15 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
-import SearchBar from './searchBar';
+import { fetchSpots } from '../../actions/spot_actions';
+import SearchBar2 from './searchBar2';
 
-const mSTP = ({ session, entities: { users } }) => ({
-  currentUser: users[session.id],
-  search: {
-    destination: '',
-    dateS: '',
-    dateE: '',
-    guests: ''
-  }
+const mSTP = state => ({
+  spots: Object.values(state.entities.spots)
 });
 
 const mDTP = dispatch => ({
+  fetchAllSpots: () => dispatch(fetchSpots()),
   logout: () => dispatch(logout())
 });
 
-export default connect(mSTP, mDTP)(SearchBar);
+export default connect(mSTP, mDTP)(SearchBar2);

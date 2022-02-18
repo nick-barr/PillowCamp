@@ -6,6 +6,10 @@ class UserReviews extends React.Component{
         super(props)
     }
 
+    componentWillUnmount(){
+        this.props.clearAllReviews();
+    }
+
     render(){
         return(
             <ul className='profile-user-reviews'>

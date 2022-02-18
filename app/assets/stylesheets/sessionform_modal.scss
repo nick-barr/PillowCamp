@@ -8,4 +8,6 @@
     .login-form-container{
         margin-top: 70px;
     }
+
+    .login-input[type="text"], .login-input[type="password"] {overflow: hidden}
 }
