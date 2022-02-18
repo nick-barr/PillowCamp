@@ -55,6 +55,7 @@ class SearchBar2 extends React.Component{
                     </div>
                     <div className='inputs'>
                         <input 
+                            className={this.state.visibility === "hidden" ? "search-dest-bar" : "search-dest-bar round"}
                             type="text" 
                             onChange={this.update} 
                             placeholder='Enter a destination'
@@ -62,15 +63,17 @@ class SearchBar2 extends React.Component{
                             onBlur={this.timeoutHidden}
                         />
                         
-                        <input 
+                        {/* <input 
                             type='image' 
                             src={searchbutton} 
                             alt="Search" 
                             className='search-button'
-                        />
+                        /> */}
                     </div>
                 </form>
 
+                <div className="search-results-container">
+                <div className="search-results-container2">
                 <div className={this.state.visibility === "hidden" ? "search-results hidden" : "search-results"}>
                     {spots.map((spot, idx) =>{
                         if (spot.title.toLowerCase().includes(this.state.search.toLowerCase()) ||
@@ -89,6 +92,8 @@ class SearchBar2 extends React.Component{
                          }
 
                     })}
+                </div>
+                </div>
                 </div>
             </div>
         )

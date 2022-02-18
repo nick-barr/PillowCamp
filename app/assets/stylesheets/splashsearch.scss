@@ -49,22 +49,22 @@
         }
     }
     
-    .inputs {
-        display: flex;
-        align-items: center;
-        width: 90%;
-        justify-content: space-between;
-        // border: 2.5px solid rgb(34, 0, 224);
-    }
+    // .inputs {
+    //     display: flex;
+    //     align-items: center;
+    //     width: 90%;
+    //     justify-content: space-between;
+    //     // border: 2.5px solid rgb(34, 0, 224);
+    // }
     
     
-    input {
-        height:42px;
-        border-radius: 30px;
-        border-style: none;
-        font-size: 15px;
+    // input {
+    //     height:42px;
+    //     border-radius: 30px;
+    //     border-style: none;
+    //     font-size: 15px;
 
-    }
+    // }
     select {
         height:42px;
         width:80px;
@@ -82,8 +82,7 @@
     }
     
     input[type="text"] {
-        width:300px;
-        padding-left: 15px;
+        // width:300px;
         padding-left: 15px;
         color: lightgray;
     }
@@ -106,7 +105,7 @@
         width: 46px;
         height: 46px;
         top: 0px;
-        left: 10px;
+        // left: 10px;
 
     }
 }
