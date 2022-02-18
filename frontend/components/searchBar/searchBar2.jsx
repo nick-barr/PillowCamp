@@ -58,7 +58,7 @@ class SearchBar2 extends React.Component{
                             className={this.state.visibility === "hidden" ? "search-dest-bar" : "search-dest-bar round"}
                             type="text" 
                             onChange={this.update} 
-                            placeholder='Enter a destination'
+                            placeholder='What are you looking for?'
                             onFocus={this.handleHidden}
                             onBlur={this.timeoutHidden}
                         />
