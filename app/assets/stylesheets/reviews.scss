@@ -4,58 +4,57 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 1.5rem;
-
+    
     label {
         font-weight: 700;
         font-size: 22px;
         margin: 1rem;
         margin-left: 0;
     }
-
+    
     textarea {
-        width: 75%;
+        width: 70%;
         height: 4.25rem;
-        margin-left: 3.75rem;
-        margin-right: 1rem;
         text-align: left;
         justify-content: start;
         font-family: 'Nunito', sans-serif;
-
+        
         padding-top: 10px;
         padding-left: 10px;
+        margin-left: 35px;
         border-radius: 5px;
     }
-
+    
     .review-form__submit {
-        background-color: white;
         color: rgb(71, 71, 71);
+        background-color: white;
         border: 1px solid rgba(145, 145, 145, 0.24);
-        text-align: center;
+        border-radius: 100%;
+        box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.274);
+        cursor: pointer;
+        
+        height: 78px;
+        width:80px;
+        
         display: inline-block;
+        text-align: center;
         font-size: 14px;
         font-weight: 500;
-        height:78px;
-        width:80px;
-        border-radius: 100%;
+
         transition-duration: .075s;
         transition-timing-function: linear;
         transition-property: all;
-        box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.274);
-        margin-right: 2rem;
-        cursor: pointer;
     }
 
     button:hover {
-        background-color: rgb(86, 211, 144);
         color: white;
+        background-color: rgb(86, 211, 144);
         border: none;
         box-shadow: 0 7px 7px -5px rgba(0, 0, 0, 0.274);
     }
 
     .review-form-controls {
         display:flex;
-        flex-direction: row;
-        align-items: center;
         justify-content: space-evenly;
         width: 100%;
     }
