@@ -51,6 +51,7 @@ margin: 5px;
         font-size: 19px;
         color: rgb(102, 102, 102);
         margin-bottom: 20px;
+        cursor: pointer;
     }
 
     hr {border-top: 1px solid grey; margin-bottom: 25px; padding: 0px;}
@@ -80,6 +81,7 @@ margin: 5px;
 
 #sess-button:hover {
     box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.274);
+    cursor: pointer
 }
 
 

@@ -36,22 +36,22 @@
     // margin-top: 23px;
     width: 100%;
     max-width: 870px;
-    // border: 2.5px solid rgb(177, 38, 38);
+    border: 2.5px solid rgb(177, 38, 38);
     
     .labels {
         display: flex;
         justify-content: start;
         width: 90%;
         margin-bottom: 10px;
-        // border: 2.5px solid black;
+        border: 2.5px solid black;
     }
     
     .inputs {
         display: flex;
         align-items: center;
-        width: 90%;
+        width: 100%;
         justify-content: space-between;
-        // border: 2.5px solid rgb(34, 0, 224);
+        border: 2.5px solid rgb(34, 0, 224);
     }
     
     input[type="text"] {
@@ -59,6 +59,7 @@
         padding-left: 15px;
         padding-left: 15px;
         color: black;
+        border: 2.5px solid rgb(0, 224, 157);
     }
 
     label {
@@ -106,7 +107,7 @@
     
     .search-results__li {
         display: flex;
-        border: 1px solid blue;
+        // border: 1px solid blue;
         list-style-type: none;
         background-color: white;
         // width: 100%;

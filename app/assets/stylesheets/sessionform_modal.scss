@@ -9,5 +9,9 @@
         margin-top: 70px;
     }
 
-    .login-input[type="text"], .login-input[type="password"] {overflow: hidden}
+    .login-input[type="text"], .login-input[type="password"] {
+        overflow: hidden;
+        border: 1px solid rgb(133, 133, 133);
+    }
+
 }
