@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import { login, clearErrors } from '../../actions/session_actions';
 import { activeModal, inactiveModal } from '../../actions/modal_actions';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import SessionForm from './session_form';
 
 const mapStateToProps = (state) => {

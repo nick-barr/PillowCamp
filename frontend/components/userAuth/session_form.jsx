@@ -42,12 +42,26 @@ class SessionForm extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li key={`error-${i}`} className='session-form___errors'>
             {error}
           </li>
         ))}
       </ul>
     );
+  }
+
+  linkSwap(){
+    const { pathname } = this.props.location;
+    
+    if (pathname === '/login' || pathname === '/signup') {
+      return (
+        <div className='auth-alternate-link'>{this.props.navLink}</div>
+      )
+    } else {
+        return(
+          <div className='auth-alternate-link' onClick={() => this.props.switchModal(this.props.modalType)}>{this.props.navLink}</div>
+        )
+      }
   }
 
   render() {
@@ -84,7 +98,8 @@ class SessionForm extends React.Component {
               
               <br /><br />
               <hr className='hr-last' />
-              <div className='auth-alternate-link' onClick={() => this.props.switchModal(this.props.modalType)}>{this.props.navLink}</div>
+              {this.linkSwap()}
+              {/* <div className='auth-alternate-link' onClick={() => this.props.switchModal(this.props.modalType)}>{this.props.navLink}</div> */}
           </form>
         </div>
       </div>
