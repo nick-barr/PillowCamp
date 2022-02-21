@@ -37,7 +37,7 @@ class SearchBar2 extends React.Component{
     }
     
     timeoutHidden(e){
-        setTimeout(this.handleHidden, 100);
+        setTimeout(this.handleHidden, 150);
     }
     
     update(e) {
