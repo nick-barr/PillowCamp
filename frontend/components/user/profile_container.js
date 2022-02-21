@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Profile from './profile';
 import { fetchUserBookings} from '../../actions/booking_actions';
-import { fetchUserReviews, clearAllReviews } from '../../actions/review_actions';
+import { fetchUserReviews, clearAllReviews, deleteReview } from '../../actions/review_actions';
 import { activeModal } from '../../actions/modal_actions';
 import { receiveUpdateBooking } from '../../actions/booking_actions';
 
@@ -18,7 +18,8 @@ const mDTP = dispatch => ({
     fetchUserReviews: (userId) => dispatch(fetchUserReviews(userId)),
     activateModal: (modalType) => dispatch(activeModal(modalType)),
     getBooking: (booking) => dispatch(receiveUpdateBooking(booking)),
-    clearAllReviews: () => dispatch(clearAllReviews())
+    clearAllReviews: () => dispatch(clearAllReviews()),
+    deleteReview: (reviewId) => dispatch(deleteReview(reviewId))
 });
 
 export default connect(mSTP, mDTP)(Profile);

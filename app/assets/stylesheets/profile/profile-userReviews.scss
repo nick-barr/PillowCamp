@@ -5,10 +5,11 @@
     padding-left: 20px;
     margin-right: 10px;
     display: flex;
+    align-items: center;
 
     img {
-        height: 7rem;
-        width: 7rem;
+        height: 8rem;
+        width: 8rem;
         object-fit: cover;
         border-radius: 100%;
         margin-right: 25px;
@@ -41,5 +42,30 @@
     h2 > span {
         font-size: 18px;
         font-weight: 700;
+    }
+
+    button {
+        background-color: white;
+        color: rgb(86, 211, 144);
+        border: 2px solid rgb(86, 211, 144);
+        text-align: center;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        height:30px;
+        width:140px;
+        border-radius: 5px;
+        transition-duration: .1s;
+        transition-timing-function: linear;
+        transition-property: all;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: rgb(86, 211, 144);
+        color: white;
+        border: none;
+        box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.274);
+        cursor: pointer;
     }
 }

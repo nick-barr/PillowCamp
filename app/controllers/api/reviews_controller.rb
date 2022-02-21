@@ -22,10 +22,19 @@ class Api::ReviewsController < ApplicationController
         end
       end
 
-      def show
-        @booking = Booking.find(params[:id]) 
-        render 'api_bookings_url'
+    def show
+      @booking = Booking.find(params[:id]) 
+      render 'api_bookings_url'
+    end
+
+    def destroy
+      @review = Review.find(params[:id])
+      if @review.destroy && current_user.id == @review.user_id
+          # render :show
+      else
+          render json: @review.errors.full_messages, status: 422
       end
+  end
           
       private
     

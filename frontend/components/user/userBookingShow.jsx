@@ -37,7 +37,6 @@ class UserBookingShow extends React.Component{
 
     render(){
         const {booking} = this.props;
-
         return(
             <div className='UBS-container'>
                 <Link to={`/spot/${booking.spot_id}`}>

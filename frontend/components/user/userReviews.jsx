@@ -4,10 +4,18 @@ import { Link } from 'react-router-dom';
 class UserReviews extends React.Component{
     constructor(props){
         super(props)
+
+        this.delete = this.delete.bind(this);
     }
 
     componentWillUnmount(){
-        this.props.clearAllReviews();
+        let { pathname } = this.props.history.location;
+        if (!pathname.includes('profile')) { this.props.clearAllReviews() }
+        
+    }
+
+    delete(reviewId){
+        this.props.deleteReview(reviewId)
     }
 
     render(){
@@ -23,8 +31,8 @@ class UserReviews extends React.Component{
                             <h1>{review.title}</h1>
                         </Link>
                         <h2><span>Your review: </span>{review.body}</h2>
+                        <button onClick={() => this.delete(review.id)}>Delete Review</button>
                     </div>
-                    {/* <button onClick={() => this.removeReview(review.id)}>Delete Review</button> */}
                 </li>
                 )) 
             } 
