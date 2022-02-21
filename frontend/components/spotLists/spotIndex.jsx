@@ -43,9 +43,7 @@ class SpotIndex extends React.Component{
                 spot.sitetype === options)
         }
         
-debugger
         options = this.props.match.params.filter
-        debugger    
         return(
             // <Maps className='map-test2' />
             <div className='spot-index-grand-container'>
