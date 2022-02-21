@@ -150,7 +150,10 @@
             font-weight: 600;
         }
     }
-    
+
+    .search-results__li:hover, .search-results__li > a:hover {
+        background-color: lightgray;
+    }
 }
 
 .search-results__details{

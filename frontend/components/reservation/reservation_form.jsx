@@ -68,9 +68,9 @@ class ReservationForm extends React.Component{
                     <input type="date" min={this.dateMin(this.state.check_in)} onChange={this.formUpdates("check_out")} required/>
                     
                     <label >Guests</label>
-                    <select onChange={this.formUpdates("capacity")}>
+                    <select defaultValue={2} onChange={this.formUpdates("capacity")}>
                         <option value="1">1 guest</option>
-                        <option value="2" selected >2 guests</option>
+                        <option value ="2" >2 guests</option>
                         <option value="3">3 guests</option>
                         <option value="4">4 guests</option>
                         <option value="5">5 guests</option>

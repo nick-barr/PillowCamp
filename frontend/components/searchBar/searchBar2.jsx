@@ -14,7 +14,7 @@ class SearchBar2 extends React.Component{
         this.update = this.update.bind(this);
         this.handleHidden = this.handleHidden.bind(this);
         this.timeoutHidden = this.timeoutHidden.bind(this);
-        // this.goToSpot = this.goToSpot.bind(this);
+        this.tempSpots = this.tempSpots.bind(this);
 
     }
 
@@ -24,6 +24,7 @@ class SearchBar2 extends React.Component{
 
     handleSubmit(e){
         e.preventDefault()
+        this.props.history.push(`/spots/${this.state.tempSpots[0].id}`);
     }
     
     update(e) {
@@ -38,9 +39,12 @@ class SearchBar2 extends React.Component{
         setTimeout(this.handleHidden, 150);
     }
 
-    // goToSpot() {
-    //     this
-    // }
+    tempSpots(spot) {
+        this.setState({tempSpots: []});
+        this.setState({tempSpots: [...this.state.myArray, spot]});
+    }
+
+    //filter array down. set into state. use that with onchange
     
     render(){
         const { spots } = this.props;
@@ -76,10 +80,15 @@ class SearchBar2 extends React.Component{
                 <div className="search-results-container2">
                 <div className={this.state.visibility === "hidden" ? "search-results hidden" : "search-results"}>
                     {spots.map((spot, idx) =>{
+                        
+                        
                         if (spot.title.toLowerCase().includes(this.state.search.toLowerCase()) ||
-                         spot.region.toLowerCase().includes(this.state.search.toLowerCase()) ||
-                         spot.details.toLowerCase().includes(this.state.search.toLowerCase())) {
-                             return (
+                        spot.region.toLowerCase().includes(this.state.search.toLowerCase()) ||
+                        spot.details.toLowerCase().includes(this.state.search.toLowerCase())) {
+                            
+                        // {this.tempSpots(spots)}
+
+                            return (
                                  <li className='search-results__li' key={idx}>
                                     <Link to={`/spot/${spot.id}`}>
                                     <div className='search-results__details'>
@@ -89,6 +98,7 @@ class SearchBar2 extends React.Component{
                                     </Link>
                                  </li>
                              )
+                         } else if (spots[0]) {
                          }
 
                     })}
