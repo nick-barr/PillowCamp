@@ -8,7 +8,6 @@
     justify-content: center;
     flex-direction: column;
 
-    // width: 1040px;
     height: 107px;
     z-index: 30;
     background: #F3F2EE;
@@ -19,9 +18,6 @@
     min-width: 700px;
     max-width: 900px;
     width: 70%;
-    
-    // border: 2.5px solid black;
-    
 }
 
 
@@ -30,10 +26,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    // margin-top: 23px;
     width: 90%;
     max-width: 870px;
-    // border: 2.5px solid rgb(177, 38, 38);
     z-index: 10;
     
     .labels {
@@ -41,7 +35,6 @@
         justify-content: start;
         width: 95%;
         margin-bottom: 7px;
-        // border: 2.5px solid black;
     }
     
     .inputs {
@@ -49,24 +42,15 @@
         align-items: center;
         width: 100%;
         justify-content: space-between;
-        // border: 2.5px solid rgb(34, 0, 224);
     }
 
     .search-dest-bar {
-        // margin-right: 4%; //no button
+        // margin-right: 4%; //remove if no button
         height:42px;
         border-radius: 30px;
         border-style: none;
         font-size: 15px;
         width:100%;
-        // border: 2.5px solid rgb(0, 224, 157);
-    }
-    .search-dest-bar:focus {
-        // height:42px;
-        // border: 1px solid lightgrey;
-        // border-radius: 30px;
-        // border-style: none;
-        // font-size: 15px;
     }
     
     input[type="text"] {
@@ -119,8 +103,8 @@
 }
 
 .search-results {
-    // width: calc(100% - 4% - 48px); with button
-    width: 100%; //no button
+    // width: calc(100% - 4% - 48px); //use with button
+    width: 100%; //use if no button
     height: auto;
     max-height: 300px;
     overflow-y: scroll;

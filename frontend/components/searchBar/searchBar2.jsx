@@ -19,38 +19,51 @@ class SearchBar2 extends React.Component{
     }
 
     componentDidMount(){
-        this.props.fetchAllSpots();
+        this.props.fetchAllSpots();        
     }
 
     handleSubmit(e){
         e.preventDefault()
-        this.props.history.push(`/spots/${this.state.tempSpots[0].id}`);
+        if (this.state.tempSpots) {
+            this.props.history.push(`/spot/${this.state.tempSpots[0].id}`);
+        } else {
+            this.props.history.push(`/spot/${this.props.spots[0].id}`)
+        }
+    }
+    
+    
+    handleHidden() {
+        this.setState({visibility: this.state.visibility === "hidden" ? "show" : "hidden"});
+    }
+    
+    timeoutHidden(e){
+        setTimeout(this.handleHidden, 100);
     }
     
     update(e) {
         this.setState({search: e.target.value})
+        this.tempSpots();
     }
-
-    handleHidden() {
-        this.setState({visibility: this.state.visibility === "hidden" ? "show" : "hidden"});
+    
+    tempSpots() {
+        const { search } = this.state; 
+        let tempSpots = this.props.spots.filter((spot) => 
+            spot.title.toLowerCase().includes(search.toLowerCase()) ||
+            spot.region.toLowerCase().includes(search.toLowerCase()) ||
+            spot.details.toLowerCase().includes(search.toLowerCase())
+        )
+        return(
+            this.setState({tempSpots: tempSpots})
+        )
     }
-
-    timeoutHidden(){
-        setTimeout(this.handleHidden, 150);
-    }
-
-    tempSpots(spot) {
-        this.setState({tempSpots: []});
-        this.setState({tempSpots: [...this.state.myArray, spot]});
-    }
-
-    //filter array down. set into state. use that with onchange
     
     render(){
         const { spots } = this.props;
         
-        if (!spots) return null;
-
+        if (spots.length === 0) return null;
+        
+        let { tempSpots } = this.state
+        if (!tempSpots) tempSpots = spots;
         return(
             <div className='search-bar2'>
                 <form className ='search-form' onSubmit={this.handleSubmit}>
@@ -79,14 +92,7 @@ class SearchBar2 extends React.Component{
                 <div className="search-results-container">
                 <div className="search-results-container2">
                 <div className={this.state.visibility === "hidden" ? "search-results hidden" : "search-results"}>
-                    {spots.map((spot, idx) =>{
-                        
-                        
-                        if (spot.title.toLowerCase().includes(this.state.search.toLowerCase()) ||
-                        spot.region.toLowerCase().includes(this.state.search.toLowerCase()) ||
-                        spot.details.toLowerCase().includes(this.state.search.toLowerCase())) {
-                            
-                        // {this.tempSpots(spots)}
+                    {tempSpots.map((spot, idx) =>{
 
                             return (
                                  <li className='search-results__li' key={idx}>
@@ -98,10 +104,8 @@ class SearchBar2 extends React.Component{
                                     </Link>
                                  </li>
                              )
-                         } else if (spots[0]) {
-                         }
-
-                    })}
+                        })
+                    }
                 </div>
                 </div>
                 </div>
