@@ -91,7 +91,7 @@ class SearchBar2 extends React.Component{
 
                 <div className="search-results-container">
                 <div className="search-results-container2">
-                <div className={this.state.visibility === "hidden" ? "search-results" : "search-results hidden"}>
+                <div className={this.state.visibility === "hidden" ? "search-results hidden" : "search-results"}>
                     {tempSpots.map((spot, idx) =>{
 
                             return (
