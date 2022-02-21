@@ -31,16 +31,21 @@ class SpotIndex extends React.Component{
         // }
         let filteredSpots = []
         let options = this.props.match.params.filter
-        if (options === 'all') {
+        
+        
+        if (options === 'search') {
+            filteredSpots = this.props.searchSpots
+        } else if (options === 'all') {
             filteredSpots = this.props.spots
         } else if (this.props.spots.length !== 0) {        
             filteredSpots = this.props.spots.filter(spot => 
                 spot.region === options ||
                 spot.sitetype === options)
         }
-
+        
+debugger
         options = this.props.match.params.filter
-            
+        debugger    
         return(
             // <Maps className='map-test2' />
             <div className='spot-index-grand-container'>

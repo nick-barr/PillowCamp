@@ -24,11 +24,19 @@ class SearchBar2 extends React.Component{
 
     handleSubmit(e){
         e.preventDefault()
+
         if (this.state.tempSpots) {
-            this.props.history.push(`/spot/${this.state.tempSpots[0].id}`);
+            // debugger
+            this.props.receiveUpdateSearch(this.state.tempSpots);
+            this.props.history.push(`/filter/search`);
         } else {
-            this.props.history.push(`/spot/${this.props.spots[0].id}`)
+            this.props.history.push(`/filter/all`)
         }
+        // if (this.state.tempSpots) {
+        //     this.props.history.push(`/spot/${this.state.tempSpots[0].id}`);
+        // } else {
+        //     this.props.history.push(`/spot/${this.props.spots[0].id}`)
+        // }
     }
     
     

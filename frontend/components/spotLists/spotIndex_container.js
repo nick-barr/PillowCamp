@@ -3,14 +3,10 @@ import {connect} from 'react-redux'
 import { fetchSpots } from '../../actions/spot_actions'
 
 const mSTP = (state, ownProps) => {
-    
-    // const s1 = Object.values(state.entities.spots)
-
-    // debugger
-
+    debugger
     return({
-        spots: Object.values(state.entities.spots)
-
+        spots: Object.values(state.entities.spots),
+        searchSpots: Object.values(state.entities.updates)
     })
 }
 const mDTP = dispatch => ({

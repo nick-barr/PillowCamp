@@ -46,6 +46,10 @@ class FilterBar extends React.Component{
                         Fancy
                     </NavLink></li>
 
+                    <li><NavLink activeClassName='filterBar-active'to='/filter/search'>
+                        Search
+                    </NavLink></li>
+
                 </ul>
             </div>
         )

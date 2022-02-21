@@ -1,6 +1,7 @@
 import { RECEIVE_UPDATE_BOOKING, REMOVE_UPDATE_BOOKING } from '../actions/booking_actions';
+import { RECEIVE_UPDATE_SEARCH, REMOVE_UPDATE_SEARCH } from '../actions/search_actions';
 
-const UpdatesReducer = (state = null, action) => {
+const UpdatesReducer = (state = [], action) => {
     Object.freeze(state);
     let newState;
     switch(action.type){
@@ -10,7 +11,14 @@ const UpdatesReducer = (state = null, action) => {
             return newState;
 
         case REMOVE_UPDATE_BOOKING:
-            return null;
+            return [];
+            
+        case RECEIVE_UPDATE_SEARCH:
+            newState = Object.assign({}, state, action.search);
+            return newState;
+
+        case REMOVE_UPDATE_SEARCH:
+            return [];
             
         default:
             return state
