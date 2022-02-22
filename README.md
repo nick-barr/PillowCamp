@@ -1,27 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
 # <img src="https://github.com/nick-barr/PillowCamp/blob/8c3d6171fcb080491e3501612be0c3ad3b1fcb13/app/assets/images/Pillowcamp_logo.jpg" width="300" height="auto" />
@@ -64,6 +42,11 @@ PillowCamp is built with the React framework and Redux architecture on the front
 
 ## Searchbar & Filters
 The searchbar and filterbar fetch all available spots and stores them into the state. This allows users to narrow down to spots that match their search queries which look up against each spots region, title, and description.  
+
+
+<p align="center">
+  <img src="/app/assets/images/pc_search_demo.gif" width="700" height="auto" />
+</p>
 
 ```javascript
 {
