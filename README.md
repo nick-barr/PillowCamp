@@ -35,10 +35,10 @@ Things you may want to cover:
 - [Technical Challenges](#technical-challenges)
 
 # Description
-Kanary is a full stack, single-page web application inspired by Kanopy. It is a video streaming service that provides access to documentaries and independent films with a unique social, cultural, and political impact.
+PillowCamp is a full stack, single-page web application inspired by Hipcamp. It is a booking service that provides access to campgrounds, open fields, cabins, and homes owned by owners who value nature.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/88195745/141483916-99507227-fd2f-4d9c-acdd-2f902fdf1ce4.png" width="700" height="auto" />
+  <img src="https://github.com/nick-barr/PillowCamp/blob/main/app/assets/images/pillowcamp_thumbnail.png" width="700" height="auto" />
 </p>
 
 # Technologies
@@ -52,76 +52,18 @@ Kanary is a full stack, single-page web application inspired by Kanopy. It is a 
 - Webpack
 - Amazon Web Services S3
 
-Kanary is built with the React framework and Redux architecture on the frontend, supported by Ruby on Rails and a PostgreSQL database on the backend. Thumbnails and videos are implemented using Active Storage and hosted by Amazon Web Services S3.
+PillowCamp is built with the React framework and Redux architecture on the frontend, supported by Ruby on Rails and a PostgreSQL database on the backend. Thumbnails and videos are implemented using Active Storage and hosted by Amazon Web Services S3.
 
 # Core Features
 
-## Video Playback
-I utilized Amazon Web Services S3 (AWS) and Rails Active Storage to store and fetch videos and images from the cloud, preloading videos upon entering the video show page to minimize wait time for end users.
+## Spot Details - Fetch and retried spot information from Rails backend turning HTTPs requests into JSON responses for specific spot show pages. (CR)
+## Filter Spots- use 
+## Bookings
+## Create: Spot show page
+## Search R.U.D.: Profile)"	Search for Spots held in state
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/88195745/144888505-bd3909aa-dac9-421d-ad77-58465e1630c2.png" width="400px" />
-</p>
-
-## Searchbar
-The searchbar feature uses lifecycle methods and selector functions to enable users to search the site's selection of films by director, description, or genre.
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/88195745/141476463-bf9d27fa-c600-40af-8595-d69b61f5246b.gif" width="400">
-</p>
-
-In order to ensure that the search results update dynamically as users type in the search bar, the state for the `SearchbarIndex` component contains two key-value pairs: (1) the search query from the text input element and (2) an array containing movie objects that match the search query. Each time the search query is updated, the selector function `selectMoviesBySearch` is invoked to select for films that match the query. State is then updated with the returned array, and a rerender of the `SearchbarIndex` component is initiated.
-
-```javascript
-handleUpdate(event) {
-    const query = event.target.value;
-
-    const matched = this.props.selectMoviesBySearch(
-        this.props.movies, this.props.genres, query
-    );
-
-    this.setState({ query, movies: matched });
-}
-```
-
-#### **CHALLENGE:**
-Initially, if the user deleted their search query from the search bar, the `selectMoviesBySearch` function would select for movies whose director, description, or genre matched an empty string, which of course was all movies in the database. Furthermore, if the user submitted the form containing the input element on an empty search query string, the site would navigate to the search results page to display all those movies.
-
-If the user submitted the form when the input element was populated with a valid search query, the site would successfully navigate to the search results page, but the search bar would remain populated with the user's latest query and a dropdown with the matching movies.
-
-#### **SOLUTION:**
-If the value of the input element becomes empty at any point, the component renders `null` rather than rendering all movies in the database. I also added a conditional statement to the `onSubmit` function so that the submit button is nonresponsive and the user remains on the current page if their search query is empty.
-
-The `onSubmit` function also calls a `handleClearSearchbar` function. Upon submission of a valid search query, the search bar query is reset to the empty string and the dropdown becomes `null` and disappears.
-
-```javascript
-<form className="searchbar-input" onSubmit={() => {
-    if (this.state.query !== "") {
-        this.props.history.push(`/search/${this.state.query}`);
-        this.handleClearSearchbar();
-    }
-}}>
-    <input type="text"
-        placeholder="Search videos, subjects..."
-        onChange={this.handleUpdate} />
-    <button type="submit">
-        <img src={window.search_icon_black} />
-    </button>
-</form>
-```
-
-## Popup
-Whenever a user adds or removes a film from their watchlist (via CRUD actions), a popup appears to inform them that the action was successful. The `Popup` component is constructed using React hooks to fade in when the user adds or removes a film and fade out when the user clicks anywhere on the popup, including the "X" button.
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/88195745/144902906-7e18c8e7-11f0-46f3-a138-3547711b5929.png" width="400px" />
-</p>
-
-#### **CHALLENGE:**
-Initially, when a user added or removed multiple films in succession from the `MovieIndex` page, only the popup for the first movie added or removed was visible, so the most recent action was not reflected by the information on the popup.
-
-#### **SOLUTION:**
-By adding a Boolean value called `displayPopup` to the state of the parent component, the `Popup` component is now conditionally rendered based on that value. The parent component passes down a `clearPopup` function to the `Popup` component. When invoked in the `Popup` component, `clearPopup` toggles the value of `displayPopup` to `false` in the parent, thus removing the previous popup from the page before rendering a new one to reflect the most recent user action.
+## Searchbar & Filters
+The searchbar and filterbar fetch all available spots and stores them into the state. This allows users to narrow down to spots that match their search queries which look up against each spots region, title, and description.  
 
 ```javascript
 {
