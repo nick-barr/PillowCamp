@@ -47,6 +47,9 @@ The searchbar and filterbar fetch all available spots and stores them into the s
 <p align="center">
   <img src="/app/assets/images/pc_search_demo.gif" width="700" height="auto" />
 </p>
+<p align="center">
+  <img src="/app/assets/images/pc_search_demo_og.gif" width="700" height="auto" />
+</p>
 
 ```javascript
 {
