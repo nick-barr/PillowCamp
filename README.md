@@ -50,7 +50,7 @@ Bookings can then be managed at the `Profile/:id` of each `User`. Details for an
 </p>
 
 ## Reviews
-`Reviews` belong to both `Spots` and `Users`. A user can submit a review for a spot once they are logged in. On the `Profile/:id route, users can look through their reviews across spots and delete them if desired.
+`Reviews` belong to both `Spots` and `Users`. A user can submit a review for a spot once they are logged in. On the `Profile/:id` route, users can look through their reviews across spots and delete them if desired.
 
 <p align="center">
   <img src="/app/assets/images/readme/pc_review_demo.gif" width="700" height="auto" />
