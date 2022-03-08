@@ -38,7 +38,7 @@ const Footer = () => {
                     <img alt="MyLinkedIn" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
                     width="50" height="50" />
                 </a>
-                <a href="https://github.com/nick-barr/">
+                <a href="https://github.com/nick-barr/PillowCamp">
                     <img alt="MyGitHub" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                     width="50" height="50" />
                 </a>
